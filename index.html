@@ -11,10 +11,46 @@
         <meta property="og:description" content="kakao renewal site" />
         <meta property="og:image" content="" />
         <meta name="twitter:image" content="" />
+        <link rel="stylesheet" href="/assets/css/style.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+        <script src="/assets/js/main.js" defer></script>
     </head>
     <body>
         <div id="main">
-            <div class="header"></div>
+            <header class="header">
+                <div class="wrap__header">
+                    <h1 class="logo">
+                        <a href="#"><img src="./assets/img/kakao.svg" alt="logo" /></a>
+                    </h1>
+                    <nav class="gnb">
+                        <ul class="gnb__list">
+                            <li class="gnb__list-item"><a href="#" class="gnb__link">소개</a></li>
+                            <li class="gnb__list-item"><a href="#" class="gnb__link">이야기</a></li>
+                            <li class="gnb__list-item"><a href="#" class="gnb__link">기술과 서비스</a></li>
+                            <li class="gnb__list-item"><a href="#" class="gnb__link">약속과 책임</a></li>
+                            <li class="gnb__list-item"><a href="#" class="gnb__link">뉴스</a></li>
+                            <li class="gnb__list-item">
+                                <a href="#" class="gnb__link"
+                                    >투자정보 <span class="ico_link" aria-label="link"></span
+                                ></a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="util__btns">
+                        <button class="util__btn util__btn--search" aria-label="search">
+                            <img src="./assets/img/search.svg" alt="search" />
+                        </button>
+                        <button class="util__btn util__btn--language" aria-label="language">
+                            <img src="./assets/img/global.svg" alt="search" />
+                        </button>
+                        <button class="util__btn util__btn--mode" aria-label="dark-mode">
+                            <img src="./assets/img/moon.svg" alt="search" />
+                        </button>
+                    </div>
+                </div>
+            </header>
             <section class="cont_home"></section>
             <section class="cont_main"></section>
             <section class="cont_main"></section>
