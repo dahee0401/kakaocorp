@@ -24,14 +24,7 @@ html,
 body {
     height: 100%;
 }
-img,
-picture,
-video,
-canvas,
-svg {
-    display: block;
-    max-width: 100%;
-}
+
 button {
     background: none;
     border: 0;
@@ -49,38 +42,4 @@ ul {
 }
 fieldset {
     border: 0;
-}
-
-::selection {
-    background: $main-color;
-    color: rgb(255, 255, 255);
-}
-
-body {
-    font-family: 'Aeonik', sans-serif;
-    text-align: left;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #fff;
-    line-height: 20px;
-    background-color: rgb(29, 32, 36);
-    font-size: 1vw;
-
-    cursor: none;
-    a {
-        cursor: none;
-    }
-
-    @include desktop {
-        font-size: 1.3vw;
-    }
-    @include tablets {
-        font-size: 1.4vw;
-    }
-    @include mobile {
-        font-size: 0.6519vw;
-    }
-    @include smobile {
-        font-size: 1vw;
-    }
 }

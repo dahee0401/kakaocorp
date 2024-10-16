@@ -1,0 +1,79 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $colorWhite;
+    margin: 0 auto;
+
+    &.active {
+        border: 1px solid $colorGray1;
+    }
+    > .wrap__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 171.2rem;
+        height: 9.2rem;
+        margin: 0 auto;
+        @include tablets() {
+            max-width: 71.2rem;
+        }
+
+        .logo {
+            width: 7.4rem;
+        }
+        .gnb {
+            .gnb__list {
+                display: flex;
+                gap: 0;
+                align-items: center;
+
+                .gnb__list-item {
+                    transition: all linear 0.3s;
+
+                    &.active .gnb__link {
+                        opacity: 1;
+                    }
+
+                    &.not-active .gnb__link {
+                        opacity: 0.5;
+                    }
+                    > .gnb__link {
+                        display: block;
+                        padding: 0 4rem;
+                        line-height: 8.5rem;
+                        font-weight: 400;
+                        text-align: center;
+                        font-size: 1.7rem;
+
+                        > .ico_link {
+                            display: inline-block;
+                            width: 9px;
+                            height: 9px;
+                            margin: 38px 0 0 4px;
+                            vertical-align: top;
+                            background-position: 50%;
+                            background-repeat: no-repeat;
+                            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='9' fill='none'%3E%3Cpath d='M1.794 1.074h6.148V7.22m0-6.146L1.378 7.638' stroke='%23000' stroke-width='1.3'/%3E%3C/svg%3E");
+                        }
+                    }
+                }
+            }
+        }
+        .util__btns {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            > .util__btn {
+                display: block;
+                width: 3.6rem;
+                height: 3.6rem;
+                border-radius: 50%;
+                &:hover {
+                    background-color: $colorGray1;
+                }
+            }
+        }
+    }
+}
