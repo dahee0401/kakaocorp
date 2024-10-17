@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,10 +12,15 @@
         <meta property="og:image" content="" />
         <meta name="twitter:image" content="" />
         <link rel="stylesheet" href="/assets/css/style.css" />
+        <!-- gsap -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
         <script src="/assets/js/main.js" defer></script>
+
+        <!-- swiper -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </head>
     <body>
         <div id="main">
@@ -24,6 +29,7 @@
                     <h1 class="logo">
                         <a href="#"><img src="./assets/img/kakao.svg" alt="logo" /></a>
                     </h1>
+
                     <nav class="gnb">
                         <ul class="gnb__list">
                             <li class="gnb__list-item"><a href="#" class="gnb__link">소개</a></li>
@@ -39,25 +45,107 @@
                         </ul>
                     </nav>
                     <div class="util__btns">
-                        <button class="util__btn util__btn--search" aria-label="search">
-                            <img src="./assets/img/search.svg" alt="search" />
+                        <button class="util__btn util__btn--search">
+                            <img src="./assets/img/search.svg" alt="search button" />
                         </button>
-                        <button class="util__btn util__btn--language" aria-label="language">
-                            <img src="./assets/img/global.svg" alt="search" />
+                        <button class="util__btn util__btn--language">
+                            <img src="./assets/img/global.svg" alt="language button" />
                         </button>
-                        <button class="util__btn util__btn--mode" aria-label="dark-mode">
-                            <img src="./assets/img/moon.svg" alt="search" />
+                        <button class="util__btn util__btn--mode">
+                            <img src="./assets/img/moon.svg" alt="dark-mode-button" />
+                        </button>
+                    </div>
+                    <div class="util__btns_mo">
+                        <button class="util__btn2 btn__hamburger">
+                            <img src="./assets/img/search-mo.svg" alt="search button" />
+                        </button>
+                        <button class="util__btn2 btn__search">
+                            <img src="./assets/img/menu-mo.svg" alt="menu button" />
                         </button>
                     </div>
                 </div>
             </header>
-            <section class="cont_home"></section>
-            <section class="cont_main"></section>
-            <section class="cont_main"></section>
-            <section class="cont_main"></section>
-            <section class="cont_main"></section>
-            <section class="cont_main"></section>
+            <section class="cont-home">
+                <!-- visual -->
+                <div class="cont-home__item visual">
+                    <div class="visual-wrpper">
+                        <div class="inner-top">
+                            <img src="./assets/img/bulb.gif" alt="소식" />
+                        </div>
+                        <video
+                            src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/heroVisual/4c2201fa019200001.mp4"
+                            poster="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/heroVisual/4c222124019200001.png?type=thumb&amp;opt=C1424x808.fwebp"
+                            autoplay="autoplay"
+                            muted="muted"
+                            loop="loop"
+                            playsinline="playsinline"
+                            type="video/mp4"
+                            class="item_visual"
+                        ></video>
+                        <div class="inner-bottom">
+                            <a href="#">
+                                <span>더 알아보기</span>
+                                <span class="screen_out">
+                                    <svg
+                                        data-v-77e115ea=""
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="64"
+                                        height="64"
+                                        viewBox="0 0 64 64"
+                                        fill="none"
+                                        class="btn_arr_big"
+                                    >
+                                        <circle cx="32" cy="31.9961" r="32" fill="black"></circle>
+                                        <path
+                                            d="M34.9292 25.5325L33.515 26.9467L38.1748 31.6065L23 31.6074V33.6015L38.1748 33.6005L33.515 38.2604L34.9292 39.6746L42.0002 32.6035L34.9292 25.5325Z"
+                                            fill="white"
+                                        ></path>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- widget -->
+                <div class="cont-home__item widget first">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <h2>기부에 함께 해주신 착한 마음들</h2>
+                                <p>61,322,120건</p>
+                            </div>
+                            <div class="swiper-slide">
+                                <h2>Slide 2</h2>
+                                <p>This is the content of the second slide.</p>
+                            </div>
+                        </div>
+
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+                <div class="cont-home__item widget second">Item 3</div>
+                <div class="cont-home__item widget third">Item 4</div>
+            </section>
+            <section class="cont_main cont__wrapper"></section>
+            <section class="cont_main cont__wrapper"></section>
+            <section class="cont_main cont__wrapper"></section>
+            <section class="cont_main cont__wrapper"></section>
+            <section class="cont_main cont__wrapper"></section>
             <footer></footer>
         </div>
+
+        <script>
+            // Initialize Swiper
+            const swiper = new Swiper('.swiper-container', {
+                slidesPerView: 1, // Show one slide at a time
+                pagination: {
+                    el: '.swiper-pagination', // Target pagination element
+                    clickable: true, // Make pagination clickable
+                },
+            });
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     </body>
 </html>
