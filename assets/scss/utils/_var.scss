@@ -1,5 +1,5 @@
 // Color
-$colorPrimay: #fae100;
+$colorPrimary: #fae100;
 $colorAccent: #0073ff;
 $colorSkyBlue: #89dcff;
 $colorGreen: #1ed47e;
@@ -10,6 +10,7 @@ $colorGray1: #eee;
 $colorGray2: #d5d5d5;
 $colorGray3: #dfdfdf;
 $colorGray4: #f4f4f4;
+$colorGrayF3: #f3f3f3;
 $colorGray5: #f7f7f7;
 $colorGray6: #fcfcfc;
 $colorGray7: #444;
@@ -19,8 +20,12 @@ $colorLightBlack: #1a1a1a;
 $colorSemiBlack: #111;
 $colorBlack: #000;
 
-//Background
+//Background Color
 $baseBackground: $colorWhite;
 $baseBackground1: rgba(255, 255, 255, 0.9);
 $baseBackground2: rgba(255, 255, 255, 0.8);
 $baseForeground: $colorBlack;
+
+// border
+$borderWidget: 2.4rem;
+$borderVisual: 3.6rem;

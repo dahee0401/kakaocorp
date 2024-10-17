@@ -16,12 +16,26 @@
         max-width: 171.2rem;
         height: 9.2rem;
         margin: 0 auto;
+        @media screen and (max-width: 1902px) {
+            max-width: 131.6rem;
+        }
+        @media screen and (max-width: 1439px) {
+            max-width: 95.2rem;
+        }
         @include tablets() {
+            padding: 0;
             max-width: 71.2rem;
+        }
+        @include mobile() {
+            max-width: 41.2rem;
         }
 
         .logo {
             width: 7.4rem;
+            > a {
+                display: block;
+                width: 100%;
+            }
         }
         .gnb {
             .gnb__list {
@@ -37,7 +51,7 @@
                     }
 
                     &.not-active .gnb__link {
-                        opacity: 0.5;
+                        opacity: 0.6;
                     }
                     > .gnb__link {
                         display: block;
@@ -46,6 +60,9 @@
                         font-weight: 400;
                         text-align: center;
                         font-size: 1.7rem;
+                        @include desktop() {
+                            padding: 0 2rem;
+                        }
 
                         > .ico_link {
                             display: inline-block;
@@ -60,6 +77,10 @@
                     }
                 }
             }
+
+            @include tablets() {
+                display: none;
+            }
         }
         .util__btns {
             display: flex;
@@ -73,6 +94,18 @@
                 &:hover {
                     background-color: $colorGray1;
                 }
+            }
+            @include tablets() {
+                display: none;
+            }
+        }
+
+        .util__btns_mo {
+            display: none;
+            @include tablets() {
+                display: flex;
+                gap: 2.2rem;
+                align-items: center;
             }
         }
     }
