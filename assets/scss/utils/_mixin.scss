@@ -2,25 +2,26 @@ $bdesktop: 1902px;
 $desktop: 1439px;
 $tablets: 1023px;
 $mobile: 767px;
-$smobile: 400px;
+
+@mixin bdesktop() {
+    @media (max-width: $bdesktop) {
+        @content;
+    }
+}
 
 @mixin desktop() {
     @media (max-width: $desktop) {
         @content;
     }
 }
+
 @mixin tablets() {
     @media (max-width: $tablets) {
         @content;
     }
 }
-@mixin mobile() {
-    @media (max-width: $mobile) {
-        @content;
-    }
-}
 
-@mixin smobile() {
+@mixin mobile() {
     @media (max-width: $mobile) {
         @content;
     }
