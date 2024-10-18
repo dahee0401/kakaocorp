@@ -5,9 +5,10 @@
     width: 100%;
     background-color: $colorWhite;
     margin: 0 auto;
-
+    z-index: 100;
     &.active {
         border: 1px solid $colorGray1;
+        z-index: 200;
     }
     > .wrap__header {
         display: flex;
@@ -57,11 +58,11 @@
                         display: block;
                         padding: 0 4rem;
                         line-height: 8.5rem;
-                        font-weight: 400;
+                        // font-weight: 400;
                         text-align: center;
                         font-size: 1.7rem;
-                        @include desktop() {
-                            padding: 0 2rem;
+                        @media screen and (max-width: 1902px) {
+                            padding: 0 3rem;
                         }
 
                         > .ico_link {

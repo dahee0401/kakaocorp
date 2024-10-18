@@ -17,3 +17,15 @@ links.forEach((link) => {
         });
     });
 });
+
+// tooltip;
+const innerTop = document.querySelector('.inner-top');
+const tooltip = document.querySelector('.info_banner');
+
+innerTop.addEventListener('mouseenter', () => {
+    tooltip.style.display = 'flex';
+});
+
+innerTop.addEventListener('mouseleave', () => {
+    tooltip.style.display = 'none';
+});
