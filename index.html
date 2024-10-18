@@ -17,6 +17,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
         <script src="/assets/js/main.js" defer></script>
+        <script src="/assets/js/gsap.js" defer></script>
 
         <!-- swiper -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -70,18 +71,23 @@
                 <div class="cont-home__item visual">
                     <div class="visual-wrpper">
                         <div class="inner-top">
-                            <img src="./assets/img/bulb.gif" alt="소식" />
+                            <a href="#none">
+                                <span aria-hidden="true" class="info_banner">카카오 소식 모아보기</span>
+                                <img src="./assets/img/bulb.gif" alt="소식" />
+                            </a>
                         </div>
-                        <video
-                            src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/heroVisual/4c2201fa019200001.mp4"
-                            poster="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/heroVisual/4c222124019200001.png?type=thumb&amp;opt=C1424x808.fwebp"
-                            autoplay="autoplay"
-                            muted="muted"
-                            loop="loop"
-                            playsinline="playsinline"
-                            type="video/mp4"
-                            class="item_visual"
-                        ></video>
+                        <div class="inner-cont">
+                            <video
+                                src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/heroVisual/4c2201fa019200001.mp4"
+                                poster="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/heroVisual/4c222124019200001.png?type=thumb&amp;opt=C1424x808.fwebp"
+                                autoplay="autoplay"
+                                muted="muted"
+                                loop="loop"
+                                playsinline="playsinline"
+                                type="video/mp4"
+                                class="item_visual"
+                            ></video>
+                        </div>
                         <div class="inner-bottom">
                             <a href="#">
                                 <span>더 알아보기</span>
@@ -108,27 +114,90 @@
                 </div>
                 <!-- widget -->
                 <div class="cont-home__item widget first">
-                    <div class="swiper-container">
+                    <div class="swiper-container swiper1">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <h2>기부에 함께 해주신 착한 마음들</h2>
-                                <p>61,322,120건</p>
-                            </div>
-                            <div class="swiper-slide">
-                                <h2>Slide 2</h2>
-                                <p>This is the content of the second slide.</p>
-                            </div>
+                            <a class="swiper-slide" href="#none">
+                                <h2>기부에 함께 해주신 <br />착한 마음들</h2>
+                                <strong class="number_count">
+                                    <span><span>6</span></span
+                                    ><span><span>1</span></span
+                                    ><span>,</span><span><span>3</span></span
+                                    ><span><span>2</span></span
+                                    ><span><span>2</span></span
+                                    ><span>,</span><span><span>1</span></span
+                                    ><span><span>2</span></span
+                                    ><span><span>0</span></span></strong
+                                >
+                                <span class="text_count">건</span>
+                            </a>
+                            <a class="swiper-slide slide2" href="#none"></a>
                         </div>
 
                         <!-- Pagination -->
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
+                <div class="cont-home__item widget second">
+                    <div class="swiper-container swiper2">
+                        <div class="swiper-wrapper">
+                            <a class="swiper-slide" href="#none">
+                                <span class="badge type2">다양성의 가치</span>
+                                <strong
+                                    >2023 <br />
+                                    카카오 다양성 보고서
+                                </strong>
+                                <ul class="tag-container">
+                                    <li class="tag">#다양성</li>
+                                    <li class="tag">#건강한디지털</li>
+                                </ul>
+                            </a>
+                            <a class="swiper-slide" href="#none">
+                                <span class="badge">디지털 격차 줄이기</span>
+                                <strong
+                                    >어른신을 위한 <br />
+                                    개인정보보호 안내
+                                </strong>
+                                <ul class="tag-container">
+                                    <li class="tag">#기술복지</li>
+                                    <li class="tag">#피싱범죄예방</li>
+                                </ul>
+                            </a>
+                            <a class="swiper-slide" href="#none">
+                                <span class="badge">카톡설명서</span>
+                                <strong
+                                    >모두의 카톡을 <br />
+                                    더 가깝고 안전하게
+                                </strong>
+                                <ul class="tag-container">
+                                    <li class="tag">#업데이트소식</li>
+                                    <li class="tag">#톡활용팁</li>
+                                </ul>
+                            </a>
+                        </div>
 
-                <div class="cont-home__item widget second">Item 3</div>
-                <div class="cont-home__item widget third">Item 4</div>
+                        <!-- Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="cont-home__item widget third">
+                    <div class="swiper-container swiper3">
+                        <div class="swiper-wrapper">
+                            <a class="swiper-slide" href="#none">
+                                <img src="./assets/img/kakao-group.webp" alt="" />
+                                <span>카카오그룹</span></a
+                            >
+                            <a class="swiper-slide history" href="#none"><span>연혁</span></a>
+                        </div>
+
+                        <!-- 버튼 추가 -->
+                        <div class="swiper-commons-button swiper-button-prev"></div>
+                        <div class="swiper-commons-button swiper-button-next"></div>
+                    </div>
+                </div>
             </section>
-            <section class="cont_main cont__wrapper"></section>
+            <section class="cont_main cont__wrapper story">
+                <h3 class="cont_main_title">카카오와 카카오 그룹이 축적해 온 이야기들</h3>
+            </section>
             <section class="cont_main cont__wrapper"></section>
             <section class="cont_main cont__wrapper"></section>
             <section class="cont_main cont__wrapper"></section>
@@ -137,15 +206,45 @@
         </div>
 
         <script>
-            // Initialize Swiper
-            const swiper = new Swiper('.swiper-container', {
-                slidesPerView: 1, // Show one slide at a time
+            const firstSwiper = new Swiper('.swiper1', {
+                slidesPerView: 1,
+                loop: true,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true,
+                },
                 pagination: {
-                    el: '.swiper-pagination', // Target pagination element
-                    clickable: true, // Make pagination clickable
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+
+            const secondSwiper = new Swiper('.swiper2', {
+                slidesPerView: 1,
+                loop: true,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true,
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+            });
+
+            const thirdSwiper = new Swiper('.swiper3', {
+                slidesPerView: 1,
+                loop: true,
+                effect: 'fade',
+                fadeEffect: {
+                    crossFade: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
                 },
             });
         </script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
     </body>
 </html>
