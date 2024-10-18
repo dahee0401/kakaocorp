@@ -54,13 +54,18 @@ body {
 
     @include tablets() {
         max-width: 71.2rem;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
+        padding-top: 7.2rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 41rem 23.2rem;
+        row-gap: 2rem;
+        column-gap: 0.8rem;
     }
 
     .visual {
         grid-row: 1 / 4;
         @include tablets() {
+            grid-row: 1 / 2;
+            grid-column: 1/4;
         }
         .visual-wrpper {
             position: relative;
@@ -80,7 +85,10 @@ body {
                 @include desktop() {
                     border-radius: 0 0 0 2rem;
                 }
-                a {
+                @include tablets() {
+                    padding: 5px 0 5px 0;
+                }
+                a.tooltip {
                     @media screen and (max-width: 1902px) {
                         width: 8.2rem;
                         height: 8.2rem;
@@ -90,20 +98,32 @@ body {
                         height: 6rem;
                         border-radius: 0 0 0 2rem;
                     }
-                }
-                img {
-                    position: relative;
-                    display: block;
-                    margin-top: -5px;
-                    width: 9.4rem;
-                    height: 9.4rem;
-                    @media screen and (max-width: 1902px) {
-                        width: 8.2rem;
-                        height: 8.2rem;
+                    @include tablets() {
+                        position: static;
+                        padding: 5px 0 5px 11px;
                     }
-                    @include desktop() {
-                        width: 6rem;
-                        height: 6rem;
+                    img {
+                        position: relative;
+                        display: block;
+                        margin-top: -5px;
+                        width: 9.4rem;
+                        height: 9.4rem;
+                        @media screen and (max-width: 1902px) {
+                            width: 8.2rem;
+                            height: 8.2rem;
+                        }
+                        @include desktop() {
+                            width: 6rem;
+                            height: 6rem;
+                        }
+
+                        @include tablets() {
+                            display: inline-block;
+                            // vertical-align: middle;
+                            width: 4.8rem;
+                            height: 4.8rem;
+                            position: static;
+                        }
                     }
                 }
                 &::before {
@@ -142,13 +162,6 @@ body {
                         background-image: url(/assets/img/right-top-small.svg);
                     }
                 }
-                @media screen and (max-width: 1902px) {
-                    padding: 2px 17px 15px;
-                }
-
-                @include desktop() {
-                    padding: 5px 5px 6px 17px;
-                }
             }
             .info_banner {
                 position: absolute;
@@ -170,6 +183,14 @@ body {
                     left: -5px;
                     top: -31px;
                 }
+                @include tablets() {
+                    display: inline-block !important;
+                    position: relative;
+                    vertical-align: top;
+                    left: auto;
+                    top: auto;
+                    padding: 9px 16px;
+                }
 
                 &::after {
                     content: '';
@@ -180,6 +201,15 @@ body {
                     height: 1.2rem;
                     background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 12a7.967 7.967 0 01-3.307-6.466V0H0c0 6.627 5.373 12 12 12z' fill='%23000'/%3E%3C/svg%3E");
                     background-size: 100%;
+
+                    @include tablets() {
+                        background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='13' fill='none'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10 13a6.64 6.64 0 01-2.756-5.388V0L0 3c0 5.523 4.477 10 10 10z' fill='%23000'/%3E%3C/svg%3E");
+                        width: 10.5px;
+                        height: 13px;
+                        left: auto;
+                        right: -2.5px;
+                        bottom: 1px;
+                    }
                 }
             }
             .inner-cont {
@@ -213,6 +243,10 @@ body {
 
                 @include desktop() {
                     height: 48.6rem;
+                    border-radius: 2rem;
+                }
+                @include tablets() {
+                    height: 40.5rem;
                     border-radius: 2rem;
                 }
             }
@@ -326,6 +360,9 @@ body {
         @include desktop() {
             border-radius: 2rem;
         }
+        @include tablets() {
+            grid-row: 2 / 3;
+        }
         > .swiper-container {
             position: relative;
             height: 100%;
@@ -391,6 +428,10 @@ body {
         &.first {
             grid-row: 1 / 2;
             background-color: $colorPrimary;
+
+            @include tablets() {
+                grid-row: auto;
+            }
             .swiper-wrapper {
                 display: table;
                 width: 200%;
@@ -451,7 +492,9 @@ body {
         &.second {
             grid-row: 2 / 3;
             background-color: $colorGrayF3;
-
+            @include tablets() {
+                grid-row: auto;
+            }
             > .swiper-container {
                 .swiper-wrapper {
                     width: 300%;
@@ -544,6 +587,9 @@ body {
 
         &.third {
             grid-row: 3 / 4;
+            @include tablets() {
+                grid-row: auto;
+            }
             .swiper-wrapper {
                 .swiper-slide {
                     display: flex;

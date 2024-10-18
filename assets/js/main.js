@@ -18,7 +18,7 @@ links.forEach((link) => {
     });
 });
 
-// tooltip;
+// tooltip
 const innerTop = document.querySelector('.inner-top');
 const tooltip = document.querySelector('.info_banner');
 

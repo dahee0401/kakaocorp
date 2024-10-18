@@ -71,7 +71,7 @@
                 <div class="cont-home__item visual">
                     <div class="visual-wrpper">
                         <div class="inner-top">
-                            <a href="#none">
+                            <a href="#none" class="tooltip">
                                 <span aria-hidden="true" class="info_banner">카카오 소식 모아보기</span>
                                 <img src="./assets/img/bulb.gif" alt="소식" />
                             </a>
@@ -206,6 +206,7 @@
         </div>
 
         <script>
+            // swiper
             const firstSwiper = new Swiper('.swiper1', {
                 slidesPerView: 1,
                 loop: true,
@@ -235,6 +236,7 @@
             const thirdSwiper = new Swiper('.swiper3', {
                 slidesPerView: 1,
                 loop: true,
+                autoplay: true,
                 effect: 'fade',
                 fadeEffect: {
                     crossFade: true,
