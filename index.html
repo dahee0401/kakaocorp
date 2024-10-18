@@ -21,7 +21,6 @@
 
         <!-- swiper -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     </head>
     <body>
         <div id="main">
@@ -133,8 +132,9 @@
                             <a class="swiper-slide slide2" href="#none"></a>
                         </div>
 
-                        <!-- Pagination -->
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-pagination1"></div>
+                        <div class="swiper-commons-button swiper-button-prev"></div>
+                        <div class="swiper-commons-button swiper-button-next"></div>
                     </div>
                 </div>
                 <div class="cont-home__item widget second">
@@ -142,10 +142,7 @@
                         <div class="swiper-wrapper">
                             <a class="swiper-slide" href="#none">
                                 <span class="badge type2">다양성의 가치</span>
-                                <strong
-                                    >2023 <br />
-                                    카카오 다양성 보고서
-                                </strong>
+                                <strong>2023 <br />카카오 다양성 보고서</strong>
                                 <ul class="tag-container">
                                     <li class="tag">#다양성</li>
                                     <li class="tag">#건강한디지털</li>
@@ -153,10 +150,7 @@
                             </a>
                             <a class="swiper-slide" href="#none">
                                 <span class="badge">디지털 격차 줄이기</span>
-                                <strong
-                                    >어른신을 위한 <br />
-                                    개인정보보호 안내
-                                </strong>
+                                <strong>어른신을 위한 <br />개인정보보호 안내</strong>
                                 <ul class="tag-container">
                                     <li class="tag">#기술복지</li>
                                     <li class="tag">#피싱범죄예방</li>
@@ -164,10 +158,7 @@
                             </a>
                             <a class="swiper-slide" href="#none">
                                 <span class="badge">카톡설명서</span>
-                                <strong
-                                    >모두의 카톡을 <br />
-                                    더 가깝고 안전하게
-                                </strong>
+                                <strong>모두의 카톡을 <br />더 가깝고 안전하게</strong>
                                 <ul class="tag-container">
                                     <li class="tag">#업데이트소식</li>
                                     <li class="tag">#톡활용팁</li>
@@ -176,7 +167,8 @@
                         </div>
 
                         <!-- Pagination -->
-                        <div class="swiper-pagination"></div>
+                        <div class="swiper-pagination swiper-pagination2"></div>
+                        <!-- 두 번째 swiper의 pagination -->
                     </div>
                 </div>
                 <div class="cont-home__item widget third">
@@ -204,7 +196,7 @@
             <section class="cont-main cont__wrapper"></section>
             <footer></footer>
         </div>
-
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
             // swiper
             const firstSwiper = new Swiper('.swiper1', {
@@ -215,8 +207,28 @@
                     crossFade: true,
                 },
                 pagination: {
-                    el: '.swiper-pagination',
+                    el: '.swiper-pagination1', // 첫 번째 swiper의 pagination
                     clickable: true,
+                    type: 'bullets', // 기본값으로는 bullets로 설정
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                breakpoints: {
+                    767: {
+                        // 767px 이하에서 적용
+                        pagination: {
+                            el: '.swiper-pagination1',
+                            clickable: true,
+                            type: 'fraction', // 숫자형 pagination
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                            hideOnClick: false, // 모바일에서 네비게이션 버튼을 항상 표시
+                        },
+                    },
                 },
             });
 
@@ -228,7 +240,7 @@
                     crossFade: true,
                 },
                 pagination: {
-                    el: '.swiper-pagination',
+                    el: '.swiper-pagination2', // 두 번째 swiper의 pagination
                     clickable: true,
                 },
             });
@@ -247,6 +259,5 @@
                 },
             });
         </script>
-        <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
     </body>
 </html>
