@@ -19,11 +19,15 @@
     }
 }
 
+// 메인타이틀
 .cont-main_title {
     position: relative;
     font-size: 2.71vw;
-    // line-height: 7.8rem;
     letter-spacing: -1px;
+    word-break: keep-all;
+    @include mobile() {
+        font-size: 2.6rem;
+    }
     &::before {
         content: '';
         display: inline-block;
@@ -32,23 +36,39 @@
         height: 7.8rem;
         margin-right: 0.384em;
         background-size: 100%;
-        background-image: url(/assets/img/ico_archives.gif);
+        @include mobile() {
+            display: none;
+        }
     }
-    // @include bdesktop() {
-    //     font-size: 4.8rem;
-    //     line-height: 7.2rem;
-    // }
-    // @include desktop() {
-    //     font-size: 3.2rem;
-    //     line-height: 4.8rem;
-    // }
 
-    @include mobile() {
-        font-size: 3.48vw;
+    &.type-story {
+        &::before {
+            background-image: url(/assets/img/ico_tit_archives.gif);
+        }
+    }
+    &.type-service {
+        &::before {
+            background-image: url(/assets/img/ico_tit_service.gif);
+        }
+    }
+    &.type-news {
+        &::before {
+            background-image: url(/assets/img/ico_tit_date.gif);
+        }
+    }
+    &.type-promise {
+        &::before {
+            background-image: url(/assets/img/ico_tit_esg.gif);
+        }
+    }
+    &.type-help {
+        &::before {
+            background-image: url(/assets/img/ico_tit_help.gif);
+        }
     }
 }
 
 .swiper-slide {
     overflow: hidden;
-    border-radius: 24px;
+    border-radius: $borderWidget;
 }
