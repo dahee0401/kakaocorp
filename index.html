@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" /> -->
         <title>카카오 리뉴얼 페이지</title>
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="dahee0401.github.io/kakaocorp" />
@@ -12,6 +13,7 @@
         <meta property="og:image" content="" />
         <meta name="twitter:image" content="" />
         <link rel="stylesheet" href="/assets/css/style.css" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <!-- gsap -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
@@ -132,7 +134,7 @@
                             <a class="swiper-slide slide2" href="#none"></a>
                         </div>
 
-                        <div class="swiper-pagination1"></div>
+                        <div class="swiper-pagination swiper-pagination2"></div>
                         <div class="swiper-commons-button swiper-button-prev"></div>
                         <div class="swiper-commons-button swiper-button-next"></div>
                     </div>
@@ -174,11 +176,13 @@
                 <div class="cont-home__item widget third">
                     <div class="swiper-container swiper3">
                         <div class="swiper-wrapper">
-                            <a class="swiper-slide" href="#none">
+                            <a class="swiper-slide" href="#none" style="background-color: #fae100">
                                 <img src="./assets/img/kakao-group.webp" alt="" />
                                 <span>카카오그룹</span></a
                             >
-                            <a class="swiper-slide history" href="#none"><span>연혁</span></a>
+                            <a class="swiper-slide history" href="#none" style="background-color: rgba(0, 0, 0, 0.2)"
+                                ><span>연혁</span></a
+                            >
                         </div>
 
                         <!-- 버튼 추가 -->
@@ -198,65 +202,98 @@
         </div>
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
-            // swiper
-            const firstSwiper = new Swiper('.swiper1', {
-                slidesPerView: 1,
-                loop: true,
-                effect: 'fade',
-                fadeEffect: {
-                    crossFade: true,
-                },
-                pagination: {
-                    el: '.swiper-pagination1', // 첫 번째 swiper의 pagination
-                    clickable: true,
-                    type: 'bullets', // 기본값으로는 bullets로 설정
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                breakpoints: {
-                    767: {
-                        // 767px 이하에서 적용
-                        pagination: {
-                            el: '.swiper-pagination1',
-                            clickable: true,
-                            type: 'fraction', // 숫자형 pagination
-                        },
-                        navigation: {
-                            nextEl: '.swiper-button-next',
-                            prevEl: '.swiper-button-prev',
-                            hideOnClick: false, // 모바일에서 네비게이션 버튼을 항상 표시
-                        },
+            var ww = $(window).width();
+            var mySwiper1, mySwiper2, mySwiper3;
+
+            function initSwiper1() {
+                if (mySwiper1) {
+                    mySwiper1.destroy();
+                }
+
+                mySwiper1 = new Swiper('.swiper1', {
+                    slidesPerView: 1,
+                    loop: true,
+                    effect: 'fade',
+                    fadeEffect: {
+                        crossFade: true,
                     },
-                },
-            });
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
 
-            const secondSwiper = new Swiper('.swiper2', {
-                slidesPerView: 1,
-                loop: true,
-                effect: 'fade',
-                fadeEffect: {
-                    crossFade: true,
-                },
-                pagination: {
-                    el: '.swiper-pagination2', // 두 번째 swiper의 pagination
-                    clickable: true,
-                },
-            });
+                updatePaginationType(mySwiper1, '.swiper-pagination');
+            }
 
-            const thirdSwiper = new Swiper('.swiper3', {
-                slidesPerView: 1,
-                loop: true,
-                autoplay: true,
-                effect: 'fade',
-                fadeEffect: {
-                    crossFade: true,
-                },
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
+            function initSwiper2() {
+                if (mySwiper2) {
+                    mySwiper2.destroy();
+                }
+
+                mySwiper2 = new Swiper('.swiper2', {
+                    slidesPerView: 1,
+                    loop: true,
+                    effect: 'fade',
+                    fadeEffect: {
+                        crossFade: true,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination2',
+                        clickable: true,
+                    },
+                });
+            }
+
+            function initSwiper3() {
+                if (mySwiper3) {
+                    mySwiper3.destroy();
+                }
+
+                mySwiper3 = new Swiper('.swiper3', {
+                    slidesPerView: 1,
+                    loop: true,
+                    autoplay: true,
+                    effect: 'fade',
+                    fadeEffect: {
+                        crossFade: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            }
+
+            function updatePaginationType(swiper, paginationSelector) {
+                if (ww < 768) {
+                    swiper.params.pagination.type = 'fraction'; // 768px 이하
+                } else {
+                    swiper.params.pagination.type = 'bullets'; // 768px 이상
+                }
+
+                if (swiper.pagination) {
+                    swiper.pagination.destroy(); // 기존 페이지네이션 제거
+                    swiper.pagination.init(); // 페이지네이션 재초기화
+                    swiper.pagination.render(); // 페이지네이션 다시 렌더링
+                }
+
+                swiper.update(); //swiper 업데이트
+            }
+
+            // 초기 Swiper 설정
+            initSwiper1();
+            initSwiper2();
+            initSwiper3();
+
+            // 리사이즈 이벤트에 따른 Swiper 재설정 및 페이지네이션 타입 변경
+            $(window).on('resize', function () {
+                ww = $(window).width();
+                updatePaginationType(mySwiper1, '.swiper-pagination'); // 첫 번째 Swiper
             });
         </script>
     </body>
