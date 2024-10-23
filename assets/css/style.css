@@ -92,12 +92,34 @@ table {
   border-spacing: 0;
 }
 
-ul {
+ul,
+ol {
   list-style: none;
 }
 
 fieldset {
   border: 0;
+}
+
+.sr-only {
+  display: block;
+  text-indent: -9999px;
+  width: 0;
+  height: 0;
+}
+
+section:not(.cont-home) {
+  margin-top: 20rem;
+}
+@media (max-width: 1902px) {
+  section:not(.cont-home) {
+    margin-top: 12rem;
+  }
+}
+@media (max-width: 1439px) {
+  section:not(.cont-home) {
+    margin-top: 8rem;
+  }
 }
 
 .cont__wrapper {
@@ -127,50 +149,68 @@ fieldset {
   }
 }
 
-.cont-main_title {
+.cont__title {
   position: relative;
   font-size: 2.71vw;
   letter-spacing: -1px;
   word-break: keep-all;
 }
 @media (max-width: 767px) {
-  .cont-main_title {
+  .cont__title {
     font-size: 2.6rem;
   }
 }
-.cont-main_title::before {
+.cont__title::before {
   content: "";
   display: inline-block;
   vertical-align: middle;
-  width: 7.8rem;
-  height: 7.8rem;
+  width: 4.06vw;
+  height: 4.06vw;
   margin-right: 0.384em;
   background-size: 100%;
 }
 @media (max-width: 767px) {
-  .cont-main_title::before {
+  .cont__title::before {
     display: none;
   }
 }
-.cont-main_title.type-story::before {
+.cont__title.type-story::before {
   background-image: url(/assets/img/ico_tit_archives.gif);
 }
-.cont-main_title.type-service::before {
+.cont__title.type-service::before {
   background-image: url(/assets/img/ico_tit_service.gif);
 }
-.cont-main_title.type-news::before {
+.cont__title.type-news::before {
   background-image: url(/assets/img/ico_tit_date.gif);
 }
-.cont-main_title.type-promise::before {
+.cont__title.type-promise::before {
   background-image: url(/assets/img/ico_tit_esg.gif);
 }
-.cont-main_title.type-help::before {
+.cont__title.type-help::before {
   background-image: url(/assets/img/ico_tit_help.gif);
 }
 
 .swiper-slide {
   overflow: hidden;
   border-radius: 2.4rem;
+}
+
+.wrap_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16.458vw;
+  height: 7.6rem;
+  margin: 3.6rem auto 0;
+  font-size: 2.2rem;
+  background-color: #f3f3f3;
+  border-radius: 3.8rem;
+}
+.wrap_btn span {
+  display: block;
+  width: 1.09em;
+  height: 1.09em;
+  margin-left: 0.545em;
 }
 
 .header {
@@ -1101,16 +1141,54 @@ body {
   z-index: 10;
 }
 
-.cont-main {
-  margin-top: 20rem;
+.cont-service__container {
+  margin-top: 4.3rem;
 }
-@media (max-width: 1902px) {
-  .cont-main {
-    margin-top: 12rem;
-  }
+.cont-service__container > .cont-service__list {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(3, 18rem);
+  gap: 16px;
 }
-@media (max-width: 1439px) {
-  .cont-main {
-    margin-top: 8rem;
-  }
+.cont-service__container > .cont-service__list > .cont-service__list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.07em;
+  font-size: 1.56vw;
+  background-color: #f3f3f3;
+  border-radius: 2.4rem;
+}
+.cont-service__container > .cont-service__list > .cont-service__list-item strong {
+  letter-spacing: -0.8px;
+  font-weight: 600;
+}
+.cont-service__container > .cont-service__list > .cont-service__list-item .item__services {
+  display: flex;
+  gap: 1.2rem;
+}
+.cont-service__container > .cont-service__list > .cont-service__list-item .item__services > .service {
+  display: block;
+  width: 1.87em;
+  height: 1.87em;
+  border-radius: 1.2rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.cont-service__container > .cont-service__list > .cont-service__list-item .item__services > .service.kakao {
+  background-image: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/cc08d9e2018e00001.png);
+}
+.cont-service__container > .cont-service__list > .cont-service__list-item .item__services > .service.daum {
+  background-image: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9425290018c00001.png);
+}
+.cont-service__container > .cont-service__list > .cont-service__list-item .item__services > .service.story {
+  background-image: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c942653a018c00001.png);
+}
+.cont-service__container > .cont-service__list > .cont-service__list-item .item__services > .service.link {
+  background-image: url();
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.cont-service__container > .cont-service__list > .cont-service__list-item .item__services > .service.link:hover {
+  background-color: rgba(0, 0, 0, 0.9);
 }
