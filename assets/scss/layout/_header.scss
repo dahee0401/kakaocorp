@@ -6,6 +6,7 @@
     background-color: $colorWhite;
     margin: 0 auto;
     z-index: 100;
+    border: 1px solid $colorWhite;
     &.active {
         border: 1px solid $colorGray1;
         z-index: 200;

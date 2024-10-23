@@ -50,6 +50,7 @@
   padding: 0;
   font: inherit;
   color: inherit;
+  box-sizing: border-box;
 }
 
 *,
@@ -221,6 +222,7 @@ section:not(.cont-home) {
   background-color: #fff;
   margin: 0 auto;
   z-index: 100;
+  border: 1px solid #fff;
 }
 .header.active {
   border: 1px solid #eee;
