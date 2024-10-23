@@ -148,6 +148,11 @@ fieldset {
   }
 }
 
+.swiper-slide {
+  overflow: hidden;
+  border-radius: 24px;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -342,7 +347,7 @@ body {
 }
 @media (max-width: 767px) {
   .cont-home .visual {
-    margin-bottom: 7rem;
+    margin-bottom: 3rem;
   }
 }
 .cont-home .visual .visual-wrpper {
@@ -549,7 +554,7 @@ body {
 }
 @media (max-width: 767px) {
   .cont-home .visual .visual-wrpper .inner-cont {
-    height: 29.9rem;
+    height: 24.9rem;
   }
 }
 .cont-home .visual .visual-wrpper .inner-bottom {
@@ -681,7 +686,6 @@ body {
 }
 .cont-home .widget {
   overflow: hidden;
-  border-radius: 2.4rem;
 }
 @media (max-width: 1439px) {
   .cont-home .widget {
@@ -696,7 +700,6 @@ body {
 @media (max-width: 767px) {
   .cont-home .widget {
     grid-row: auto;
-    height: 22rem;
   }
 }
 .cont-home .widget > .swiper-container {
@@ -760,11 +763,15 @@ body {
 }
 .cont-home .widget.first {
   grid-row: 1/2;
-  background-color: #fae100;
 }
 @media (max-width: 1023px) {
   .cont-home .widget.first {
     grid-row: auto;
+  }
+}
+@media (max-width: 767px) {
+  .cont-home .widget.first .swiper-container {
+    padding-top: 4.2rem;
   }
 }
 .cont-home .widget.first .swiper-wrapper {
@@ -772,9 +779,18 @@ body {
   width: 200%;
 }
 .cont-home .widget.first .swiper-wrapper .swiper-slide {
-  text-align: center;
   display: table-cell;
+  text-align: center;
   vertical-align: middle;
+  background-color: #fae100;
+}
+@media (max-width: 767px) {
+  .cont-home .widget.first .swiper-wrapper .swiper-slide {
+    height: 22rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .cont-home .widget.first .swiper-wrapper .swiper-slide h2 {
   font-size: 1.7rem;
@@ -836,17 +852,41 @@ body {
   background-position: center center;
   background-size: cover;
 }
+@media (max-width: 767px) {
+  .cont-home .widget.first .swiper-pagination {
+    top: 0;
+    left: 8.4rem;
+    height: 3.2rem;
+    margin-left: 1rem;
+  }
+}
+.cont-home .widget.first .swiper-pagination span {
+  font-size: 1.2rem;
+  color: #888;
+  display: inline-block;
+  padding: 0 3px;
+}
 .cont-home .widget.first .swiper-commons-button {
   display: none;
 }
 @media (max-width: 767px) {
   .cont-home .widget.first .swiper-commons-button {
     display: block;
+    width: 3.2rem;
+    height: 3.2rem;
+    top: 1rem;
   }
+}
+.cont-home .widget.first .swiper-commons-button.swiper-button-prev {
+  left: 0;
+  background-image: url(/assets/img/prev_m_ico.svg);
+}
+.cont-home .widget.first .swiper-commons-button.swiper-button-next {
+  left: 3.8rem;
+  background-image: url(/assets/img/next_m_ico.svg);
 }
 .cont-home .widget.second {
   grid-row: 2/3;
-  background-color: #f3f3f3;
 }
 @media (max-width: 1023px) {
   .cont-home .widget.second {
@@ -863,6 +903,7 @@ body {
 }
 .cont-home .widget.second > .swiper-container .swiper-wrapper .swiper-slide {
   padding: 2rem;
+  background-color: #f3f3f3;
 }
 @media (max-width: 1439px) {
   .cont-home .widget.second > .swiper-container .swiper-wrapper .swiper-slide {
@@ -915,6 +956,11 @@ body {
 @media (max-width: 1439px) {
   .cont-home .widget.second > .swiper-container .swiper-wrapper .swiper-slide strong {
     font-size: 1.4rem;
+  }
+}
+@media (max-width: 767px) {
+  .cont-home .widget.second > .swiper-container .swiper-wrapper .swiper-slide strong {
+    font-size: 1.6rem;
   }
 }
 .cont-home .widget.second > .swiper-container .swiper-wrapper .swiper-slide .tag-container {
@@ -970,20 +1016,25 @@ body {
   align-items: center;
   flex-direction: column;
 }
-.cont-home .widget.third .swiper-wrapper .swiper-slide img {
+@media (max-width: 767px) {
+  .cont-home .widget.third .swiper-wrapper .swiper-slide {
+    height: 22rem;
+  }
+}
+.cont-home .widget.third .swiper-wrapper .swiper-slide b img {
   display: block !important;
   margin-bottom: 4px;
   width: 8rem;
   height: 8rem;
 }
 @media screen and (max-width: 1902px) {
-  .cont-home .widget.third .swiper-wrapper .swiper-slide img {
+  .cont-home .widget.third .swiper-wrapper .swiper-slide b img {
     width: 4rem;
     height: 4rem;
   }
 }
 @media (max-width: 767px) {
-  .cont-home .widget.third .swiper-wrapper .swiper-slide img {
+  .cont-home .widget.third .swiper-wrapper .swiper-slide b img {
     width: 8rem;
     height: 8rem;
   }
