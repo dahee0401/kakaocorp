@@ -34,7 +34,7 @@ section:not(.cont-home) {
         max-width: 71.2rem;
     }
     @include mobile() {
-        max-width: 41.2rem;
+        max-width: 38.4rem;
     }
 }
 
@@ -99,17 +99,44 @@ section:not(.cont-home) {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 16.458vw;
+    width: 31.6rem;
     height: 7.6rem;
     margin: 3.6rem auto 0;
     font-size: 2.2rem;
     background-color: $colorGrayF3;
     border-radius: 3.8rem;
+    transition: all ease 0.3s;
+
+    @include desktop() {
+        width: 28rem;
+        height: 6rem;
+        font-size: 1.5rem;
+    }
+    @include tablets() {
+        margin-top: 2.4rem;
+    }
+    @include mobile() {
+        width: 100%;
+        height: 4.8rem;
+        border-radius: 2.4rem;
+        margin-top: 1.2rem;
+    }
+
+    &:hover {
+        box-shadow: $btnShadow;
+    }
 
     span {
         display: block;
-        width: 1.09em;
-        height: 1.09em;
-        margin-left: 0.545em;
+        width: 2.4rem;
+        height: 2.4rem;
+        margin-left: 1.2rem;
+    }
+}
+.cont-commons {
+    margin-top: 4.3rem;
+
+    @include desktop() {
+        margin-top: 2.4rem;
     }
 }
