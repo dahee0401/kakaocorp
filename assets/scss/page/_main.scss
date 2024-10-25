@@ -261,8 +261,8 @@ body {
 
                 @include mobile() {
                     width: 100%;
-                    border-radius: 3.6rem;
-                    background-color: $colorGrayF3;
+
+                    border-radius: 0;
                     padding: 0;
                     position: static;
                     margin-top: 1rem;
@@ -318,9 +318,18 @@ body {
                     line-height: 2.9em;
                     font-size: 2.2rem;
                     letter-spacing: -0.6px;
+                    transition: $btnHover;
+
                     @include mobile() {
                         justify-content: center;
                         height: 4.8rem;
+                        border-radius: 3.6rem;
+                        background-color: $colorGrayF3;
+                    }
+                    &:hover {
+                        @include mobile() {
+                            box-shadow: $btnShadow;
+                        }
                     }
                     span {
                         display: flex;
@@ -800,6 +809,46 @@ body {
                 &.story {
                     background-image: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c942653a018c00001.png);
                 }
+                &.channel {
+                    background-image: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9468d8a018c00001.png);
+                }
+                &.cloud {
+                    background-image: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9469d4a018c00001.png);
+                }
+                &.agit {
+                    background-image: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c946aa55018c00001.png);
+                }
+                &.kakaoMap {
+                    background-image: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c947f606018c00001.png);
+                }
+                &.kakaoT {
+                    background-image: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94804d8018c00001.png);
+                }
+                &.kakaoBank {
+                    background-image: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c9481249018c00001.png);
+                }
+                &.kakaoGift {
+                    background-image: url('https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94a2627018c00001.png');
+                }
+                &.kakaoShop {
+                    background-image: url('https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94a89d4018c00001.png');
+                }
+                &.kakaoZigzag {
+                    background-image: url('https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94a96f9018c00001.png');
+                }
+                &.kakaoPage {
+                    background-image: url('https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94b668f018c00001.png');
+                }
+                &.kakaoPiccoma {
+                    background-image: url('https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94b7687018c00001.png');
+                }
+                &.kakaoMelon {
+                    background-image: url('https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94b83e3018c00001.png');
+                }
+                &.kakaoTogether {
+                    background-image: url('https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/c94c09cc018c00001.png');
+                }
+
                 &.link {
                     background-image: url(/assets/img/ico_more.svg);
                     background-repeat: no-repeat;
@@ -816,6 +865,320 @@ body {
                     display: none;
                 }
             }
+        }
+    }
+}
+
+//promise
+.cont-promise {
+    &__list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.6rem;
+
+        @include desktop() {
+            gap: 1.2rem;
+        }
+        @include tablets() {
+            gap: 0.8rem;
+        }
+        @include mobile() {
+            display: block;
+        }
+        &-item {
+            flex: 1;
+            position: relative;
+            height: 66.9rem;
+            border-radius: $borderWidget;
+
+            @include bdesktop() {
+                height: 55.9rem;
+            }
+            @include desktop() {
+                height: 39.7rem;
+            }
+            @include tablets() {
+                height: 34.1rem;
+            }
+            @include mobile() {
+                margin-top: 1.6rem;
+                height: 29.6rem;
+            }
+            .title_responsible {
+                position: absolute;
+                right: -2px;
+                top: -2px;
+                padding: 0.117em 0.117em 1.062em 1.062em;
+                background-color: $colorWhite;
+                border-radius: 0 0 0 3.6rem;
+                font-size: 1.7rem;
+                @include bdesktop() {
+                    padding: 0.117em 0.117em 0.882em 0.882em;
+                    border-radius: 0 0 0 2.4rem;
+                }
+                @include desktop() {
+                    font-size: 1.4rem;
+                    border-radius: 0 0 0 2rem;
+                }
+                @include mobile() {
+                    padding: 0 0 0.846em 0.846em;
+                    font-size: 1.3rem;
+                }
+
+                .name_reponsible {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 27.2rem;
+                    height: 5.8rem;
+                    margin: 2px 2px 0 0;
+                    text-align: center;
+                    border-radius: 2.9rem;
+                    letter-spacing: -0.5px;
+                    @include bdesktop() {
+                        width: 20.5rem;
+                        height: 5rem;
+                        border-radius: 2.5rem;
+                    }
+                    @include desktop() {
+                        width: 16.8rem;
+                        height: 4rem;
+                        border-radius: 2rem;
+                    }
+                    @include tablets() {
+                        width: 12.5rem;
+                        height: 3.2rem;
+                        border-radius: 1.6rem;
+                    }
+                    @include mobile() {
+                        width: 18.6rem;
+                        height: 4rem;
+                        border-radius: 20px;
+                    }
+                    &.bg-esg {
+                        background-color: $colorSkyBlue;
+                    }
+                    &.bg-green {
+                        background-color: $colorGreen;
+                    }
+                    &.bg-policy {
+                        background-color: $colorPrimary;
+                    }
+                    &::before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 2.6rem;
+                        height: 2.6rem;
+                        left: -2.4rem;
+                        top: 0;
+                        background-size: 100% auto;
+                        background-position: 50%;
+                        background-repeat: no-repeat;
+                        background-image: url(/assets/img/right-top.svg);
+
+                        @include desktop() {
+                            width: 18px;
+                            height: 18px;
+                            left: -16px;
+                        }
+                    }
+                    &::after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 2.6rem;
+                        height: 2.6rem;
+                        right: 0;
+                        bottom: -2.4rem;
+                        background-size: 100% auto;
+                        background-position: 50%;
+                        background-repeat: no-repeat;
+                        background-image: url(/assets/img/right-top.svg);
+                        @include desktop() {
+                            width: 18px;
+                            height: 18px;
+                            bottom: -16px;
+                        }
+                    }
+                }
+            }
+            .img_responsible {
+                display: block;
+                width: 100%;
+                max-width: 32.2rem;
+                // object-fit: cover;
+                position: absolute;
+                top: 16.4rem;
+                left: 50%;
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+                @include bdesktop() {
+                    max-width: 24.4rem;
+                    top: 14.2rem;
+                }
+                @include desktop() {
+                    max-width: 18rem;
+                    top: 10.3rem;
+                }
+                @include tablets() {
+                    min-width: 14rem;
+                    top: 8.3rem;
+                }
+                @include mobile() {
+                    width: auto;
+                    height: 14rem;
+                    top: 50%;
+                    -webkit-transform: translate(-50%, -50%);
+                    transform: translate(-50%, -50%);
+                    margin-top: -5px;
+                }
+            }
+            .text_responsible {
+                position: absolute;
+                bottom: 4rem;
+                left: 4rem;
+                font-size: 2.6rem;
+                line-height: 1.46;
+                letter-spacing: -0.8px;
+                max-width: 34rem;
+                color: $colorWhite;
+                word-break: keep-all;
+                @include bdesktop() {
+                    max-width: 33rem;
+                }
+                @include desktop() {
+                    bottom: 24px;
+                    left: 24px;
+                    font-size: 17px;
+                    line-height: 1.52;
+                    letter-spacing: -0.2px;
+                    max-width: 20.2rem;
+                }
+                @include tablets() {
+                    bottom: 20px;
+                    left: 20px;
+                    font-size: 17px;
+                    line-height: 1.52;
+                    max-width: 14.9rem;
+                }
+                @include mobile() {
+                    bottom: 24px;
+                    left: 24px;
+                    font-size: 16px;
+                    max-width: 25rem;
+                }
+            }
+            .btn_area {
+                position: absolute;
+                right: -2px;
+                bottom: -2px;
+                padding: 16px 0 0 16px;
+                background-color: $colorWhite;
+                border-radius: 36px 0 0 0;
+
+                @include bdesktop() {
+                    padding: 15px 0 0 15px;
+                }
+                @include desktop() {
+                    padding: 12px 0 0 12px;
+                    border-radius: 24px 0 0 0;
+                }
+                @include tablets() {
+                    padding: 9px 0 0 9px;
+                }
+                @include mobile() {
+                    right: 20px;
+                    bottom: 20px;
+                    padding: 0;
+                    background-color: transparent;
+                    border-radius: 0;
+                }
+
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 26px;
+                    height: 26px;
+                    background-size: 100% auto;
+                    background-position: 50%;
+                    background-repeat: no-repeat;
+                    background-image: url(/assets/img/right-bottom.svg);
+                    left: -24px;
+                    bottom: 0;
+                    @include desktop() {
+                        width: 18px;
+                        height: 18px;
+                        left: -16px;
+                    }
+                    @include mobile() {
+                        display: none;
+                    }
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    width: 26px;
+                    height: 26px;
+                    background-size: 100% auto;
+                    background-position: 50%;
+                    background-repeat: no-repeat;
+                    background-image: url(/assets/img/right-bottom.svg);
+                    right: 0;
+                    top: -24px;
+                    @include desktop() {
+                        width: 18px;
+                        height: 18px;
+                        top: -16px;
+                    }
+                    @include mobile() {
+                        display: none;
+                    }
+                }
+                &:hover {
+                    .btn_arr_big {
+                        opacity: 0.7;
+                    }
+                }
+
+                .btn_arr_big {
+                    width: 6.4rem;
+                    height: 100%;
+                    margin: 0 2px 2px 0;
+                    @include bdesktop() {
+                        width: 5.5rem;
+                    }
+                    @include desktop() {
+                        width: 4.8rem;
+                    }
+                    @include mobile() {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+
+        .esg {
+            background-color: $colorSkyBlue;
+
+            .img_responsible {
+                max-width: 55.9rem;
+                @include bdesktop() {
+                    max-width: fit-content;
+                }
+            }
+            .text_responsible {
+                color: $colorBlack;
+            }
+        }
+        .green {
+            background-color: $colorDarkGreen;
+        }
+        .policy {
+            background-color: $colorGray8;
         }
     }
 }

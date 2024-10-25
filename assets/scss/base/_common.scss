@@ -27,7 +27,7 @@ section:not(.cont-home) {
         max-width: 131.6rem;
     }
     @media screen and (max-width: 1439px) {
-        max-width: 95.2rem;
+        max-width: 94.8rem;
     }
     @include tablets() {
         padding: 0;
@@ -105,7 +105,7 @@ section:not(.cont-home) {
     font-size: 2.2rem;
     background-color: $colorGrayF3;
     border-radius: 3.8rem;
-    transition: all ease 0.3s;
+    transition: $btnHover;
 
     @include desktop() {
         width: 28rem;
