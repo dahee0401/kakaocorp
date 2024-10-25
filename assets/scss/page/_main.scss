@@ -745,7 +745,36 @@ body {
 }
 
 // story
+.cont-story {
+    overflow: hidden;
+}
+.cont-story__list {
+    display: flex;
+    width: 100%;
+    white-space: nowrap;
+    animation: slide 150s linear infinite; // 속도 조정 가능
 
+    &-item {
+        display: inline-block; /* 인라인 블록 요소로 설정 */
+        width: 100px; /* 각 슬라이드의 너비 */
+        margin: 0 8px; /* 슬라이드 간 간격 */
+
+        > .item_normal_card {
+            border-radius: 2.4rem;
+            background-color: yellow;
+            height: 100px;
+        }
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* 전체 너비 만큼 이동 */
+    }
+}
 // service
 .cont-service__list {
     display: grid;

@@ -29,3 +29,5 @@ innerTop.addEventListener('mouseenter', () => {
 innerTop.addEventListener('mouseleave', () => {
     tooltip.style.display = 'none';
 });
+
+// 무한 slide
