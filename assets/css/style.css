@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Noto Sans KR";
@@ -208,7 +209,7 @@ section:not(.cont-home) {
   font-size: 2.2rem;
   background-color: #f3f3f3;
   border-radius: 3.8rem;
-  transition: all ease 0.3s;
+  transition: all ease 0.2s;
 }
 @media (max-width: 1439px) {
   .wrap_btn {
@@ -734,7 +735,7 @@ body {
   line-height: 2.9em;
   font-size: 2.2rem;
   letter-spacing: -0.6px;
-  transition: all ease 0.3s;
+  transition: all ease 0.2s;
 }
 @media (max-width: 767px) {
   .cont-home .visual .visual-wrpper .inner-bottom a {
@@ -1526,12 +1527,16 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: 50%;
+  transition: all ease 0.2s;
 }
 @media (max-width: 1439px) {
   .cont-service__list > .cont-service__list-item .item__services > .service {
     width: 4.6rem;
     height: 4.6rem;
   }
+}
+.cont-service__list > .cont-service__list-item .item__services > .service:hover {
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }
 .cont-service__list > .cont-service__list-item .item__services > .service.kakao {
   background-image: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/cc08d9e2018e00001.png);
@@ -1965,4 +1970,16 @@ body {
 }
 .cont-promise__list .policy {
   background-color: #333;
+}
+
+.help-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.6rem;
+}
+.help-grid .col-4 {
+  grid-column: span 2;
+}
+.help-grid .col-6 {
+  grid-column: span 3; /* 6열 차지 */
 }

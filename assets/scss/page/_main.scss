@@ -1045,9 +1045,14 @@ body {
                 background-size: 100%;
                 background-repeat: no-repeat;
                 background-position: 50%;
+                transition: $btnHover;
                 @include desktop() {
                     width: 4.6rem;
                     height: 4.6rem;
+                }
+
+                &:hover {
+                    box-shadow: $serviceShadow;
                 }
 
                 &.kakao {
@@ -1431,4 +1436,46 @@ body {
             background-color: $colorGray8;
         }
     }
+}
+
+// help
+.help-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.6rem;
+
+    .col-4 {
+        grid-column: span 2;
+    }
+    .col-6 {
+        grid-column: span 3; /* 6열 차지 */
+    }
+
+    // .kakao_customer {
+    //     grid-area: kakao_customer;
+    // }
+
+    // .daum_customer {
+    //     grid-area: daum_customer;
+    // }
+
+    // .commerce_customer {
+    //     grid-area: commerce_customer;
+    // }
+
+    // .kakao_subscribe {
+    //     grid-area: kakao_subscribe;
+    // }
+
+    // .kakao_crew {
+    //     grid-area: kakao_crew;
+    // }
+
+    // .invest_info {
+    //     grid-area: invest_info;
+    // }
+
+    // .data_info {
+    //     grid-area: data_info;
+    // }
 }
