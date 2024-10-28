@@ -747,34 +747,255 @@ body {
 // story
 .cont-story {
     overflow: hidden;
+    .type-story {
+        display: flex;
+        align-items: center;
+        .btn_story {
+            // display: inline-block;
+            width: 5.6rem;
+            height: 5.6rem;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            margin-left: auto;
+            margin-right: 0;
+            @include desktop() {
+                width: 3.2rem;
+                height: 3.2rem;
+            }
+            @include mobile() {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+
+            &.pause {
+                background-image: url(/assets/img/ico_pause.svg);
+            }
+            &.play {
+                background-image: url(/assets/img/ico_play.svg);
+            }
+        }
+    }
 }
 .cont-story__list {
     display: flex;
-    width: 100%;
     white-space: nowrap;
-    animation: slide 150s linear infinite; // 속도 조정 가능
+    gap: 1.6rem;
 
+    @include desktop() {
+        gap: 1.2rem;
+    }
     &-item {
-        display: inline-block; /* 인라인 블록 요소로 설정 */
-        width: 100px; /* 각 슬라이드의 너비 */
-        margin: 0 8px; /* 슬라이드 간 간격 */
-
         > .item_normal_card {
             border-radius: 2.4rem;
-            background-color: yellow;
-            height: 100px;
+            background-color: $colorGrayF3;
+            // width: 100%;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            overflow: hidden;
+            box-sizing: border-box;
+            height: 100%;
+
+            @include tablets() {
+                border-radius: 1.6rem;
+            }
+
+            > .wrap_cont {
+                display: flex;
+                justify-content: space-between;
+                height: 53.7rem;
+
+                @include bdesktop() {
+                    height: 43.9rem;
+                }
+                @include desktop() {
+                    height: 36.5rem;
+                }
+                @include tablets() {
+                    height: 32.8rem;
+                }
+
+                > .wrap_text {
+                    display: flex;
+                    flex-direction: column;
+                    width: 41.6rem;
+                    padding: 4rem;
+                    @include bdesktop() {
+                        width: 33.2rem;
+                        padding: 3rem;
+                    }
+                    @include desktop() {
+                        width: 100%;
+                        padding: 2.4rem;
+                    }
+                    @include tablets() {
+                        padding: 2rem;
+                    }
+                    .info_cate {
+                        display: flex;
+                        justify-content: space-between;
+                        .info_cate__tit {
+                            display: flex;
+                            align-items: center;
+                            img {
+                                display: block;
+                                width: 3.2rem;
+                                height: 3.2rem;
+                                margin-right: 8px;
+                            }
+                            .text_cate {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                position: relative;
+                                height: 3.2rem;
+                                padding: 0 12px;
+                                border-radius: 8px;
+                                background-color: $colorWhite;
+                                font-size: 1.4rem;
+                                letter-spacing: -0.2px;
+
+                                @include desktop() {
+                                    font-size: 1.2rem;
+                                    height: 2.6rem;
+                                }
+                            }
+                        }
+                        .share_btn {
+                            width: 2.4rem;
+                            height: 2.4rem;
+                        }
+                    }
+                    > .tit_card {
+                        display: block;
+                        font-weight: 600;
+                        margin-top: 1.6rem;
+                        font-size: 2.6rem;
+                        letter-spacing: -0.8px;
+                        -webkit-line-clamp: 3;
+                        @include desktop() {
+                            font-size: 1.8rem;
+                            -webkit-line-clamp: 2;
+                        }
+                    }
+                    > .desc_card {
+                        margin-top: 1.2rem;
+                        font-size: 1.6rem;
+                        -webkit-line-clamp: 7;
+                        color: $colorGray10;
+
+                        @include desktop() {
+                            display: none;
+                        }
+                    }
+                    .info_card {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 0.8rem;
+                        font-size: 1.6rem;
+                        color: $colorGray10;
+                        margin-top: auto;
+                        @include desktop() {
+                            font-size: 1.3rem;
+                        }
+
+                        .removed {
+                            display: block;
+                            @include desktop() {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+                > .wrap_thumb {
+                    height: 100%;
+                    // flex: 1;
+                }
+            }
+        }
+
+        // wide type 슬라이드
+        &.type_wide {
+            width: 137rem;
+
+            @include bdesktop() {
+                width: 111rem;
+            }
+            > .wrap_text {
+                width: 41.6rem;
+                @include bdesktop() {
+                    // width: 33.2rem;
+                }
+            }
+        }
+
+        &.type_normal {
+            width: 41.6rem;
+            @include bdesktop() {
+                width: 31.7rem;
+            }
+
+            @include desktop() {
+                width: 30.8rem;
+            }
+            @include tablets() {
+                width: 23.2rem;
+            }
+            @include mobile() {
+                width: 25.2rem;
+            }
+            .wrap_cont {
+                flex-direction: column;
+
+                &.reverse {
+                    flex-direction: column-reverse;
+                    @include tablets() {
+                        flex-direction: column;
+                    }
+                }
+                .wrap_text {
+                    height: calc(100% - 23.4rem);
+
+                    @include bdesktop() {
+                        height: calc(100% - 17.9rem);
+                    }
+                    @include desktop() {
+                        height: calc(100% - 17.4rem);
+                    }
+                    @include tablets() {
+                        height: calc(100% - 13rem);
+                    }
+                    @include mobile() {
+                        height: auto;
+                    }
+                }
+                .wrap_thumb {
+                    height: auto;
+                    img {
+                        width: 100%;
+                        height: 23.4rem;
+                        @include bdesktop() {
+                            height: 17.9rem;
+                        }
+                        @include desktop() {
+                            height: 17.4rem;
+                        }
+                        @include tablets() {
+                            height: 13rem;
+                        }
+                        @include mobile() {
+                            height: auto;
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
-@keyframes slide {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-100%); /* 전체 너비 만큼 이동 */
-    }
-}
 // service
 .cont-service__list {
     display: grid;
