@@ -1278,7 +1278,7 @@ body {
                     top: 10.3rem;
                 }
                 @include tablets() {
-                    min-width: 14rem;
+                    max-width: 14rem;
                     top: 8.3rem;
                 }
                 @include mobile() {
@@ -1312,11 +1312,9 @@ body {
                     max-width: 20.2rem;
                 }
                 @include tablets() {
-                    bottom: 20px;
-                    left: 20px;
-                    font-size: 17px;
-                    line-height: 1.52;
-                    max-width: 14.9rem;
+                    bottom: 15px;
+                    left: 15px;
+                    max-width: 15.9rem;
                 }
                 @include mobile() {
                     bottom: 24px;
@@ -1442,40 +1440,277 @@ body {
 .help-grid {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, auto);
     gap: 1.6rem;
+    @include tablets() {
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 0.8rem;
+    }
+    @include mobile() {
+        gap: 1.6rem;
+    }
+    //회색박스 공통
+    .commons {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $colorGrayF3;
+        transition: $btnHover;
+        .commons_content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            // width: 100%;
+            height: 100%;
 
+            @include tablets() {
+                flex-direction: row;
+            }
+            @include tablets() {
+                flex-direction: column;
+            }
+
+            br {
+                display: none;
+                @include tablets() {
+                    display: block;
+                }
+            }
+            .common_name {
+                font-size: 2.6rem;
+                letter-spacing: -0.6px;
+
+                @include desktop() {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+        .icon_help {
+            width: 8.4rem;
+            height: auto;
+
+            @include desktop() {
+                width: 6rem;
+            }
+            @include tablets() {
+                display: none;
+            }
+        }
+
+        &:hover {
+            box-shadow: $btnShadow;
+        }
+    }
+    .common_gosite {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        font-size: 1.7rem;
+        letter-spacing: -0.5px;
+        @include desktop() {
+            font-size: 1.4rem;
+        }
+
+        &:hover {
+            svg {
+                opacity: 0.7;
+            }
+        }
+
+        &.direct {
+            @include tablets() {
+                text-indent: -9999px;
+            }
+        }
+    }
+    [class*='col-'] {
+        > * {
+            height: 100%;
+            border-radius: 2rem;
+            padding: 3.85rem 4rem;
+
+            @include bdesktop() {
+                padding: 3.45rem 4rem;
+            }
+            @include desktop() {
+                padding: 2.4rem;
+            }
+            @include mobile() {
+                padding: 1.6rem;
+            }
+        }
+        .center {
+            @include mobile() {
+                height: 12.8rem;
+            }
+        }
+    }
     .col-4 {
         grid-column: span 2;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 1.6rem;
+
+        @include tablets() {
+            gap: 0.8rem;
+            grid-column: span 3;
+        }
+        @include mobile() {
+            grid-column: span 6;
+            gap: 1.6rem;
+        }
+        &.center_wrapper {
+            display: grid;
+            // gap: 1.6rem;
+            @include tablets() {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: repeat(1, auto);
+                grid-column: span 6;
+            }
+        }
+
+        .kakao_subscribe {
+            background-image: url(/assets/img/img_ryan.png);
+            background-repeat: no-repeat;
+            background-size: 264px auto;
+            background-position: bottom;
+            background-color: $colorPrimary;
+
+            @include tablets() {
+                background-image: none;
+            }
+
+            .sns_lists {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 4rem;
+
+                @include tablets() {
+                    margin-top: 2.4rem;
+                }
+
+                &__item {
+                    transition: $btnHover;
+                    &:hover {
+                        a {
+                            opacity: 0.8;
+                        }
+                    }
+                    a {
+                        display: block;
+                        width: 8rem;
+                        height: 8rem;
+                        background-position: 50%;
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+
+                        @include bdesktop() {
+                            width: 6rem;
+                            height: 6rem;
+                        }
+
+                        @include desktop() {
+                            width: 4.6rem;
+                            height: 4.6rem;
+                        }
+
+                        @include tablets() {
+                            width: 5.6em;
+                            height: 5.6rem;
+                        }
+
+                        &.kakao {
+                            background-image: url(/assets/img/icon_ch.png);
+                        }
+                        &.youtube {
+                            background-image: url(/assets/img/icon_yt.png);
+                        }
+                        &.insta {
+                            background-image: url(/assets/img/icon_insta.png);
+                        }
+                        &.facebook {
+                            background-image: url(/assets/img/icon_fb.png);
+                        }
+                        &.linked {
+                            background-image: url(/assets/img/icon_li.png);
+                        }
+                    }
+                }
+            }
+        }
+        .kakao_crew {
+            color: $colorWhite;
+            background-image: url(/assets/img/img_recruit.png);
+            background-position: 0 100%;
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            background-color: $colorAccent;
+
+            @include tablets() {
+                background-position: right 16px bottom 16px;
+                background-size: 15.4rem 6.8rem;
+                background-image: url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/main/img_recruit_mo.png);
+            }
+            @include mobile() {
+                height: 18.4rem;
+            }
+        }
+        > [class*='kakao_'] {
+            p {
+                margin-bottom: 2.4rem;
+                font-size: 2.6rem;
+                letter-spacing: -0.6px;
+                font-weight: 600;
+                @include bdesktop() {
+                    margin-bottom: 1.2rem;
+                }
+                @include desktop() {
+                    font-size: 1.7rem;
+                }
+                @include tablets() {
+                    font-size: 1.8rem;
+                }
+                @include mobile() {
+                    font-size: 1.5rem;
+                    margin-bottom: 0.8rem;
+                }
+            }
+            span {
+                font-size: 1.7rem;
+                letter-spacing: -0.5px;
+                @include desktop() {
+                    font-size: 1.4rem;
+                }
+            }
+        }
     }
     .col-6 {
-        grid-column: span 3; /* 6열 차지 */
+        grid-column: span 3;
+
+        @include mobile() {
+            height: auto;
+            grid-column: span 6;
+        }
+        > a {
+            .commons_content {
+                // justify-content: flex-start;
+                @include tablets() {
+                    width: auto;
+                    flex-direction: column;
+                }
+
+                .common_gosite {
+                    @include mobile() {
+                        text-indent: -9999px;
+                    }
+                }
+            }
+
+            .icon_help {
+                display: block;
+            }
+        }
     }
-
-    // .kakao_customer {
-    //     grid-area: kakao_customer;
-    // }
-
-    // .daum_customer {
-    //     grid-area: daum_customer;
-    // }
-
-    // .commerce_customer {
-    //     grid-area: commerce_customer;
-    // }
-
-    // .kakao_subscribe {
-    //     grid-area: kakao_subscribe;
-    // }
-
-    // .kakao_crew {
-    //     grid-area: kakao_crew;
-    // }
-
-    // .invest_info {
-    //     grid-area: invest_info;
-    // }
-
-    // .data_info {
-    //     grid-area: data_info;
-    // }
 }

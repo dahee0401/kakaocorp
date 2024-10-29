@@ -45,9 +45,12 @@ section:not(.cont-home) {
     letter-spacing: -1px;
     word-break: keep-all;
     margin-bottom: 4.3rem;
+    @include desktop() {
+        // font-size: 2.223vw;
+        margin-bottom: 2.4rem;
+    }
     @include mobile() {
         font-size: 2.6rem;
-        margin-bottom: 2.4rem;
     }
     &::before {
         content: '';
