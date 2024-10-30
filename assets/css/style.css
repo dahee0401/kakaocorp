@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "Noto Sans KR";
@@ -249,13 +250,14 @@ section:not(.cont-home) {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;
   margin: 0 auto;
   z-index: 100;
-  border: 1px solid #fff;
+  color: #000;
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
 }
 .header.active {
-  border: 1px solid #eee;
+  border-bottom: 1px solid #f3f3f3;
   z-index: 200;
 }
 .header > .wrap__header {
@@ -263,7 +265,6 @@ section:not(.cont-home) {
   justify-content: space-between;
   align-items: center;
   max-width: 171.2rem;
-  height: 7.2rem;
   margin: 0 auto;
 }
 @media screen and (max-width: 1902px) {
@@ -305,11 +306,12 @@ section:not(.cont-home) {
   align-items: center;
 }
 .header > .wrap__header .gnb .gnb__list .gnb__list-item {
+  height: 9.2rem;
+  line-height: 9.2rem;
   transition: all ease 0.3s;
 }
 .header > .wrap__header .gnb .gnb__list .gnb__list-item.active .gnb__link {
   opacity: 1;
-  border-bottom: 1.5px solid #333;
 }
 .header > .wrap__header .gnb .gnb__list .gnb__list-item.not-active .gnb__link {
   opacity: 0.4;
@@ -317,9 +319,7 @@ section:not(.cont-home) {
 .header > .wrap__header .gnb .gnb__list .gnb__list-item > .gnb__link {
   display: block;
   height: 100%;
-  max-height: 7.4rem;
   padding: 0 4rem;
-  line-height: 8.5rem;
   text-align: center;
   font-size: 1.7rem;
   border-bottom: 1px solid transparent;
@@ -379,6 +379,164 @@ section:not(.cont-home) {
   }
 }
 
+.search_layer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 3000;
+  transition: opacity ease 0.6s;
+}
+.search_layer::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: #fff;
+  transition: opacity ease 0.6s;
+}
+.search_layer .inner_layer {
+  background: #fff;
+  opacity: 0;
+  transition: opacity ease 0.6s;
+}
+.search_layer .inner_layer > * {
+  position: relative;
+  max-width: 67.5vw;
+  margin: 0 auto;
+}
+@media (max-width: 1439px) {
+  .search_layer .inner_layer > * {
+    max-width: 72.5vw;
+  }
+}
+.search_layer .inner_layer .layer_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 7.2rem;
+}
+.search_layer .inner_layer .layer_head__logo {
+  width: 7.4rem;
+}
+.search_layer .inner_layer .layer_head .layer_close img {
+  display: block;
+  width: 100%;
+}
+.search_layer .inner_layer .layer_body .area_search {
+  transform: translateY(-100%);
+  opacity: 0.01;
+  transition: transform 0.6s, opacity 0.4s ease-in 0.4s;
+}
+.search_layer .inner_layer .layer_body .area_search .group_search {
+  padding: 12rem 0;
+  background: url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/bg_search.png) no-repeat top 5vw right 2.6vw;
+  background-size: 8.44vw 9.27vw;
+}
+@media (max-width: 1439px) {
+  .search_layer .inner_layer .layer_body .area_search .group_search {
+    padding: 9.6rem 0;
+    background-position: top 72px right 30px;
+  }
+}
+@media (max-width: 1023px) {
+  .search_layer .inner_layer .layer_body .area_search .group_search {
+    padding: 8.4rem 0;
+    background-position: top 78px right;
+  }
+}
+@media (max-width: 767px) {
+  .search_layer .inner_layer .layer_body .area_search .group_search {
+    padding: 7.2rem 0;
+    background-position: top 65px right;
+    background-size: 63px 70px;
+  }
+}
+.search_layer .inner_layer .layer_body .area_search .group_search form {
+  position: relative;
+  max-width: 42.864vw;
+  margin: 0 auto;
+}
+.search_layer .inner_layer .layer_body .area_search .group_search form::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath d='M20 20c-3.336-2.42-5.514-6.34-5.513-10.776V0H0c0 11.046 8.954 20 20 20' fill='%23333' fill-rule='evenodd'/%3E%3C/svg%3E");
+  content: "";
+}
+@media (max-width: 767px) {
+  .search_layer .inner_layer .layer_body .area_search .group_search form {
+    max-width: 53vw;
+    margin-left: 4%;
+  }
+}
+.search_layer .inner_layer .layer_body .area_search .group_search form input {
+  position: relative;
+  width: 100%;
+  height: 7.2rem;
+  padding: 2rem 2.4rem 2rem 6.4rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: -0.6px;
+  border-radius: 2.8rem;
+  border: 0;
+  background-color: #333;
+  background-image: url(/assets/img/ico_search.svg);
+  background-repeat: no-repeat;
+  background-position: 2rem center;
+  background-size: 1.09em;
+}
+@media (max-width: 1439px) {
+  .search_layer .inner_layer .layer_body .area_search .group_search form input {
+    padding: 1.8rem 2.4rem 1.8rem 6rem;
+    font-size: 1.8rem;
+    letter-spacing: -0.5px;
+    background-position: 1.8rem center;
+    height: 6rem;
+  }
+}
+@media (max-width: 767px) {
+  .search_layer .inner_layer .layer_body .area_search .group_search form input {
+    border-radius: 2rem;
+  }
+}
+.search_layer .inner_layer .layer_body .area_search .group_search form input::-moz-placeholder {
+  color: #fff;
+}
+.search_layer .inner_layer .layer_body .area_search .group_search form input::placeholder {
+  color: #fff;
+}
+.search_layer .inner_layer .layer_body .area_search .group_search .wrap_tag {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 3rem auto 0;
+  gap: 0.6rem;
+}
+.search_layer .inner_layer .layer_body .area_search .group_search .wrap_tag > .link_tag {
+  background-color: #eee;
+  padding: 0 1.5rem;
+  border-radius: 1.5rem;
+}
+.search_layer .inner_layer .layer_body .area_search .group_search .wrap_tag > .link_tag a {
+  display: block;
+  height: 3.4rem;
+  line-height: 3.4rem;
+  font-size: 1.3rem;
+  letter-spacing: -0.5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+.search_layer .inner_layer .layer_body .area_search .group_search .wrap_tag > .link_tag:hover {
+  background-color: #dfdfdf;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -386,6 +544,100 @@ html {
 body {
   font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
   color: #000;
+  background-color: #fff;
+  word-break: keep-all;
+  word-wrap: break-word;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+body.open_search {
+  overflow-y: hidden;
+}
+body.open_search .doc_main {
+  height: calc(100vh - 92px);
+  transform: translateY(310px);
+  overflow: hidden;
+}
+body.open_search .search_layer {
+  display: block;
+  top: 0;
+  bottom: 0;
+}
+body.open_search .search_layer::before {
+  opacity: 0.9;
+}
+body.open_search .search_layer .inner_layer {
+  opacity: 1;
+}
+body.open_search .search_layer .inner_layer .layer_body .area_search {
+  transform: translateY(0);
+  opacity: 1;
+}
+body .icon-path {
+  stroke: #000; /* 기본 색상 (라이트 모드) */
+  transition: stroke 0.3s; /* 부드러운 전환 효과 */
+}
+body.dark-mode {
+  color: #fff;
+  background-color: #000;
+}
+body.dark-mode header {
+  color: #fff;
+  background-color: #000;
+  border-bottom: 1px solid #000;
+}
+body.dark-mode header.active {
+  border-bottom: 1px solid #333;
+}
+body.dark-mode .icon-path {
+  stroke: #fff !important;
+}
+body.dark-mode .info_banner {
+  background-color: #fff;
+  color: #000;
+}
+body.dark-mode [class*=inner-] {
+  background-color: #000 !important;
+}
+body.dark-mode .swiper-slide * {
+  color: #000 !important;
+}
+body.dark-mode .item_normal_card {
+  background-color: #333 !important;
+  color: #fff;
+}
+body.dark-mode .item_normal_card [class*=card] {
+  color: #fff !important;
+}
+body.dark-mode .cont-service__list-item {
+  background-color: #333 !important;
+}
+body.dark-mode .commons {
+  background-color: #333 !important;
+}
+body.dark-mode .title_responsible {
+  background-color: #000;
+}
+body.dark-mode .btn_area {
+  background-color: #000;
+}
+body.dark-mode .wrap_btn {
+  background-color: #333 !important;
+}
+body.dark-mode .text_cate {
+  background-color: #444 !important;
+}
+body.dark-mode .kakao_subscribe {
+  color: #000 !important;
+}
+
+.container_doc {
+  position: relative;
+}
+
+.doc_main {
+  transform: none;
+  transition: transform 0.5s cubic-bezier(0.59, 0.01, 0.28, 1);
 }
 
 .cont-home {
@@ -1030,7 +1282,6 @@ body {
 }
 .cont-home .widget.second > .swiper-container .swiper-wrapper .swiper-slide .badge.type2 {
   color: #fff;
-  background-color: #000;
 }
 @media screen and (max-width: 1902px) {
   .cont-home .widget.second > .swiper-container .swiper-wrapper .swiper-slide .badge {
@@ -1047,7 +1298,6 @@ body {
   font-size: 2.2rem;
   line-height: 1.36;
   letter-spacing: -0.6px;
-  color: var(--baseForeground);
   font-weight: 400;
 }
 @media screen and (max-width: 1902px) {
@@ -1539,7 +1789,7 @@ body {
   }
 }
 .cont-service__list > .cont-service__list-item .item__services > .service:hover {
-  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  opacity: 0.7;
 }
 .cont-service__list > .cont-service__list-item .item__services > .service.kakao {
   background-image: url(https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/kakaoService/cc08d9e2018e00001.png);
@@ -1813,7 +2063,6 @@ body {
   letter-spacing: -0.8px;
   max-width: 34rem;
   color: #fff;
-  word-break: keep-all;
 }
 @media (max-width: 1902px) {
   .cont-promise__list-item .text_responsible {

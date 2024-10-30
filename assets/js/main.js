@@ -102,3 +102,28 @@ window.addEventListener('resize', () => {
         updateItemClass(item); // 기존 아이템의 클래스 업데이트
     });
 });
+
+// 검색버튼 search_layer
+const searchButtons = document.querySelectorAll('.searchBtn');
+
+searchButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+        document.body.classList.toggle('open_search'); // body에 open_search 클래스 토글
+        const searchLayer = document.querySelector('.search_layer');
+    });
+});
+document.getElementById('closeBtn').addEventListener('click', function () {
+    document.body.classList.remove('open_search'); // body에서 open_search 클래스 제거
+});
+
+// ESC 키 눌렀을 때 검색 레이어 닫기
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        document.body.classList.remove('open_search'); // body에서 open_search 클래스 제거
+    }
+});
+
+// 다크모드
+document.querySelector('.util__btn--mode').addEventListener('click', function () {
+    document.body.classList.toggle('dark-mode'); // body에 dark-mode 클래스 토글s
+});

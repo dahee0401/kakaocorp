@@ -1,0 +1,176 @@
+.search_layer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 3000;
+    transition: $searchLayer;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        background-color: $colorWhite;
+        transition: $searchLayer;
+    }
+
+    .inner_layer {
+        background: $colorWhite;
+        opacity: 0;
+        transition: $searchLayer;
+
+        > * {
+            position: relative;
+            max-width: 67.5vw;
+            margin: 0 auto;
+            @include desktop() {
+                max-width: 72.5vw;
+            }
+
+            // @include mobile() {
+            //     max-width: 47.457vw;
+            // }
+        }
+        .layer_head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 7.2rem;
+
+            &__logo {
+                width: 7.4rem;
+            }
+
+            .layer_close {
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+
+        .layer_body {
+            .area_search {
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+                opacity: 0.01;
+                -webkit-transition: opacity 0.4s ease-in 0.4s, -webkit-transform 0.6s;
+                transition: opacity 0.4s ease-in 0.4s, -webkit-transform 0.6s;
+                transition: transform 0.6s, opacity 0.4s ease-in 0.4s;
+                transition: transform 0.6s, opacity 0.4s ease-in 0.4s, -webkit-transform 0.6s;
+
+                .group_search {
+                    padding: 12rem 0;
+                    background: url(//t1.kakaocdn.net/kakaocorp/kakaocorp/service/bg_search.png) no-repeat top 5vw right
+                        2.6vw;
+
+                    background-size: 8.44vw 9.27vw;
+
+                    @include desktop() {
+                        padding: 9.6rem 0;
+                        background-position: top 72px right 30px;
+                        // background-size: 8.437vw 7.604vw;
+                    }
+                    @include tablets() {
+                        padding: 8.4rem 0;
+                        background-position: top 78px right;
+                        // background-size: 96px 106px;
+                    }
+
+                    @include mobile() {
+                        padding: 7.2rem 0;
+                        background-position: top 65px right;
+                        background-size: 63px 70px;
+
+                        // background-size: 63px 70px;
+                    }
+
+                    form {
+                        position: relative;
+                        max-width: 42.864vw;
+                        margin: 0 auto;
+
+                        &::after {
+                            position: absolute;
+                            bottom: 0;
+                            right: 0;
+                            width: 20px;
+                            height: 20px;
+                            background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20'%3E%3Cpath d='M20 20c-3.336-2.42-5.514-6.34-5.513-10.776V0H0c0 11.046 8.954 20 20 20' fill='%23333' fill-rule='evenodd'/%3E%3C/svg%3E");
+                            content: '';
+                        }
+                        @include mobile() {
+                            max-width: 53vw;
+                            margin-left: 4%;
+                        }
+                        input {
+                            position: relative;
+                            width: 100%;
+                            height: 7.2rem;
+                            padding: 2rem 2.4rem 2rem 6.4rem;
+                            font-size: 2.2rem;
+                            font-weight: 700;
+                            color: $colorWhite;
+                            letter-spacing: -0.6px;
+                            border-radius: 2.8rem;
+                            border: 0;
+                            background-color: $colorGray8;
+                            background-image: url(/assets/img/ico_search.svg);
+                            background-repeat: no-repeat;
+                            background-position: 2rem center;
+                            background-size: 1.09em;
+                            @include desktop() {
+                                padding: 1.8rem 2.4rem 1.8rem 6rem;
+                                font-size: 1.8rem;
+                                letter-spacing: -0.5px;
+                                background-position: 1.8rem center;
+                                height: 6rem;
+                            }
+                            @include mobile() {
+                                border-radius: 2rem;
+                                // width: 81.35%;
+                            }
+
+                            &::placeholder {
+                                color: $colorWhite;
+                            }
+                        }
+                    }
+
+                    .wrap_tag {
+                        width: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        margin: 3rem auto 0;
+                        gap: 0.6rem;
+                        // @include mobile() {
+                        //     max-width: 43.489vw;
+                        // }
+                        > .link_tag {
+                            background-color: $colorGray1;
+                            padding: 0 1.5rem;
+                            border-radius: 1.5rem;
+                            a {
+                                display: block;
+                                height: 3.4rem;
+                                line-height: 3.4rem;
+                                font-size: 1.3rem;
+                                letter-spacing: -0.5px;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                text-align: center;
+                            }
+
+                            &:hover {
+                                background-color: $colorGray3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

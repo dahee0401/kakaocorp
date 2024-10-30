@@ -25,13 +25,12 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     </head>
     <body>
-        <div id="main">
+        <div class="container_doc">
             <header class="header">
                 <div class="wrap__header">
                     <h1 class="logo">
                         <a href="#"><img src="./assets/img/kakao.svg" alt="logo" /></a>
                     </h1>
-
                     <nav class="gnb">
                         <ul class="gnb__list">
                             <li class="gnb__list-item"><a href="#" class="gnb__link">소개</a></li>
@@ -39,675 +38,896 @@
                             <li class="gnb__list-item"><a href="#" class="gnb__link">기술과 서비스</a></li>
                             <li class="gnb__list-item"><a href="#" class="gnb__link">약속과 책임</a></li>
                             <li class="gnb__list-item"><a href="#" class="gnb__link">뉴스</a></li>
-                            <li class="gnb__list-item">
-                                <a href="#" class="gnb__link"
-                                    >투자정보 <span class="ico_link" aria-label="link"></span
-                                ></a>
-                            </li>
+                            <li class="gnb__list-item"><a href="#" class="gnb__link">투자 정보</a></li>
                         </ul>
                     </nav>
                     <div class="util__btns">
-                        <button class="util__btn util__btn--search">
-                            <img src="./assets/img/search.svg" alt="search button" />
+                        <button class="util__btn util__btn--search searchBtn">
+                            <svg
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    class="icon-path"
+                                    d="M17.5 17.5L22 22"
+                                    stroke="#141B34"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    class="icon-path"
+                                    d="M20 11C20 6.02944 15.9706 2 11 2C6.02944 2 2 6.02944 2 11C2 15.9706 6.02944 20 11 20C15.9706 20 20 15.9706 20 11Z"
+                                    stroke="#141B34"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
                         </button>
                         <button class="util__btn util__btn--language">
-                            <img src="./assets/img/global.svg" alt="language button" />
+                            <svg
+                                class="icon"
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                            >
+                                <path
+                                    class="icon-path"
+                                    d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                    stroke="black"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    class="icon-path"
+                                    d="M8.0001 3H9.0001C7.0501 8.84 7.0501 15.16 9.0001 21H8.0001"
+                                    stroke="black"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    class="icon-path"
+                                    d="M15 3C16.95 8.84 16.95 15.16 15 21"
+                                    stroke="black"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    class="icon-path"
+                                    d="M3 16V15C8.84 16.95 15.16 16.95 21 15V16"
+                                    stroke="black"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    class="icon-path"
+                                    d="M3 8.99998C8.84 7.04998 15.16 7.04998 21 8.99998"
+                                    stroke="black"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
                         </button>
                         <button class="util__btn util__btn--mode">
-                            <img src="./assets/img/moon.svg" alt="dark-mode-button" />
+                            <svg
+                                class="icon"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    class="icon-path"
+                                    d="M2.03009 12.42C2.39009 17.57 6.76009 21.76 11.9901 21.99C15.6801 22.15 18.9801 20.43 20.9601 17.72C21.7801 16.61 21.3401 15.87 19.9701 16.12C19.3001 16.24 18.6101 16.29 17.8901 16.26C13.0001 16.06 9.00009 11.97 8.98009 7.14002C8.97009 5.84002 9.24009 4.61002 9.73009 3.49002C10.2701 2.25002 9.62009 1.66002 8.37009 2.19002C4.41009 3.86002 1.70009 7.85002 2.03009 12.42Z"
+                                    stroke="black"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
                         </button>
                     </div>
                     <div class="util__btns_mo">
-                        <button class="util__btn2 btn__hamburger">
-                            <img src="./assets/img/search-mo.svg" alt="search button" />
+                        <button class="util__btn2 btn__search searchBtn">
+                            <svg
+                                class="icon"
+                                width="28"
+                                height="28"
+                                viewBox="0 0 28 28"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    class="icon-path"
+                                    d="M20.416 20.417L25.666 25.667"
+                                    stroke="#141B34"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    class="icon-path"
+                                    d="M23.332 12.8335C23.332 7.03451 18.631 2.3335 12.832 2.3335C7.03304 2.3335 2.33203 7.03451 2.33203 12.8335C2.33203 18.6325 7.03304 23.3335 12.832 23.3335C18.631 23.3335 23.332 18.6325 23.332 12.8335Z"
+                                    stroke="#141B34"
+                                    stroke-width="1.5"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
                         </button>
-                        <button class="util__btn2 btn__search">
-                            <img src="./assets/img/menu-mo.svg" alt="menu button" />
+                        <button class="util__btn2 btn__hamburger">
+                            <svg
+                                class="icon"
+                                width="28"
+                                height="28"
+                                viewBox="0 0 28 28"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    class="icon-path"
+                                    d="M4.28983 20.125H24.0648V21.4375C24.0648 22.3658 23.6961 23.256 23.0397 23.9124C22.3833 24.5688 21.4931 24.9375 20.5648 24.9375H7.78983C6.86157 24.9375 5.97133 24.5688 5.31495 23.9124C4.65857 23.256 4.28983 22.3658 4.28983 21.4375V20.125Z"
+                                    stroke="black"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    class="icon-path"
+                                    d="M21.7023 14.7875H23.9773C24.3293 14.7757 24.6801 14.835 25.0087 14.9616C25.3374 15.0883 25.6372 15.2798 25.8903 15.5247C26.1434 15.7696 26.3446 16.063 26.4819 16.3873C26.6193 16.7116 26.69 17.0603 26.6898 17.4125C26.6898 18.1319 26.404 18.8218 25.8953 19.3305C25.3866 19.8392 24.6967 20.125 23.9773 20.125H4.37728C4.02507 20.1252 3.67645 20.0545 3.35213 19.9171C3.02781 19.7798 2.73443 19.5786 2.48949 19.3255C2.24456 19.0724 2.05306 18.7726 1.92641 18.4439C1.79976 18.1153 1.74054 17.7645 1.75228 17.4125C1.74006 17.0645 1.79962 16.7177 1.92721 16.3937C2.0548 16.0697 2.24772 15.7754 2.49395 15.5291C2.74019 15.2829 3.03445 15.09 3.35846 14.9624C3.68247 14.8348 4.02927 14.7753 4.37728 14.7875H12.0773"
+                                    stroke="black"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    class="icon-path"
+                                    d="M26.6898 13.0375C26.6832 13.4991 26.4946 13.9394 26.1648 14.2625C26.0114 14.4343 25.8222 14.5703 25.6106 14.661C25.3989 14.7517 25.17 14.7949 24.9398 14.7875H20.3898L17.4148 18.2L14.4398 14.7875H3.41483C3.18894 14.7878 2.96535 14.7421 2.75772 14.6531C2.55009 14.5642 2.36277 14.4338 2.20719 14.2701C2.05161 14.1063 1.93105 13.9125 1.85284 13.7006C1.77463 13.4887 1.74041 13.2631 1.7523 13.0375C1.74041 12.8119 1.77463 12.5863 1.85284 12.3744C1.93105 12.1625 2.05161 11.9687 2.20719 11.805C2.36277 11.6412 2.55009 11.5109 2.75772 11.4219C2.96535 11.3329 3.18894 11.2872 3.41483 11.2875H24.9398C25.4039 11.2875 25.8491 11.4719 26.1773 11.8001C26.5055 12.1283 26.6898 12.5734 26.6898 13.0375Z"
+                                    stroke="black"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    class="icon-path"
+                                    d="M11.8148 3.5H16.6273C18.6231 3.5 20.5371 4.2928 21.9483 5.70402C23.3595 7.11523 24.1523 9.02925 24.1523 11.025H4.28983C4.28983 9.02925 5.08262 7.11523 6.49383 5.70402C7.90504 4.2928 9.81905 3.5 11.8148 3.5Z"
+                                    stroke="black"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    class="icon-path"
+                                    d="M9.2773 7.4375L10.3273 8.575"
+                                    stroke="black"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    class="icon-path"
+                                    d="M18.7273 7L19.8648 8.22499"
+                                    stroke="black"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                                <path
+                                    class="icon-path"
+                                    d="M13.4773 7.52501L14.7023 6.38751"
+                                    stroke="black"
+                                    stroke-width="1.5"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
                         </button>
                     </div>
                 </div>
             </header>
             <!-- home -->
-            <section class="cont-home cont__wrapper">
-                <!-- visual -->
-                <div class="cont-home__item visual">
-                    <div class="visual-wrpper">
-                        <div class="inner-top">
-                            <a href="#none" class="tooltip">
-                                <span aria-hidden="true" class="info_banner">카카오 소식 모아보기</span>
-                                <img src="./assets/img/bulb.gif" alt="소식" />
-                            </a>
-                        </div>
-                        <div class="inner-cont">
-                            <video
-                                src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/heroVisual/4c2201fa019200001.mp4"
-                                poster="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/heroVisual/4c222124019200001.png?type=thumb&amp;opt=C1424x808.fwebp"
-                                autoplay="autoplay"
-                                muted="muted"
-                                loop="loop"
-                                playsinline="playsinline"
-                                type="video/mp4"
-                                class="item_visual"
-                            ></video>
-                        </div>
-                        <div class="inner-bottom">
-                            <a href="#">
-                                <span>더 알아보기</span>
-                                <span class="screen_out">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="64"
-                                        height="64"
-                                        viewBox="0 0 64 64"
-                                        fill="none"
-                                        class="btn_arr_big"
-                                    >
-                                        <circle cx="32" cy="31.9961" r="32" fill="black"></circle>
-                                        <path
-                                            d="M34.9292 25.5325L33.515 26.9467L38.1748 31.6065L23 31.6074V33.6015L38.1748 33.6005L33.515 38.2604L34.9292 39.6746L42.0002 32.6035L34.9292 25.5325Z"
-                                            fill="white"
-                                        ></path>
-                                    </svg>
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- widget -->
-                <div class="cont-home__item widget first">
-                    <div class="swiper-container swiper1">
-                        <div class="swiper-wrapper">
-                            <a class="swiper-slide" href="#none">
-                                <h2>기부에 함께 해주신 <br />착한 마음들</h2>
-                                <strong class="number_count">
-                                    <span><span>6</span></span
-                                    ><span><span>1</span></span
-                                    ><span>,</span><span><span>3</span></span
-                                    ><span><span>2</span></span
-                                    ><span><span>2</span></span
-                                    ><span>,</span><span><span>1</span></span
-                                    ><span><span>2</span></span
-                                    ><span><span>0</span></span></strong
-                                >
-                                <span class="text_count">건</span>
-                            </a>
-                            <a class="swiper-slide slide2" href="#none"></a>
-                        </div>
-
-                        <div class="swiper-pagination swiper-pagination2"></div>
-                        <div class="swiper-commons-button swiper-button-prev"></div>
-                        <div class="swiper-commons-button swiper-button-next"></div>
-                    </div>
-                </div>
-                <div class="cont-home__item widget second">
-                    <div class="swiper-container swiper2">
-                        <div class="swiper-wrapper">
-                            <a class="swiper-slide" href="#none">
-                                <span class="badge type2">다양성의 가치</span>
-                                <strong>2023 <br />카카오 다양성 보고서</strong>
-                                <ul class="tag-container">
-                                    <li class="tag">#다양성</li>
-                                    <li class="tag">#건강한디지털</li>
-                                </ul>
-                            </a>
-                            <a class="swiper-slide" href="#none">
-                                <span class="badge">디지털 격차 줄이기</span>
-                                <strong>어른신을 위한 <br />개인정보보호 안내</strong>
-                                <ul class="tag-container">
-                                    <li class="tag">#기술복지</li>
-                                    <li class="tag">#피싱범죄예방</li>
-                                </ul>
-                            </a>
-                            <a class="swiper-slide" href="#none">
-                                <span class="badge">카톡설명서</span>
-                                <strong>모두의 카톡을 <br />더 가깝고 안전하게</strong>
-                                <ul class="tag-container">
-                                    <li class="tag">#업데이트소식</li>
-                                    <li class="tag">#톡활용팁</li>
-                                </ul>
-                            </a>
-                        </div>
-
-                        <!-- Pagination -->
-                        <div class="swiper-pagination swiper-pagination2"></div>
-                        <!-- 두 번째 swiper의 pagination -->
-                    </div>
-                </div>
-                <div class="cont-home__item widget third">
-                    <div class="swiper-container swiper3">
-                        <div class="swiper-wrapper">
-                            <a class="swiper-slide" href="#none" style="background-color: #fae100">
-                                <img src="./assets/img/kakao-group.webp" alt="" />
-                                <span>카카오그룹</span></a
-                            >
-                            <a class="swiper-slide history" href="#none" style="background-color: rgba(0, 0, 0, 0.2)"
-                                ><span>연혁</span></a
-                            >
-                        </div>
-
-                        <!-- 버튼 추가 -->
-                        <div class="swiper-commons-button swiper-button-prev"></div>
-                        <div class="swiper-commons-button swiper-button-next"></div>
-                    </div>
-                </div>
-            </section>
-            <!-- story -->
-            <section class="cont-story">
-                <h3 class="cont__title cont__wrapper type-story">
-                    카카오와 카카오 그룹이 축적해 온 이야기들
-                    <button class="btn_story pause" aria-label="카드 슬라이드동작 "></button>
-                </h3>
-                <ul class="cont-story__list" id="storyList">
-                    <li class="cont-story__list-item type_wide first">
-                        <div class="item_normal_card type_flow">
-                            <a href="#none" class="wrap_cont">
-                                <div class="wrap_text">
-                                    <div class="info_cate">
-                                        <div class="info_cate__tit">
-                                            <img src="./assets/img/impact.webp" alt="title 이미지" />
-                                            <span class="text_cate">임팩트</span>
-                                        </div>
-                                        <button class="share_btn" aria-label="공유하기">
-                                            <img src="./assets/img/ico_share.svg" alt="share-menu" />
-                                        </button>
-                                    </div>
-                                    <strong class="tit_card"> 왕초보 사장님들의 <br />단골 만들기 비법 </strong>
-                                    <p class="desc_card">마케팅이 어려웠던 사장님이<br />매출 500% 올린 비결</p>
-                                    <ol class="info_card">
-                                        <li>#소상공인지원</li>
-                                        <li class="removed">#카카오상생활동</li>
-                                        <li>#카카오톡채널</li>
-                                    </ol>
-                                </div>
-                                <div class="wrap_thumb">
-                                    <img src="./assets/img/thumb_1.webp" alt="카카오톡 채널로 매출이 늘어난 비결은?" />
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="cont-story__list-item type_normal" data-category="data2">
-                        <div class="item_normal_card type_flow">
-                            <a href="#none" class="wrap_cont">
-                                <div class="wrap_text">
-                                    <div class="info_cate">
-                                        <div class="info_cate__tit">
-                                            <img src="./assets/img/ico_closer.webp" alt="title 이미지" />
-                                            <span class="text_cate">더 가깝게</span>
-                                        </div>
-                                        <button class="share_btn" aria-label="공유하기">
-                                            <img src="./assets/img/ico_share.svg" alt="share-menu" />
-                                        </button>
-                                    </div>
-                                    <strong class="tit_card">무료로 여는<br />톡 안의 두번째 매장 </strong>
-                                    <ol class="info_card">
-                                        <li>#디지털전환</li>
-                                        <li>#카카오톡채널</li>
-                                    </ol>
-                                </div>
-                                <div class="wrap_thumb">
-                                    <img src="./assets/img/thumb_2.webp" alt="카카오톡 채널로 매출이 늘어난 비결은?" />
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="cont-story__list-item type_normal" data-category="data3">
-                        <div class="item_normal_card type_flow">
-                            <a href="#none" class="wrap_cont reverse">
-                                <div class="wrap_text">
-                                    <div class="info_cate">
-                                        <div class="info_cate__tit">
-                                            <img src="./assets/img/impact.webp" alt="title 이미지" />
-                                            <span class="text_cate">임팩트</span>
-                                        </div>
-                                        <button class="share_btn" aria-label="공유하기">
-                                            <img src="./assets/img/ico_share.svg" alt="share-menu" />
-                                        </button>
-                                    </div>
-                                    <strong class="tit_card">도로 위 히어로즈</strong>
-                                    <ol class="info_card">
-                                        <li>#카카오모빌리티</li>
-                                        <li>#파트너상생</li>
-                                    </ol>
-                                </div>
-                                <div class="wrap_thumb">
-                                    <img src="./assets/img/thumb_3.webp" alt="히어로, 보이는 것보다 가까이 있습니다" />
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="cont-story__list-item type_normal" data-category="data4">
-                        <div class="item_normal_card type_flow">
-                            <a href="#none" class="wrap_cont">
-                                <div class="wrap_text">
-                                    <div class="info_cate">
-                                        <div class="info_cate__tit">
-                                            <img src="./assets/img/impact.webp" alt="title 이미지" />
-                                            <span class="text_cate">임팩트</span>
-                                        </div>
-                                        <button class="share_btn" aria-label="공유하기">
-                                            <img src="./assets/img/ico_share.svg" alt="share-menu" />
-                                        </button>
-                                    </div>
-                                    <strong class="tit_card">카카오가 꿈꾸는<br />지속가능한 미래</strong>
-                                    <ol class="info_card">
-                                        <li>#ESG</li>
-                                        <li>#ESG보고서</li>
-                                        <li>#약속과책임</li>
-                                        <li>#카카오</li>
-                                    </ol>
-                                </div>
-                                <div class="wrap_thumb">
-                                    <img src="./assets/img/thumb_4.webp" alt="카카오가 궁금해! esg talk" />
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                    <li class="cont-story__list-item type_normal" data-category="data5">
-                        <div class="item_normal_card type_flow">
-                            <a href="#none" class="wrap_cont reverse">
-                                <div class="wrap_text">
-                                    <div class="info_cate">
-                                        <div class="info_cate__tit">
-                                            <img src="./assets/img/impact.webp" alt="title 이미지" />
-                                            <span class="text_cate">서비스</span>
-                                        </div>
-                                        <button class="share_btn" aria-label="공유하기">
-                                            <img src="./assets/img/ico_share.svg" alt="share-menu" />
-                                        </button>
-                                    </div>
-                                    <strong class="tit_card"
-                                        >진화에 누구보다 <br />
-                                        진심인 편</strong
-                                    >
-                                    <ol class="info_card">
-                                        <li>#조승연의탐구생활</li>
-                                        <li>#카카오톡</li>
-                                        <li>#카카이지</li>
-                                    </ol>
-                                </div>
-                                <div class="wrap_thumb">
-                                    <img src="./assets/img/thumb_5.webp" alt="달라진 일상, 달라진 카톡" />
-                                </div>
-                            </a>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-            <!-- service -->
-            <section class="cont-service cont__wrapper">
-                <h3 class="cont__title type-service">더 나은 세상을 만드는 카카오 서비스</h3>
-                <ul class="cont-service__list">
-                    <li class="cont-service__list-item">
-                        <strong>커뮤니케이션</strong>
-                        <div class="item__services">
-                            <a class="service kakao" href="#"><span class="sr-only">카카오톡</span></a>
-                            <a class="service daum" href="#"><span class="sr-only">다음</span></a>
-                            <a class="service story last" href="#"><span class="sr-only">스토리</span></a>
-                            <a class="service link" href="#"><span class="sr-only">커뮤니케이션더보기</span></a>
-                        </div>
-                    </li>
-                    <li class="cont-service__list-item">
-                        <strong>비즈니스</strong>
-                        <div class="item__services">
-                            <a class="service channel" href="#"><span class="sr-only">카카오톡</span></a>
-                            <a class="service cloud" href="#"><span class="sr-only">다음</span></a>
-                            <a class="service agit last" href="#"><span class="sr-only">스토리</span></a>
-                            <a class="service link" href="#"><span class="sr-only">커뮤니케이션더보기</span></a>
-                        </div>
-                    </li>
-                    <li class="cont-service__list-item">
-                        <strong>일상편의</strong>
-                        <div class="item__services">
-                            <a class="service kakaoMap" href="#"><span class="sr-only">카카오톡</span></a>
-                            <a class="service kakaoT" href="#"><span class="sr-only">다음</span></a>
-                            <a class="service kakaoBank last" href="#"><span class="sr-only">스토리</span></a>
-                            <a class="service link" href="#"><span class="sr-only">커뮤니케이션더보기</span></a>
-                        </div>
-                    </li>
-                    <li class="cont-service__list-item">
-                        <strong>쇼핑</strong>
-                        <div class="item__services">
-                            <a class="service kakaoGift" href="#"><span class="sr-only">카카오톡</span></a>
-                            <a class="service kakaoShop" href="#"><span class="sr-only">다음</span></a>
-                            <a class="service kakaoZigzag last" href="#"><span class="sr-only">스토리</span></a>
-                            <a class="service link" href="#"><span class="sr-only">커뮤니케이션더보기</span></a>
-                        </div>
-                    </li>
-                    <li class="cont-service__list-item">
-                        <strong>엔터테인먼트</strong>
-                        <div class="item__services">
-                            <a class="service kakaoPage" href="#"><span class="sr-only">카카오톡</span></a>
-                            <a class="service kakaoPiccoma" href="#"><span class="sr-only">다음</span></a>
-                            <a class="service kakaoMelon last" href="#"><span class="sr-only">스토리</span></a>
-                            <a class="service link" href="#"><span class="sr-only">커뮤니케이션더보기</span></a>
-                        </div>
-                    </li>
-                    <li class="cont-service__list-item">
-                        <strong>소셜임팩트</strong>
-                        <div class="item__services">
-                            <a class="service kakaoTogether" href="#"><span class="sr-only">카카오톡</span></a>
-                            <a class="service link" href="#"><span class="sr-only">커뮤니케이션더보기</span></a>
-                        </div>
-                    </li>
-                </ul>
-                <button class="wrap_btn">
-                    서비스 전체보기
-                    <span class="screen_out">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="25"
-                            viewBox="0 0 24 25"
-                            fill="none"
-                            class="btn_arr"
-                        >
-                            <g id="btn">
-                                <circle cx="12" cy="12.5" r="12" fill="black"></circle>
-                                <path
-                                    d="M13.971 9.07847L13.2084 9.84107L15.7213 12.3539L7.53825 12.3543L7.53826 13.4296L15.7213 13.4292L13.2085 15.942L13.9711 16.7046L17.7842 12.8916L13.971 9.07847Z"
-                                    fill="white"
-                                ></path>
-                            </g>
-                        </svg>
-                    </span>
-                </button>
-            </section>
-            <!-- news -->
-            <section class="cont-news cont__wrapper">
-                <h3 class="cont__title type-news">오늘의 뉴스</h3>
-            </section>
-            <!-- promise -->
-            <section class="cont-promise cont__wrapper">
-                <h3 class="cont__title type-promise">약속과 책임</h3>
-                <ul class="cont-promise__list">
-                    <li class="cont-promise__list-item esg">
-                        <div class="title_responsible">
-                            <span class="name_reponsible bg-esg">ESG</span>
-                        </div>
-                        <img src="./assets/img/esg.gif" alt="esg image" class="img_responsible" />
-                        <p class="text_responsible">모두의 지속가능한 미래를 위한 카카오의 약속과 책임</p>
-                        <a href="#none" class="btn_area" aria-label="ESG페이지 바로가기">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="64"
-                                height="64"
-                                viewBox="0 0 64 64"
-                                fill="none"
-                                class="btn_arr_big"
-                            >
-                                <circle cx="32" cy="31.9961" r="32" fill="black"></circle>
-                                <path
-                                    d="M34.9292 25.5325L33.515 26.9467L38.1748 31.6065L23 31.6074V33.6015L38.1748 33.6005L33.515 38.2604L34.9292 39.6746L42.0002 32.6035L34.9292 25.5325Z"
-                                    fill="white"
-                                ></path>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="cont-promise__list-item green">
-                        <div class="title_responsible">
-                            <span class="name_reponsible bg-green">액티브그린</span>
-                        </div>
-                        <img src="./assets/img/green.gif" alt="esg image" class="img_responsible" />
-                        <p class="text_responsible">카카오를 이용하는 만큼 우리들의 지구도 더 풍요로울 수 있도록</p>
-                        <a href="#none" class="btn_area" aria-label="액티브그린페이지 바로가기">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="64"
-                                height="64"
-                                viewBox="0 0 64 64"
-                                fill="none"
-                                class="btn_arr_big"
-                            >
-                                <circle cx="32" cy="31.9961" r="32" fill="black"></circle>
-                                <path
-                                    d="M34.9292 25.5325L33.515 26.9467L38.1748 31.6065L23 31.6074V33.6015L38.1748 33.6005L33.515 38.2604L34.9292 39.6746L42.0002 32.6035L34.9292 25.5325Z"
-                                    fill="white"
-                                ></path>
-                            </svg>
-                        </a>
-                    </li>
-                    <li class="cont-promise__list-item policy">
-                        <div class="title_responsible">
-                            <span class="name_reponsible bg-policy">정책매거진</span>
-                        </div>
-                        <img src="./assets/img/policy.gif" alt="esg image" class="img_responsible" />
-                        <p class="text_responsible">기술과 사람이 함께 만드는 건강한 디지털 문화를 고민합니다</p>
-                        <a href="#none" class="btn_area" aria-label="정책매거진페이지 바로가기">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="64"
-                                height="64"
-                                viewBox="0 0 64 64"
-                                fill="none"
-                                class="btn_arr_big"
-                            >
-                                <circle cx="32" cy="31.9961" r="32" fill="black"></circle>
-                                <path
-                                    d="M34.9292 25.5325L33.515 26.9467L38.1748 31.6065L23 31.6074V33.6015L38.1748 33.6005L33.515 38.2604L34.9292 39.6746L42.0002 32.6035L34.9292 25.5325Z"
-                                    fill="white"
-                                ></path>
-                            </svg>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <!-- help -->
-            <section class="cont-help cont__wrapper">
-                <h3 class="cont__title type-help">무엇을 도와드릴까요?</h3>
-                <div class="main-grid-bg">
-                    <div class="help-grid">
-                        <div class="col-4 center_wrapper">
-                            <a class="commons center" href="#">
-                                <div class="commons_content">
-                                    <p class="common_name">
-                                        카카오 <br />
-                                        고객센터
-                                    </p>
-                                    <span class="common_gosite direct"
-                                        >바로가기
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="24"
-                                            height="24"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            class="btn_out"
-                                        >
-                                            <circle cx="12" cy="12" r="12" fill="black"></circle>
-                                            <path
-                                                d="M10.8104 8.57804V9.65654H14.3641L8.57812 15.4432L9.33847 16.2035L15.1244 10.4169V13.9706H16.2029V8.57804H10.8104Z"
-                                                fill="white"
-                                            ></path>
-                                        </svg>
-                                    </span>
-                                </div>
-                                <img
-                                    src="//t1.kakaocdn.net/thumb/C200x200.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fservice%2Fmain%2Fkakao-cs-white.gif"
-                                    alt="kakao customer center"
-                                    class="icon_help"
-                                />
-                            </a>
-                            <a class="commons center" href="#">
-                                <div class="commons_content">
-                                    <p class="common_name">다음 <br />고객센터</p>
-                                    <span class="common_gosite direct"
-                                        >바로가기
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="24"
-                                            height="24"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            class="btn_out"
-                                        >
-                                            <circle cx="12" cy="12" r="12" fill="black"></circle>
-                                            <path
-                                                d="M10.8104 8.57804V9.65654H14.3641L8.57812 15.4432L9.33847 16.2035L15.1244 10.4169V13.9706H16.2029V8.57804H10.8104Z"
-                                                fill="white"
-                                            ></path>
-                                        </svg>
-                                    </span>
-                                </div>
-                                <img
-                                    src="//t1.kakaocdn.net/thumb/C200x200.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fservice%2Fmain%2Fdaum-cs-white.gif"
-                                    alt=""
-                                    class="icon_help"
-                                />
-                            </a>
-                            <a class="commons center" href="#">
-                                <div class="commons_content">
-                                    <p class="common_name direct">커머스 <br />고객센터</p>
-                                    <span class="common_gosite direct"
-                                        >바로가기
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="24"
-                                            height="24"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            class="btn_out"
-                                        >
-                                            <circle cx="12" cy="12" r="12" fill="black"></circle>
-                                            <path
-                                                d="M10.8104 8.57804V9.65654H14.3641L8.57812 15.4432L9.33847 16.2035L15.1244 10.4169V13.9706H16.2029V8.57804H10.8104Z"
-                                                fill="white"
-                                            ></path>
-                                        </svg>
-                                    </span>
-                                </div>
-                                <img
-                                    src="//t1.kakaocdn.net/thumb/C200x200.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fservice%2Fmain%2Fcommerce-cs-white_231229.gif"
-                                    alt=""
-                                    class="icon_help"
-                                />
-                            </a>
-                        </div>
-                        <div class="col-4">
-                            <div class="kakao_subscribe">
-                                <p>카카오의 다양한 소식을 구독하세요!</p>
-                                <span>공식 소셜 미디어 바로가기</span>
-                                <ul class="sns_lists">
-                                    <li class="sns_lists__item">
-                                        <a href="#" class="sr-only kakao">카카오채널 새창열기</a>
-                                    </li>
-                                    <li class="sns_lists__item">
-                                        <a href="#" class="sr-only youtube">유투브 새창열기</a>
-                                    </li>
-                                    <li class="sns_lists__item">
-                                        <a href="#" class="sr-only insta">인스타그램 새창열기</a>
-                                    </li>
-                                    <li class="sns_lists__item">
-                                        <a href="#" class="sr-only facebook">페이스북 새창열기</a>
-                                    </li>
-                                    <li class="sns_lists__item">
-                                        <a href="#" class="sr-only linked">링크드인 새창열기</a>
-                                    </li>
-                                </ul>
+            <div class="doc_main">
+                <section class="cont-home cont__wrapper">
+                    <!-- visual -->
+                    <div class="cont-home__item visual">
+                        <div class="visual-wrpper">
+                            <div class="inner-top">
+                                <a href="#none" class="tooltip">
+                                    <span aria-hidden="true" class="info_banner">카카오 소식 모아보기</span>
+                                    <img src="./assets/img/bulb.gif" alt="소식" />
+                                </a>
                             </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="kakao_crew">
-                                <p>
-                                    세상만사에 관심이 많다면, <br />
-                                    당신은 이미 카카오 크루
-                                </p>
-                                <a class="common_gosite" href="#none"
-                                    >영입소식
-
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        width="24"
-                                        height="24"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        class="btn_out type_inversion"
-                                    >
-                                        <circle cx="12" cy="12" r="12" fill="#fff"></circle>
-                                        <path
-                                            d="M10.8104 8.57804V9.65654H14.3641L8.57812 15.4432L9.33847 16.2035L15.1244 10.4169V13.9706H16.2029V8.57804H10.8104Z"
-                                            fill="#000"
-                                        ></path>
-                                    </svg>
+                            <div class="inner-cont">
+                                <video
+                                    src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/heroVisual/4c2201fa019200001.mp4"
+                                    poster="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/heroVisual/4c222124019200001.png?type=thumb&amp;opt=C1424x808.fwebp"
+                                    autoplay="autoplay"
+                                    muted="muted"
+                                    loop="loop"
+                                    playsinline="playsinline"
+                                    type="video/mp4"
+                                    class="item_visual"
+                                ></video>
+                            </div>
+                            <div class="inner-bottom">
+                                <a href="#">
+                                    <span>더 알아보기</span>
+                                    <span class="screen_out">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            width="64"
+                                            height="64"
+                                            viewBox="0 0 64 64"
+                                            fill="none"
+                                            class="btn_arr_big"
+                                        >
+                                            <circle cx="32" cy="31.9961" r="32" fill="black"></circle>
+                                            <path
+                                                d="M34.9292 25.5325L33.515 26.9467L38.1748 31.6065L23 31.6074V33.6015L38.1748 33.6005L33.515 38.2604L34.9292 39.6746L42.0002 32.6035L34.9292 25.5325Z"
+                                                fill="white"
+                                            ></path>
+                                        </svg>
+                                    </span>
                                 </a>
                             </div>
                         </div>
-                        <div class="col-6">
-                            <a class="invest_info commons" href="#none">
-                                <div class="commons_content">
-                                    <p class="common_name">투자정보</p>
-                                    <span class="common_gosite"
-                                        >바로가기
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            width="24"
-                                            height="24"
-                                            viewBox="0 0 24 24"
-                                            fill="none"
-                                            class="btn_out"
-                                        >
-                                            <circle cx="12" cy="12" r="12" fill="black"></circle>
-                                            <path
-                                                d="M10.8104 8.57804V9.65654H14.3641L8.57812 15.4432L9.33847 16.2035L15.1244 10.4169V13.9706H16.2029V8.57804H10.8104Z"
-                                                fill="white"
-                                            ></path>
-                                        </svg>
-                                    </span>
-                                </div>
-                                <img src="./assets/img/img_invest.webp" alt="" class="icon_help" />
-                            </a>
+                    </div>
+                    <!-- widget -->
+                    <div class="cont-home__item widget first">
+                        <div class="swiper-container swiper1">
+                            <div class="swiper-wrapper">
+                                <a class="swiper-slide" href="#none">
+                                    <h2>기부에 함께 해주신 <br />착한 마음들</h2>
+                                    <strong class="number_count">
+                                        <span><span>6</span></span
+                                        ><span><span>1</span></span
+                                        ><span>,</span><span><span>3</span></span
+                                        ><span><span>2</span></span
+                                        ><span><span>2</span></span
+                                        ><span>,</span><span><span>1</span></span
+                                        ><span><span>2</span></span
+                                        ><span><span>0</span></span></strong
+                                    >
+                                    <span class="text_count">건</span>
+                                </a>
+                                <a class="swiper-slide slide2" href="#none"></a>
+                            </div>
+
+                            <div class="swiper-pagination swiper-pagination2"></div>
+                            <div class="swiper-commons-button swiper-button-prev"></div>
+                            <div class="swiper-commons-button swiper-button-next"></div>
                         </div>
-                        <div class="col-6">
-                            <a class="data_info commons" href="#none">
-                                <div class="commons_content">
-                                    <p class="common_name">데이터의 연결과 보호의 균형을 위한 <br />카카오의 노력</p>
-                                    <span class="common_gosite"
-                                        >바로가기
+                    </div>
+                    <div class="cont-home__item widget second">
+                        <div class="swiper-container swiper2">
+                            <div class="swiper-wrapper">
+                                <a class="swiper-slide" href="#none">
+                                    <span class="badge type2">다양성의 가치</span>
+                                    <strong>2023 <br />카카오 다양성 보고서</strong>
+                                    <ul class="tag-container">
+                                        <li class="tag">#다양성</li>
+                                        <li class="tag">#건강한디지털</li>
+                                    </ul>
+                                </a>
+                                <a class="swiper-slide" href="#none">
+                                    <span class="badge">디지털 격차 줄이기</span>
+                                    <strong>어른신을 위한 <br />개인정보보호 안내</strong>
+                                    <ul class="tag-container">
+                                        <li class="tag">#기술복지</li>
+                                        <li class="tag">#피싱범죄예방</li>
+                                    </ul>
+                                </a>
+                                <a class="swiper-slide" href="#none">
+                                    <span class="badge">카톡설명서</span>
+                                    <strong>모두의 카톡을 <br />더 가깝고 안전하게</strong>
+                                    <ul class="tag-container">
+                                        <li class="tag">#업데이트소식</li>
+                                        <li class="tag">#톡활용팁</li>
+                                    </ul>
+                                </a>
+                            </div>
+
+                            <!-- Pagination -->
+                            <div class="swiper-pagination swiper-pagination2"></div>
+                            <!-- 두 번째 swiper의 pagination -->
+                        </div>
+                    </div>
+                    <div class="cont-home__item widget third">
+                        <div class="swiper-container swiper3">
+                            <div class="swiper-wrapper">
+                                <a class="swiper-slide" href="#none" style="background-color: #fae100">
+                                    <img src="./assets/img/kakao-group.webp" alt="" />
+                                    <span>카카오그룹</span></a
+                                >
+                                <a
+                                    class="swiper-slide history"
+                                    href="#none"
+                                    style="background-color: rgba(0, 0, 0, 0.2)"
+                                    ><span>연혁</span></a
+                                >
+                            </div>
+
+                            <!-- 버튼 추가 -->
+                            <div class="swiper-commons-button swiper-button-prev"></div>
+                            <div class="swiper-commons-button swiper-button-next"></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- story -->
+                <section class="cont-story">
+                    <h3 class="cont__title cont__wrapper type-story">
+                        카카오와 카카오 그룹이 축적해 온 이야기들
+                        <button class="btn_story pause" aria-label="카드 슬라이드동작 "></button>
+                    </h3>
+                    <ul class="cont-story__list" id="storyList">
+                        <li class="cont-story__list-item type_wide first">
+                            <div class="item_normal_card type_flow">
+                                <a href="#none" class="wrap_cont">
+                                    <div class="wrap_text">
+                                        <div class="info_cate">
+                                            <div class="info_cate__tit">
+                                                <img src="./assets/img/impact.webp" alt="title 이미지" />
+                                                <span class="text_cate">임팩트</span>
+                                            </div>
+                                            <button class="share_btn" aria-label="공유하기">
+                                                <img src="./assets/img/ico_share.svg" alt="share-menu" />
+                                            </button>
+                                        </div>
+                                        <strong class="tit_card"> 왕초보 사장님들의 <br />단골 만들기 비법 </strong>
+                                        <p class="desc_card">마케팅이 어려웠던 사장님이<br />매출 500% 올린 비결</p>
+                                        <ol class="info_card">
+                                            <li>#소상공인지원</li>
+                                            <li class="removed">#카카오상생활동</li>
+                                            <li>#카카오톡채널</li>
+                                        </ol>
+                                    </div>
+                                    <div class="wrap_thumb">
+                                        <img
+                                            src="./assets/img/thumb_1.webp"
+                                            alt="카카오톡 채널로 매출이 늘어난 비결은?"
+                                        />
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="cont-story__list-item type_normal" data-category="data2">
+                            <div class="item_normal_card type_flow">
+                                <a href="#none" class="wrap_cont">
+                                    <div class="wrap_text">
+                                        <div class="info_cate">
+                                            <div class="info_cate__tit">
+                                                <img src="./assets/img/ico_closer.webp" alt="title 이미지" />
+                                                <span class="text_cate">더 가깝게</span>
+                                            </div>
+                                            <button class="share_btn" aria-label="공유하기">
+                                                <img src="./assets/img/ico_share.svg" alt="share-menu" />
+                                            </button>
+                                        </div>
+                                        <strong class="tit_card">무료로 여는<br />톡 안의 두번째 매장 </strong>
+                                        <ol class="info_card">
+                                            <li>#디지털전환</li>
+                                            <li>#카카오톡채널</li>
+                                        </ol>
+                                    </div>
+                                    <div class="wrap_thumb">
+                                        <img
+                                            src="./assets/img/thumb_2.webp"
+                                            alt="카카오톡 채널로 매출이 늘어난 비결은?"
+                                        />
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="cont-story__list-item type_normal" data-category="data3">
+                            <div class="item_normal_card type_flow">
+                                <a href="#none" class="wrap_cont reverse">
+                                    <div class="wrap_text">
+                                        <div class="info_cate">
+                                            <div class="info_cate__tit">
+                                                <img src="./assets/img/impact.webp" alt="title 이미지" />
+                                                <span class="text_cate">임팩트</span>
+                                            </div>
+                                            <button class="share_btn" aria-label="공유하기">
+                                                <img src="./assets/img/ico_share.svg" alt="share-menu" />
+                                            </button>
+                                        </div>
+                                        <strong class="tit_card">도로 위 히어로즈</strong>
+                                        <ol class="info_card">
+                                            <li>#카카오모빌리티</li>
+                                            <li>#파트너상생</li>
+                                        </ol>
+                                    </div>
+                                    <div class="wrap_thumb">
+                                        <img
+                                            src="./assets/img/thumb_3.webp"
+                                            alt="히어로, 보이는 것보다 가까이 있습니다"
+                                        />
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="cont-story__list-item type_normal" data-category="data4">
+                            <div class="item_normal_card type_flow">
+                                <a href="#none" class="wrap_cont">
+                                    <div class="wrap_text">
+                                        <div class="info_cate">
+                                            <div class="info_cate__tit">
+                                                <img src="./assets/img/impact.webp" alt="title 이미지" />
+                                                <span class="text_cate">임팩트</span>
+                                            </div>
+                                            <button class="share_btn" aria-label="공유하기">
+                                                <img src="./assets/img/ico_share.svg" alt="share-menu" />
+                                            </button>
+                                        </div>
+                                        <strong class="tit_card">카카오가 꿈꾸는<br />지속가능한 미래</strong>
+                                        <ol class="info_card">
+                                            <li>#ESG</li>
+                                            <li>#ESG보고서</li>
+                                            <li>#약속과책임</li>
+                                            <li>#카카오</li>
+                                        </ol>
+                                    </div>
+                                    <div class="wrap_thumb">
+                                        <img src="./assets/img/thumb_4.webp" alt="카카오가 궁금해! esg talk" />
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="cont-story__list-item type_normal" data-category="data5">
+                            <div class="item_normal_card type_flow">
+                                <a href="#none" class="wrap_cont reverse">
+                                    <div class="wrap_text">
+                                        <div class="info_cate">
+                                            <div class="info_cate__tit">
+                                                <img src="./assets/img/impact.webp" alt="title 이미지" />
+                                                <span class="text_cate">서비스</span>
+                                            </div>
+                                            <button class="share_btn" aria-label="공유하기">
+                                                <img src="./assets/img/ico_share.svg" alt="share-menu" />
+                                            </button>
+                                        </div>
+                                        <strong class="tit_card"
+                                            >진화에 누구보다 <br />
+                                            진심인 편</strong
+                                        >
+                                        <ol class="info_card">
+                                            <li>#조승연의탐구생활</li>
+                                            <li>#카카오톡</li>
+                                            <li>#카카이지</li>
+                                        </ol>
+                                    </div>
+                                    <div class="wrap_thumb">
+                                        <img src="./assets/img/thumb_5.webp" alt="달라진 일상, 달라진 카톡" />
+                                    </div>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <!-- service -->
+                <section class="cont-service cont__wrapper">
+                    <h3 class="cont__title type-service">더 나은 세상을 만드는 카카오 서비스</h3>
+                    <ul class="cont-service__list">
+                        <li class="cont-service__list-item">
+                            <strong>커뮤니케이션</strong>
+                            <div class="item__services">
+                                <a class="service kakao" href="#"><span class="sr-only">카카오톡</span></a>
+                                <a class="service daum" href="#"><span class="sr-only">다음</span></a>
+                                <a class="service story last" href="#"><span class="sr-only">스토리</span></a>
+                                <a class="service link" href="#"><span class="sr-only">커뮤니케이션더보기</span></a>
+                            </div>
+                        </li>
+                        <li class="cont-service__list-item">
+                            <strong>비즈니스</strong>
+                            <div class="item__services">
+                                <a class="service channel" href="#"><span class="sr-only">카카오톡</span></a>
+                                <a class="service cloud" href="#"><span class="sr-only">다음</span></a>
+                                <a class="service agit last" href="#"><span class="sr-only">스토리</span></a>
+                                <a class="service link" href="#"><span class="sr-only">커뮤니케이션더보기</span></a>
+                            </div>
+                        </li>
+                        <li class="cont-service__list-item">
+                            <strong>일상편의</strong>
+                            <div class="item__services">
+                                <a class="service kakaoMap" href="#"><span class="sr-only">카카오톡</span></a>
+                                <a class="service kakaoT" href="#"><span class="sr-only">다음</span></a>
+                                <a class="service kakaoBank last" href="#"><span class="sr-only">스토리</span></a>
+                                <a class="service link" href="#"><span class="sr-only">커뮤니케이션더보기</span></a>
+                            </div>
+                        </li>
+                        <li class="cont-service__list-item">
+                            <strong>쇼핑</strong>
+                            <div class="item__services">
+                                <a class="service kakaoGift" href="#"><span class="sr-only">카카오톡</span></a>
+                                <a class="service kakaoShop" href="#"><span class="sr-only">다음</span></a>
+                                <a class="service kakaoZigzag last" href="#"><span class="sr-only">스토리</span></a>
+                                <a class="service link" href="#"><span class="sr-only">커뮤니케이션더보기</span></a>
+                            </div>
+                        </li>
+                        <li class="cont-service__list-item">
+                            <strong>엔터테인먼트</strong>
+                            <div class="item__services">
+                                <a class="service kakaoPage" href="#"><span class="sr-only">카카오톡</span></a>
+                                <a class="service kakaoPiccoma" href="#"><span class="sr-only">다음</span></a>
+                                <a class="service kakaoMelon last" href="#"><span class="sr-only">스토리</span></a>
+                                <a class="service link" href="#"><span class="sr-only">커뮤니케이션더보기</span></a>
+                            </div>
+                        </li>
+                        <li class="cont-service__list-item">
+                            <strong>소셜임팩트</strong>
+                            <div class="item__services">
+                                <a class="service kakaoTogether" href="#"><span class="sr-only">카카오톡</span></a>
+                                <a class="service link" href="#"><span class="sr-only">커뮤니케이션더보기</span></a>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="wrap_btn">
+                        서비스 전체보기
+                        <span class="screen_out">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="25"
+                                viewBox="0 0 24 25"
+                                fill="none"
+                                class="btn_arr"
+                            >
+                                <g id="btn">
+                                    <circle cx="12" cy="12.5" r="12" fill="black"></circle>
+                                    <path
+                                        d="M13.971 9.07847L13.2084 9.84107L15.7213 12.3539L7.53825 12.3543L7.53826 13.4296L15.7213 13.4292L13.2085 15.942L13.9711 16.7046L17.7842 12.8916L13.971 9.07847Z"
+                                        fill="white"
+                                    ></path>
+                                </g>
+                            </svg>
+                        </span>
+                    </button>
+                </section>
+                <!-- news -->
+                <section class="cont-news cont__wrapper">
+                    <h3 class="cont__title type-news">오늘의 뉴스</h3>
+                </section>
+                <!-- promise -->
+                <section class="cont-promise cont__wrapper">
+                    <h3 class="cont__title type-promise">약속과 책임</h3>
+                    <ul class="cont-promise__list">
+                        <li class="cont-promise__list-item esg">
+                            <div class="title_responsible">
+                                <span class="name_reponsible bg-esg">ESG</span>
+                            </div>
+                            <img src="./assets/img/esg.gif" alt="esg image" class="img_responsible" />
+                            <p class="text_responsible">모두의 지속가능한 미래를 위한 카카오의 약속과 책임</p>
+                            <a href="#none" class="btn_area" aria-label="ESG페이지 바로가기">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="64"
+                                    height="64"
+                                    viewBox="0 0 64 64"
+                                    fill="none"
+                                    class="btn_arr_big"
+                                >
+                                    <circle cx="32" cy="31.9961" r="32" fill="black"></circle>
+                                    <path
+                                        d="M34.9292 25.5325L33.515 26.9467L38.1748 31.6065L23 31.6074V33.6015L38.1748 33.6005L33.515 38.2604L34.9292 39.6746L42.0002 32.6035L34.9292 25.5325Z"
+                                        fill="white"
+                                    ></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="cont-promise__list-item green">
+                            <div class="title_responsible">
+                                <span class="name_reponsible bg-green">액티브그린</span>
+                            </div>
+                            <img src="./assets/img/green.gif" alt="esg image" class="img_responsible" />
+                            <p class="text_responsible">카카오를 이용하는 만큼 우리들의 지구도 더 풍요로울 수 있도록</p>
+                            <a href="#none" class="btn_area" aria-label="액티브그린페이지 바로가기">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="64"
+                                    height="64"
+                                    viewBox="0 0 64 64"
+                                    fill="none"
+                                    class="btn_arr_big"
+                                >
+                                    <circle cx="32" cy="31.9961" r="32" fill="black"></circle>
+                                    <path
+                                        d="M34.9292 25.5325L33.515 26.9467L38.1748 31.6065L23 31.6074V33.6015L38.1748 33.6005L33.515 38.2604L34.9292 39.6746L42.0002 32.6035L34.9292 25.5325Z"
+                                        fill="white"
+                                    ></path>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="cont-promise__list-item policy">
+                            <div class="title_responsible">
+                                <span class="name_reponsible bg-policy">정책매거진</span>
+                            </div>
+                            <img src="./assets/img/policy.gif" alt="esg image" class="img_responsible" />
+                            <p class="text_responsible">기술과 사람이 함께 만드는 건강한 디지털 문화를 고민합니다</p>
+                            <a href="#none" class="btn_area" aria-label="정책매거진페이지 바로가기">
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="64"
+                                    height="64"
+                                    viewBox="0 0 64 64"
+                                    fill="none"
+                                    class="btn_arr_big"
+                                >
+                                    <circle cx="32" cy="31.9961" r="32" fill="black"></circle>
+                                    <path
+                                        d="M34.9292 25.5325L33.515 26.9467L38.1748 31.6065L23 31.6074V33.6015L38.1748 33.6005L33.515 38.2604L34.9292 39.6746L42.0002 32.6035L34.9292 25.5325Z"
+                                        fill="white"
+                                    ></path>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <!-- help -->
+                <section class="cont-help cont__wrapper">
+                    <h3 class="cont__title type-help">무엇을 도와드릴까요?</h3>
+                    <div class="main-grid-bg">
+                        <div class="help-grid">
+                            <div class="col-4 center_wrapper">
+                                <a class="commons center" href="#">
+                                    <div class="commons_content">
+                                        <p class="common_name">
+                                            카카오 <br />
+                                            고객센터
+                                        </p>
+                                        <span class="common_gosite direct"
+                                            >바로가기
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                class="btn_out"
+                                            >
+                                                <circle cx="12" cy="12" r="12" fill="black"></circle>
+                                                <path
+                                                    d="M10.8104 8.57804V9.65654H14.3641L8.57812 15.4432L9.33847 16.2035L15.1244 10.4169V13.9706H16.2029V8.57804H10.8104Z"
+                                                    fill="white"
+                                                ></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <img
+                                        src="//t1.kakaocdn.net/thumb/C200x200.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fservice%2Fmain%2Fkakao-cs-white.gif"
+                                        alt="kakao customer center"
+                                        class="icon_help"
+                                    />
+                                </a>
+                                <a class="commons center" href="#">
+                                    <div class="commons_content">
+                                        <p class="common_name">다음 <br />고객센터</p>
+                                        <span class="common_gosite direct"
+                                            >바로가기
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                class="btn_out"
+                                            >
+                                                <circle cx="12" cy="12" r="12" fill="black"></circle>
+                                                <path
+                                                    d="M10.8104 8.57804V9.65654H14.3641L8.57812 15.4432L9.33847 16.2035L15.1244 10.4169V13.9706H16.2029V8.57804H10.8104Z"
+                                                    fill="white"
+                                                ></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <img
+                                        src="//t1.kakaocdn.net/thumb/C200x200.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fservice%2Fmain%2Fdaum-cs-white.gif"
+                                        alt=""
+                                        class="icon_help"
+                                    />
+                                </a>
+                                <a class="commons center" href="#">
+                                    <div class="commons_content">
+                                        <p class="common_name direct">커머스 <br />고객센터</p>
+                                        <span class="common_gosite direct"
+                                            >바로가기
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                class="btn_out"
+                                            >
+                                                <circle cx="12" cy="12" r="12" fill="black"></circle>
+                                                <path
+                                                    d="M10.8104 8.57804V9.65654H14.3641L8.57812 15.4432L9.33847 16.2035L15.1244 10.4169V13.9706H16.2029V8.57804H10.8104Z"
+                                                    fill="white"
+                                                ></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <img
+                                        src="//t1.kakaocdn.net/thumb/C200x200.fwebp.q100/?fname=https%3A%2F%2Ft1.kakaocdn.net%2Fkakaocorp%2Fkakaocorp%2Fservice%2Fmain%2Fcommerce-cs-white_231229.gif"
+                                        alt=""
+                                        class="icon_help"
+                                    />
+                                </a>
+                            </div>
+                            <div class="col-4">
+                                <div class="kakao_subscribe">
+                                    <p>카카오의 다양한 소식을 구독하세요!</p>
+                                    <span>공식 소셜 미디어 바로가기</span>
+                                    <ul class="sns_lists">
+                                        <li class="sns_lists__item">
+                                            <a href="#" class="sr-only kakao">카카오채널 새창열기</a>
+                                        </li>
+                                        <li class="sns_lists__item">
+                                            <a href="#" class="sr-only youtube">유투브 새창열기</a>
+                                        </li>
+                                        <li class="sns_lists__item">
+                                            <a href="#" class="sr-only insta">인스타그램 새창열기</a>
+                                        </li>
+                                        <li class="sns_lists__item">
+                                            <a href="#" class="sr-only facebook">페이스북 새창열기</a>
+                                        </li>
+                                        <li class="sns_lists__item">
+                                            <a href="#" class="sr-only linked">링크드인 새창열기</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="kakao_crew">
+                                    <p>
+                                        세상만사에 관심이 많다면, <br />
+                                        당신은 이미 카카오 크루
+                                    </p>
+                                    <a class="common_gosite" href="#none"
+                                        >영입소식
+
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             width="24"
                                             height="24"
                                             viewBox="0 0 24 24"
                                             fill="none"
-                                            class="btn_out"
+                                            class="btn_out type_inversion"
                                         >
-                                            <circle cx="12" cy="12" r="12" fill="black"></circle>
+                                            <circle cx="12" cy="12" r="12" fill="#fff"></circle>
                                             <path
                                                 d="M10.8104 8.57804V9.65654H14.3641L8.57812 15.4432L9.33847 16.2035L15.1244 10.4169V13.9706H16.2029V8.57804H10.8104Z"
-                                                fill="white"
+                                                fill="#000"
                                             ></path>
                                         </svg>
-                                    </span>
+                                    </a>
                                 </div>
-                                <img src="./assets/img/img_lock.webp" alt="" class="icon_help" />
-                            </a>
+                            </div>
+                            <div class="col-6">
+                                <a class="invest_info commons" href="#none">
+                                    <div class="commons_content">
+                                        <p class="common_name">투자정보</p>
+                                        <span class="common_gosite"
+                                            >바로가기
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                class="btn_out"
+                                            >
+                                                <circle cx="12" cy="12" r="12" fill="black"></circle>
+                                                <path
+                                                    d="M10.8104 8.57804V9.65654H14.3641L8.57812 15.4432L9.33847 16.2035L15.1244 10.4169V13.9706H16.2029V8.57804H10.8104Z"
+                                                    fill="white"
+                                                ></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <img src="./assets/img/img_invest.webp" alt="" class="icon_help" />
+                                </a>
+                            </div>
+                            <div class="col-6">
+                                <a class="data_info commons" href="#none">
+                                    <div class="commons_content">
+                                        <p class="common_name">
+                                            데이터의 연결과 보호의 균형을 위한 <br />카카오의 노력
+                                        </p>
+                                        <span class="common_gosite"
+                                            >바로가기
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                width="24"
+                                                height="24"
+                                                viewBox="0 0 24 24"
+                                                fill="none"
+                                                class="btn_out"
+                                            >
+                                                <circle cx="12" cy="12" r="12" fill="black"></circle>
+                                                <path
+                                                    d="M10.8104 8.57804V9.65654H14.3641L8.57812 15.4432L9.33847 16.2035L15.1244 10.4169V13.9706H16.2029V8.57804H10.8104Z"
+                                                    fill="white"
+                                                ></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                    <img src="./assets/img/img_lock.webp" alt="" class="icon_help" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="wrap_btn">
+                        카카오 소식 모아보기
+                        <span class="screen_out">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="25"
+                                viewBox="0 0 24 25"
+                                fill="none"
+                                class="btn_arr"
+                            >
+                                <g id="btn">
+                                    <circle cx="12" cy="12.5" r="12" fill="black"></circle>
+                                    <path
+                                        d="M13.971 9.07847L13.2084 9.84107L15.7213 12.3539L7.53825 12.3543L7.53826 13.4296L15.7213 13.4292L13.2085 15.942L13.9711 16.7046L17.7842 12.8916L13.971 9.07847Z"
+                                        fill="white"
+                                    ></path>
+                                </g>
+                            </svg>
+                        </span>
+                    </button>
+                </section>
+            </div>
+            <!-- footer -->
+            <footer class="cont__wrapper"></footer>
+
+            <div class="search_layer">
+                <div class="inner_layer">
+                    <div class="layer_head">
+                        <a href="#none" class="layer_head__logo" aria-label="카카오">
+                            <img src="./assets/img/kakao.svg" alt="logo" />
+                        </a>
+                        <button class="layer_close" id="closeBtn" aria-label="닫기">
+                            <img src="./assets/img/ico_close.svg" alt="닫기버튼" />
+                        </button>
+                    </div>
+                    <div class="layer_body">
+                        <h2 class="sr-only">검색</h2>
+                        <div class="area_search">
+                            <div class="group_search">
+                                <form autocomplete="off">
+                                    <input
+                                        type="text"
+                                        id="inpSearch"
+                                        placeholder="무엇이 궁금하신가요?"
+                                        aria-label="검색어 입력"
+                                    />
+                                </form>
+                                <ul class="wrap_tag">
+                                    <li class="link_tag"><a href="#none">#2024 스타콘 페스타</a></li>
+                                    <li class="link_tag"><a href="#none">#카카오톡 쇼핑탭</a></li>
+                                    <li class="link_tag"><a href="#none">#카카오쇼핑페스타</a></li>
+                                    <li class="link_tag"><a href="#none">#성황리에종료</a></li>
+                                    <li class="link_tag"><a href="#none">#전략적파트너십</a></li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <button class="wrap_btn">
-                    카카오 소식 모아보기
-                    <span class="screen_out">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="25"
-                            viewBox="0 0 24 25"
-                            fill="none"
-                            class="btn_arr"
-                        >
-                            <g id="btn">
-                                <circle cx="12" cy="12.5" r="12" fill="black"></circle>
-                                <path
-                                    d="M13.971 9.07847L13.2084 9.84107L15.7213 12.3539L7.53825 12.3543L7.53826 13.4296L15.7213 13.4292L13.2085 15.942L13.9711 16.7046L17.7842 12.8916L13.971 9.07847Z"
-                                    fill="white"
-                                ></path>
-                            </g>
-                        </svg>
-                    </span>
-                </button>
-            </section>
-            <!-- footer -->
-            <footer class="cont__wrapper"></footer>
+            </div>
         </div>
+
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script>
             // swiper : cont-home

@@ -5,9 +5,126 @@ html {
 body {
     font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
     color: $colorBlack;
-    // overflow-x: hidden;
+    background-color: $colorWhite;
+    word-break: keep-all;
+    word-wrap: break-word;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    // search-toggle
+    &.open_search {
+        overflow-y: hidden;
+        .doc_main {
+            height: calc(100vh - 92px);
+            transform: translateY(310px);
+            overflow: hidden;
+        }
+        .search_layer {
+            display: block;
+            top: 0;
+            bottom: 0;
+            &::before {
+                opacity: 0.9;
+            }
+            .inner_layer {
+                opacity: 1;
+
+                .layer_body {
+                    .area_search {
+                        -webkit-transform: translateY(0);
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    .icon-path {
+        stroke: #000; /* 기본 색상 (라이트 모드) */
+        transition: stroke 0.3s; /* 부드러운 전환 효과 */
+    }
+    // dark-mode
+    &.dark-mode {
+        color: $colorWhite;
+        background-color: $colorBlack;
+
+        header {
+            color: $colorWhite;
+            background-color: $colorBlack;
+            border-bottom: 1px solid $colorBlack;
+
+            &.active {
+                border-bottom: 1px solid $colorGray8;
+            }
+        }
+
+        .icon-path {
+            stroke: #fff !important;
+        }
+
+        .info_banner {
+            background-color: $colorWhite;
+            color: $colorBlack;
+        }
+        [class*='inner-'] {
+            background-color: $colorBlack !important;
+        }
+
+        .swiper-slide {
+            * {
+                color: $colorBlack !important;
+            }
+        }
+
+        .item_normal_card {
+            background-color: $colorGray8 !important;
+            color: $colorWhite;
+
+            [class*='card'] {
+                color: $colorWhite !important;
+            }
+        }
+
+        .cont-service__list-item {
+            background-color: $colorGray8 !important;
+        }
+
+        .commons {
+            background-color: $colorGray8 !important;
+        }
+
+        .title_responsible {
+            background-color: $colorBlack;
+        }
+        .btn_area {
+            background-color: $colorBlack;
+        }
+
+        .wrap_btn {
+            background-color: $colorGray8 !important;
+        }
+        .text_cate {
+            background-color: $colorGray7 !important;
+        }
+
+        .kakao_subscribe {
+            color: $colorBlack !important;
+        }
+    }
 }
 
+.container_doc {
+    position: relative;
+}
+.doc_main {
+    -webkit-transform: none;
+    transform: none;
+    -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.59, 0.01, 0.28, 1);
+    transition: -webkit-transform 0.5s cubic-bezier(0.59, 0.01, 0.28, 1);
+    transition: transform 0.5s cubic-bezier(0.59, 0.01, 0.28, 1);
+    transition: transform 0.5s cubic-bezier(0.59, 0.01, 0.28, 1),
+        -webkit-transform 0.5s cubic-bezier(0.59, 0.01, 0.28, 1);
+}
 // home
 .cont-home {
     display: grid;
@@ -590,7 +707,7 @@ body {
                             background-color: $colorPrimary;
                             &.type2 {
                                 color: $colorWhite;
-                                background-color: $colorBlack;
+                                // background-color: $colorBlack;
                             }
                             @media screen and (max-width: 1902px) {
                                 margin-bottom: 0.5rem;
@@ -604,7 +721,6 @@ body {
                             font-size: 2.2rem;
                             line-height: 1.36;
                             letter-spacing: -0.6px;
-                            color: var(--baseForeground);
                             font-weight: 400;
 
                             @media screen and (max-width: 1902px) {
@@ -1052,7 +1168,7 @@ body {
                 }
 
                 &:hover {
-                    box-shadow: $serviceShadow;
+                    opacity: 0.7;
                 }
 
                 &.kakao {
@@ -1299,7 +1415,7 @@ body {
                 letter-spacing: -0.8px;
                 max-width: 34rem;
                 color: $colorWhite;
-                word-break: keep-all;
+                // word-break: keep-all;
                 @include bdesktop() {
                     max-width: 33rem;
                 }
