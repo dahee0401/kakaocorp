@@ -124,6 +124,9 @@ body {
     transition: transform 0.5s cubic-bezier(0.59, 0.01, 0.28, 1);
     transition: transform 0.5s cubic-bezier(0.59, 0.01, 0.28, 1),
         -webkit-transform 0.5s cubic-bezier(0.59, 0.01, 0.28, 1);
+    > article {
+        padding-bottom: 20rem;
+    }
 }
 // home
 .cont-home {

@@ -15,5 +15,5 @@
     ],
     "liveSassCompile.settings.generateMap": false,
     "liveSassCompile.settings.includeItems": ["/assets/scss/**/*.scss"],
-    "liveServer.settings.port": 5502
+    "liveServer.settings.port": 5503
 }

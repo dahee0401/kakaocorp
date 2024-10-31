@@ -537,6 +537,13 @@ section:not(.cont-home) {
   background-color: #dfdfdf;
 }
 
+footer {
+  background-color: #fff;
+  border-top: 1px solid #000;
+}
+footer .inner_footer {
+  padding: 81px 0 48px;
+}
 html {
   font-size: 62.5%;
 }
@@ -638,6 +645,9 @@ body.dark-mode .kakao_subscribe {
 .doc_main {
   transform: none;
   transition: transform 0.5s cubic-bezier(0.59, 0.01, 0.28, 1);
+}
+.doc_main > article {
+  padding-bottom: 20rem;
 }
 
 .cont-home {
