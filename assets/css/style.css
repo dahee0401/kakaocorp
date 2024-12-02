@@ -686,10 +686,10 @@ footer .section_relation > .wrap_relation > .link_info {
   display: block;
   padding: 10px 20px 12px;
   border-radius: 24px;
-  font-size: 12px;
+  font-size: 1.2rem;
   font-weight: 400;
   color: #111;
-  line-height: 18px;
+  line-height: 1.5em;
   letter-spacing: -0.2px;
   background: #eee;
 }
@@ -721,7 +721,7 @@ footer .section_relation > .wrap_relation > .sub_info {
   position: absolute;
   bottom: 5.2rem;
   left: 0;
-  padding: 16px 0;
+  padding: 1.6rem 0;
   background: #eee;
   border-radius: 1.2rem;
 }
@@ -741,7 +741,7 @@ footer .section_relation > .wrap_relation > .sub_info > li > a:hover {
 footer .section_relation small {
   display: block;
   padding-top: 6px;
-  font-size: 13px;
+  font-size: 1.3rem;
   letter-spacing: -0.2px;
   color: #888;
   clear: both;

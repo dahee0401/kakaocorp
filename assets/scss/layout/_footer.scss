@@ -30,7 +30,7 @@ footer {
                         margin-top: 0.8rem;
                         &:hover {
                             > a {
-                                color: #000;
+                                color: $colorBlack;
                                 text-decoration: underline;
                             }
                         }
@@ -96,10 +96,10 @@ footer {
                     padding-right: 0.8333em;
                     font-size: 1.2rem;
 
-                    color: #888;
+                    color: $colorGray9;
 
                     &:hover {
-                        color: #000;
+                        color: $colorBlack;
                     }
                     &.link_info {
                         position: relative;
@@ -117,7 +117,7 @@ footer {
                             background-position: center;
                         }
                         &.on {
-                            color: #000;
+                            color: $colorBlack;
                             &::after {
                                 transform: translateY(-50%) scaleY(-1); // 상하 반전 추가
                             }
@@ -128,7 +128,7 @@ footer {
                         }
                     }
                     &.link_emph {
-                        color: #333;
+                        color: $colorGray8;
                         font-weight: 700;
                     }
                 }
@@ -139,7 +139,7 @@ footer {
                     bottom: 3rem;
                     left: 0;
                     padding: 16px 0;
-                    background: #eee;
+                    background: $colorGray1;
                     border-radius: 1.2rem;
                     > li {
                         &:not(:first-child) {
@@ -148,10 +148,10 @@ footer {
                         > a {
                             padding: 0 1.6667em;
                             font-size: 1.2rem;
-                            color: #666;
+                            color: $colorGray10;
                             white-space: nowrap;
                             &:hover {
-                                color: #000;
+                                color: $colorBlack;
                                 text-decoration: underline;
                             }
                         }
@@ -168,12 +168,12 @@ footer {
                 display: block;
                 padding: 10px 20px 12px;
                 border-radius: 24px;
-                font-size: 12px;
+                font-size: 1.2rem;
                 font-weight: 400;
-                color: #111;
-                line-height: 18px;
+                color: $colorSemiBlack;
+                line-height: 1.5em;
                 letter-spacing: -0.2px;
-                background: #eee;
+                background: $colorGray1;
 
                 &::after {
                     content: '';
@@ -208,8 +208,8 @@ footer {
                 position: absolute;
                 bottom: 5.2rem;
                 left: 0;
-                padding: 16px 0;
-                background: #eee;
+                padding: 1.6rem 0;
+                background: $colorGray1;
                 border-radius: 1.2rem;
                 > li {
                     &:not(:first-child) {
@@ -218,10 +218,10 @@ footer {
                     > a {
                         padding: 0 1.6667em;
                         font-size: 1.2rem;
-                        color: #666;
+                        color: $colorGray10;
                         white-space: nowrap;
                         &:hover {
-                            color: #000;
+                            color: $colorBlack;
                             text-decoration: underline;
                         }
                     }
@@ -232,9 +232,9 @@ footer {
         small {
             display: block;
             padding-top: 6px;
-            font-size: 13px;
+            font-size: 1.3rem;
             letter-spacing: -0.2px;
-            color: #888;
+            color: $colorGray9;
             clear: both;
         }
     }
