@@ -545,6 +545,11 @@ footer {
 footer .inner_footer {
   padding: 8rem 0 4.8rem;
 }
+@media (max-width: 1439px) {
+  footer .inner_footer {
+    max-width: 96.8rem;
+  }
+}
 footer .section_service {
   margin: 0 auto;
 }
@@ -611,8 +616,10 @@ footer .section_relation {
 footer .section_relation > .group_info > .wrap_info {
   float: left;
   position: relative;
-  line-height: 18px;
-  margin-left: 24px;
+  line-height: 1.8rem;
+}
+footer .section_relation > .group_info > .wrap_info:not(:first-child) {
+  margin-left: 2.4rem;
 }
 footer .section_relation > .group_info > .wrap_info > a {
   padding-right: 0.8333em;
@@ -659,7 +666,7 @@ footer .section_relation > .group_info > .wrap_info > .list_subinfo {
   position: absolute;
   bottom: 3rem;
   left: 0;
-  padding: 16px 0;
+  padding: 1.6rem 0;
   background: #eee;
   border-radius: 1.2rem;
 }
@@ -684,7 +691,7 @@ footer .section_relation > .wrap_relation {
 footer .section_relation > .wrap_relation > .link_info {
   position: relative;
   display: block;
-  padding: 10px 20px 12px;
+  padding: 1rem 2rem 1.2rem;
   border-radius: 24px;
   font-size: 1.2rem;
   font-weight: 400;
