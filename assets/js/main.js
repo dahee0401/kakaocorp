@@ -127,3 +127,47 @@ document.addEventListener('keydown', function (event) {
 document.querySelector('.util__btn--mode').addEventListener('click', function () {
     document.body.classList.toggle('dark-mode'); // body에 dark-mode 클래스 토글s
 });
+
+// footer link_info클릭 토글
+document.addEventListener('DOMContentLoaded', function () {
+    const linkInfoElements = document.querySelectorAll('.link_info');
+
+    linkInfoElements.forEach(function (linkInfo) {
+        linkInfo.addEventListener('click', function (event) {
+            // 현재 클릭한 요소의 on 클래스를 토글
+            this.classList.toggle('on');
+
+            // 이벤트 전파 방지
+            event.stopPropagation();
+        });
+    });
+
+    // 문서 전체에 클릭 이벤트 추가
+    document.addEventListener('click', function () {
+        linkInfoElements.forEach(function (linkInfo) {
+            linkInfo.classList.remove('on'); // 모든 link_info에서 on 클래스 제거
+        });
+    });
+
+    // 형제 요소 클릭 시 on 클래스 제거
+    linkInfoElements.forEach(function (linkInfo) {
+        linkInfo.addEventListener('click', function (event) {
+            // 형제 요소의 on 클래스 제거
+            linkInfoElements.forEach(function (sibling) {
+                if (sibling !== linkInfo) {
+                    sibling.classList.remove('on');
+                }
+            });
+        });
+    });
+
+    // ESC 키 => on 클래스 제거
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            // ESC 키가 눌렸는지 확인
+            linkInfoElements.forEach(function (linkInfo) {
+                linkInfo.classList.remove('on'); // 모든 link_info에서 on 클래스 제거
+            });
+        }
+    });
+});

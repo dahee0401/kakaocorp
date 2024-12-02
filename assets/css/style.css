@@ -554,16 +554,22 @@ footer .section_service .wrap_service h3 {
   line-height: 1.38;
   letter-spacing: -0.6px;
   font-weight: 600;
+  cursor: text;
 }
 footer .section_service .wrap_service .board_type {
   display: flex;
   flex-wrap: nowrap;
+  padding-bottom: 4rem;
 }
 footer .section_service .wrap_service .board_type > ul {
   flex: 1;
 }
 footer .section_service .wrap_service .board_type > ul > li {
   margin-top: 0.8rem;
+}
+footer .section_service .wrap_service .board_type > ul > li:hover > a {
+  color: #000;
+  text-decoration: underline;
 }
 footer .section_service .wrap_service .board_type > ul > li:first-child {
   margin-bottom: 1.2rem;
@@ -573,6 +579,7 @@ footer .section_service .wrap_service .board_type > ul > li strong {
   line-height: 1.75;
   letter-spacing: -0.5px;
   font-weight: 600;
+  cursor: text;
 }
 footer .section_service .wrap_service .board_type > ul > li a {
   font-size: 1.4rem;
@@ -598,6 +605,148 @@ footer .section_service .wrap_service .board_type > ul > li a.open-blank::after 
 footer .section_service .wrap_service .board_type .service__list li a {
   color: #000;
 }
+footer .section_relation {
+  margin-top: 12rem;
+}
+footer .section_relation > .group_info > .wrap_info {
+  float: left;
+  position: relative;
+  line-height: 18px;
+  margin-left: 24px;
+}
+footer .section_relation > .group_info > .wrap_info > a {
+  padding-right: 0.8333em;
+  font-size: 1.2rem;
+  color: #888;
+}
+footer .section_relation > .group_info > .wrap_info > a:hover {
+  color: #000;
+}
+footer .section_relation > .group_info > .wrap_info > a.link_info {
+  position: relative;
+}
+footer .section_relation > .group_info > .wrap_info > a.link_info::after {
+  content: "";
+  position: absolute;
+  right: -0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0.9rem;
+  height: 0.9rem;
+  z-index: 10;
+  background-image: url(/assets/img/arrow-down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+footer .section_relation > .group_info > .wrap_info > a.link_info.on {
+  color: #000;
+}
+footer .section_relation > .group_info > .wrap_info > a.link_info.on::after {
+  transform: translateY(-50%) scaleY(-1);
+}
+footer .section_relation > .group_info > .wrap_info > a.link_info.on + .list_subinfo {
+  display: block;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+footer .section_relation > .group_info > .wrap_info > a.link_emph {
+  color: #333;
+  font-weight: 700;
+}
+footer .section_relation > .group_info > .wrap_info > .list_subinfo {
+  display: none;
+  height: 0;
+  position: absolute;
+  bottom: 3rem;
+  left: 0;
+  padding: 16px 0;
+  background: #eee;
+  border-radius: 1.2rem;
+}
+footer .section_relation > .group_info > .wrap_info > .list_subinfo > li:not(:first-child) {
+  margin-top: 1.2rem;
+}
+footer .section_relation > .group_info > .wrap_info > .list_subinfo > li > a {
+  padding: 0 1.6667em;
+  font-size: 1.2rem;
+  color: #666;
+  white-space: nowrap;
+}
+footer .section_relation > .group_info > .wrap_info > .list_subinfo > li > a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+footer .section_relation > .wrap_relation {
+  float: right;
+  position: relative;
+  width: 208px;
+}
+footer .section_relation > .wrap_relation > .link_info {
+  position: relative;
+  display: block;
+  padding: 10px 20px 12px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #111;
+  line-height: 18px;
+  letter-spacing: -0.2px;
+  background: #eee;
+}
+footer .section_relation > .wrap_relation > .link_info::after {
+  content: "";
+  position: absolute;
+  right: 2rem;
+  float: right;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 3px;
+  background-image: url(/assets/img/ico_close.svg);
+  transform: rotate(-45deg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 0.2s linear;
+}
+footer .section_relation > .wrap_relation > .link_info.on + .sub_info {
+  display: block;
+  height: auto;
+}
+footer .section_relation > .wrap_relation > .link_info.on::after {
+  transform: rotate(0);
+}
+footer .section_relation > .wrap_relation > .sub_info {
+  display: none;
+  height: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 5.2rem;
+  left: 0;
+  padding: 16px 0;
+  background: #eee;
+  border-radius: 1.2rem;
+}
+footer .section_relation > .wrap_relation > .sub_info > li:not(:first-child) {
+  margin-top: 1.2rem;
+}
+footer .section_relation > .wrap_relation > .sub_info > li > a {
+  padding: 0 1.6667em;
+  font-size: 1.2rem;
+  color: #666;
+  white-space: nowrap;
+}
+footer .section_relation > .wrap_relation > .sub_info > li > a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+footer .section_relation small {
+  display: block;
+  padding-top: 6px;
+  font-size: 13px;
+  letter-spacing: -0.2px;
+  color: #888;
+  clear: both;
+}
+
 html {
   font-size: 62.5%;
 }
