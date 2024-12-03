@@ -547,7 +547,21 @@ footer .inner_footer {
 }
 @media (max-width: 1439px) {
   footer .inner_footer {
-    max-width: 96.8rem;
+    max-width: 95.2rem;
+    padding: 3.8rem 0;
+  }
+}
+@media (max-width: 1023px) {
+  footer .inner_footer {
+    max-width: 71.2rem;
+    padding-top: 4rem;
+  }
+}
+@media (max-width: 767px) {
+  footer .inner_footer {
+    max-width: 38.4rem;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
   }
 }
 footer .section_service {
@@ -561,13 +575,71 @@ footer .section_service .wrap_service h3 {
   font-weight: 600;
   cursor: text;
 }
+@media (max-width: 1439px) {
+  footer .section_service .wrap_service h3 {
+    font-size: 1.8rem;
+    line-height: 1.55;
+    letter-spacing: -0.5px;
+  }
+}
+@media (max-width: 1023px) {
+  footer .section_service .wrap_service h3 {
+    position: static;
+    padding-bottom: 2rem;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    letter-spacing: -0.5px;
+  }
+}
 footer .section_service .wrap_service .board_type {
   display: flex;
   flex-wrap: nowrap;
   padding-bottom: 4rem;
 }
+@media (max-width: 1439px) {
+  footer .section_service .wrap_service .board_type {
+    display: block;
+  }
+}
+@media (max-width: 1023px) {
+  footer .section_service .wrap_service .board_type {
+    padding: 0;
+  }
+}
 footer .section_service .wrap_service .board_type > ul {
   flex: 1;
+}
+@media (max-width: 1439px) {
+  footer .section_service .wrap_service .board_type > ul {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(25% - 20px);
+    margin-left: 16px;
+  }
+}
+@media (max-width: 1023px) {
+  footer .section_service .wrap_service .board_type > ul {
+    display: block;
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (max-width: 1023px) {
+  footer .section_service .wrap_service .board_type > ul.today-list + .hide-version {
+    border-top: 1px solid #e6e6e6;
+  }
+}
+@media (max-width: 1023px) {
+  footer .section_service .wrap_service .board_type > ul.today-list a {
+    color: #333;
+  }
+}
+@media (max-width: 1023px) {
+  footer .section_service .wrap_service .board_type > ul.today-list {
+    margin-bottom: 4rem;
+  }
 }
 footer .section_service .wrap_service .board_type > ul > li {
   margin-top: 0.8rem;
@@ -579,15 +651,47 @@ footer .section_service .wrap_service .board_type > ul > li:hover > a {
 footer .section_service .wrap_service .board_type > ul > li:first-child {
   margin-bottom: 1.2rem;
 }
+@media (max-width: 1023px) {
+  footer .section_service .wrap_service .board_type > ul > li:first-child {
+    margin: 0;
+  }
+}
 footer .section_service .wrap_service .board_type > ul > li strong {
+  position: relative;
   font-size: 1.6rem;
   line-height: 1.75;
   letter-spacing: -0.5px;
   font-weight: 600;
   cursor: text;
 }
+@media (max-width: 1439px) {
+  footer .section_service .wrap_service .board_type > ul > li strong {
+    font-size: 1.4rem;
+    line-height: 1.42;
+  }
+}
+@media (max-width: 1023px) {
+  footer .section_service .wrap_service .board_type > ul > li strong {
+    cursor: pointer;
+  }
+}
+@media (max-width: 1023px) {
+  footer .section_service .wrap_service .board_type > ul > li strong::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url(/assets/img/arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 12px;
+  }
+}
 footer .section_service .wrap_service .board_type > ul > li a {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   line-height: 1.78;
   letter-spacing: -0.2px;
   color: #888;
@@ -607,23 +711,86 @@ footer .section_service .wrap_service .board_type > ul > li a.open-blank::after 
   background-repeat: no-repeat;
   background-image: url(/assets/img/ico_link.svg);
 }
-footer .section_service .wrap_service .board_type .service__list li a {
-  color: #000;
+@media (max-width: 1023px) {
+  footer .section_service .wrap_service .board_type .kakao-group {
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+}
+@media (max-width: 1023px) {
+  footer .section_service .wrap_service .board_type .hide-version li:not(:first-child) {
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+}
+@media (max-width: 1023px) {
+  footer .section_service .wrap_service .board_type .hide-version li strong {
+    overflow: hidden;
+    display: block;
+    width: 100%;
+    position: static;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.53;
+    letter-spacing: -0.2px;
+    margin-bottom: 0;
+    padding: 16px 0;
+    text-align: left;
+    border-bottom: 1px solid #e6e6e6;
+  }
 }
 footer .section_relation {
   margin-top: 12rem;
+}
+@media (max-width: 1023px) {
+  footer .section_relation {
+    margin-top: 4.5rem;
+  }
+}
+footer .section_relation > .group_info {
+  float: left;
+}
+@media (max-width: 1439px) {
+  footer .section_relation > .group_info {
+    max-width: 59.4rem;
+  }
+}
+@media (max-width: 1023px) {
+  footer .section_relation > .group_info {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 footer .section_relation > .group_info > .wrap_info {
   float: left;
   position: relative;
   line-height: 1.8rem;
-}
-footer .section_relation > .group_info > .wrap_info:not(:first-child) {
   margin-left: 2.4rem;
+}
+@media (max-width: 1902px) {
+  footer .section_relation > .group_info > .wrap_info {
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 1023px) {
+  footer .section_relation > .group_info > .wrap_info {
+    width: 50%;
+    margin-left: 0;
+    margin-top: 1.5rem;
+  }
 }
 footer .section_relation > .group_info > .wrap_info > a {
   padding-right: 0.8333em;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   color: #888;
 }
 footer .section_relation > .group_info > .wrap_info > a:hover {
@@ -635,9 +802,9 @@ footer .section_relation > .group_info > .wrap_info > a.link_info {
 footer .section_relation > .group_info > .wrap_info > a.link_info::after {
   content: "";
   position: absolute;
-  right: -0.5rem;
+  right: -0.2em;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-40%);
   width: 0.9rem;
   height: 0.9rem;
   z-index: 10;
@@ -655,6 +822,7 @@ footer .section_relation > .group_info > .wrap_info > a.link_info.on + .list_sub
   display: block;
   height: -moz-fit-content;
   height: fit-content;
+  z-index: 10;
 }
 footer .section_relation > .group_info > .wrap_info > a.link_emph {
   color: #333;
@@ -687,6 +855,21 @@ footer .section_relation > .wrap_relation {
   float: right;
   position: relative;
   width: 208px;
+}
+@media (max-width: 1023px) {
+  footer .section_relation > .wrap_relation {
+    margin-top: 5.8rem;
+    width: 29.8rem;
+    padding-bottom: 4.8rem;
+  }
+}
+@media (max-width: 767px) {
+  footer .section_relation > .wrap_relation {
+    float: none;
+    width: 100%;
+    margin-top: 4.8rem;
+    padding: 0;
+  }
 }
 footer .section_relation > .wrap_relation > .link_info {
   position: relative;
@@ -731,6 +914,17 @@ footer .section_relation > .wrap_relation > .sub_info {
   padding: 1.6rem 0;
   background: #eee;
   border-radius: 1.2rem;
+  z-index: 10;
+}
+@media (max-width: 1023px) {
+  footer .section_relation > .wrap_relation > .sub_info {
+    bottom: 10.2rem;
+  }
+}
+@media (max-width: 767px) {
+  footer .section_relation > .wrap_relation > .sub_info {
+    bottom: 5.2rem;
+  }
 }
 footer .section_relation > .wrap_relation > .sub_info > li:not(:first-child) {
   margin-top: 1.2rem;
@@ -752,6 +946,29 @@ footer .section_relation small {
   letter-spacing: -0.2px;
   color: #888;
   clear: both;
+  margin-left: 2.4rem;
+}
+@media (max-width: 1439px) {
+  footer .section_relation small {
+    margin-left: 2rem;
+  }
+}
+@media (max-width: 1023px) {
+  footer .section_relation small {
+    float: left;
+    padding-top: 0;
+    margin-top: -3rem;
+    margin-left: 0;
+    padding-bottom: 4.8rem;
+    margin-top: -7.5rem;
+  }
+}
+@media (max-width: 767px) {
+  footer .section_relation small {
+    float: none;
+    margin-top: 4.8rem;
+    padding: 0;
+  }
 }
 
 html {
