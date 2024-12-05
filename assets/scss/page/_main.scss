@@ -11,6 +11,9 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
 
+    &.no-scr {
+        overflow-y: hidden;
+    }
     // search-toggle
     &.open_search {
         overflow-y: hidden;
@@ -182,11 +185,7 @@ body {
         }
         .visual-wrpper {
             position: relative;
-            // height: 80.8rem;
-            // @media screen and (max-width: 1902px) {
-            //
-            //     height: 62.1rem;
-            // }
+
             .inner-top {
                 position: absolute;
                 top: -2px;
@@ -194,7 +193,7 @@ body {
                 padding: 2px 27px 11px;
                 border-radius: 0 0 0 3.6rem;
                 background-color: $colorWhite;
-                z-index: 100;
+                z-index: 50;
                 @include desktop() {
                     border-radius: 0 0 0 2rem;
                 }

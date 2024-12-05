@@ -171,3 +171,38 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// 햄버거 버튼 메뉴
+const hamburgerButton = document.querySelector('.btn__hamburger');
+const closeButton = document.querySelector('.btn_close');
+const header = document.querySelector('.header');
+const areaGnb = document.querySelector('.area_gnb');
+
+hamburgerButton.addEventListener('click', function () {
+    header.classList.add('open_gnb');
+    areaGnb.classList.add('slide_on');
+    if (header.classList.contains('open_gnb')) {
+        document.body.classList.add('no-scr');
+    }
+});
+closeButton.addEventListener('click', function () {
+    header.classList.remove('open_gnb');
+    areaGnb.classList.remove('slide_on');
+    document.body.classList.remove('no-scr');
+});
+
+// 모바일 gnb 리스트 클릭
+const listItems = document.querySelectorAll('.list_gnb--item');
+
+listItems.forEach((item) => {
+    item.addEventListener('click', function () {
+        const subList = this.querySelector('.list_sub');
+
+        // 서브 메뉴가 보이는지 확인하고 토글
+        if (subList.style.display === 'none' || subList.style.display === '') {
+            subList.style.display = 'block'; // 서브 메뉴 보이기
+        } else {
+            subList.style.display = 'none'; // 서브 메뉴 숨기기
+        }
+    });
+});
