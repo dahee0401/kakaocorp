@@ -30,6 +30,55 @@ innerTop.addEventListener('mouseleave', () => {
     tooltip.style.display = 'none';
 });
 
+//swiper1 숫자애니메이션
+const maxNumbers = [61322120]; // 목표 숫자 배열
+const targets = document.querySelectorAll('.number_count');
+
+// 숫자 애니메이션 함수
+function animateNumber(target, maxValue) {
+    const duration = 1000; // 애니메이션 지속 시간 (ms)
+    const frameRate = 60; // 초당 프레임 수
+    const totalFrames = Math.ceil(duration / (1000 / frameRate)); // 총 프레임 수
+    const increment = Math.ceil(maxValue / totalFrames); // 각 프레임 증가값
+
+    let currentValue = 0;
+
+    const spans = target.querySelectorAll('span > span'); // 숫자 스팬만 선택
+    const updateNumber = () => {
+        currentValue += increment;
+        if (currentValue > maxValue) currentValue = maxValue;
+
+        // 현재 숫자를 쉼표 포함 문자열로 변환
+        const currentString = currentValue.toLocaleString();
+        const digits = currentString.replace(/,/g, '').split(''); // 쉼표 제거 후 배열로 변환
+
+        // 각 숫자 스팬 업데이트
+        let digitIndex = 0;
+        spans.forEach((span) => {
+            if (span.parentElement.textContent === ',') {
+                return; // 쉼표는 건너뜀
+            }
+            if (digitIndex < digits.length) {
+                span.textContent = digits[digitIndex];
+                digitIndex++;
+            }
+        });
+
+        if (currentValue < maxValue) {
+            requestAnimationFrame(updateNumber);
+        }
+    };
+
+    updateNumber();
+}
+
+// 모든 타겟에 대해 숫자 애니메이션 실행
+targets.forEach((target, index) => {
+    if (index < maxNumbers.length) {
+        animateNumber(target, maxNumbers[index]);
+    }
+});
+
 // story 무한 슬라이드
 const list = document.querySelector('.cont-story__list');
 const items = document.querySelectorAll('.cont-story__list-item');
@@ -191,18 +240,41 @@ closeButton.addEventListener('click', function () {
     document.body.classList.remove('no-scr');
 });
 
-// 모바일 gnb 리스트 클릭
+// GNB 서브메뉴 show/hide
 const listItems = document.querySelectorAll('.list_gnb--item');
 
 listItems.forEach((item) => {
-    item.addEventListener('click', function () {
-        const subList = this.querySelector('.list_sub');
+    item.addEventListener('click', function (event) {
+        event.stopPropagation();
 
-        // 서브 메뉴가 보이는지 확인하고 토글
-        if (subList.style.display === 'none' || subList.style.display === '') {
-            subList.style.display = 'block'; // 서브 메뉴 보이기
-        } else {
-            subList.style.display = 'none'; // 서브 메뉴 숨기기
+        // 다른 서브메뉴 숨기기
+        listItems.forEach((otherItem) => {
+            if (otherItem !== item) {
+                const otherSubList = otherItem.querySelector('.list_sub');
+                if (otherSubList) {
+                    otherSubList.style.display = 'none';
+                }
+            }
+        });
+
+        // 클릭한 아이템의 서브메뉴 토글
+        const subList = this.querySelector('.list_sub');
+        if (subList) {
+            if (subList.style.display === 'none' || subList.style.display === '') {
+                subList.style.display = 'block';
+            } else {
+                subList.style.display = 'none';
+            }
+        }
+    });
+});
+
+// 빈 곳 클릭 시 모든 서브메뉴 숨기기
+document.addEventListener('click', () => {
+    listItems.forEach((item) => {
+        const subList = item.querySelector('.list_sub');
+        if (subList) {
+            subList.style.display = 'none';
         }
     });
 });

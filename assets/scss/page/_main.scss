@@ -1242,6 +1242,184 @@ body {
     }
 }
 
+// news
+.cont-news {
+    .inner_news {
+        @include tablets() {
+            display: flex;
+            flex-direction: row;
+        }
+        @include mobile() {
+            flex-direction: column;
+        }
+        [class*='wrap_'] {
+            > .swiper-wrapper {
+                display: flex;
+                gap: 1.6rem;
+                width: 35.2rem;
+                @include desktop() {
+                    gap: 1.2rem;
+                }
+                @include tablets() {
+                    gap: 0;
+                }
+                .swiper-slide {
+                    display: block;
+                    width: 100%;
+                    background-color: #f3f3f3;
+                    border-radius: 2.4rem;
+                    @include tablets() {
+                        border-radius: 1.6rem;
+                    }
+                }
+            }
+        }
+        .wrap_top {
+            @include tablets() {
+                flex: 1;
+                width: 35.2rem;
+                overflow: hidden;
+                position: relative;
+            }
+            @include mobile() {
+                width: 100%;
+            }
+            .swiper-wrapper {
+                width: 100%;
+                .swiper-slide {
+                    display: block;
+                    width: calc((100% - 3.2rem) / 3) !important;
+                    height: 62.1rem;
+
+                    @include desktop() {
+                        height: 42.4rem;
+                    }
+                    @include tablets() {
+                        width: 100% !important;
+
+                        height: 39.9rem;
+                    }
+                }
+            }
+
+            [class*='swiper-button'] {
+                display: none;
+                position: absolute;
+                width: 32px;
+                height: 32px;
+                font-size: 0;
+                background-size: 100%;
+                background-repeat: no-repeat;
+                background-position: 50%;
+                top: 50%;
+                transform: translate3d(0, -50%, 0);
+                &::after {
+                    display: none;
+                }
+
+                @include tablets() {
+                    display: block;
+                }
+                &.swiper-button-next {
+                    right: 1.8rem;
+                    background-image: url(/assets/img/slide-next.svg);
+                }
+
+                &.swiper-button-prev {
+                    left: 1.8rem;
+                    background-image: url(/assets/img/slide-prev.svg);
+                }
+            }
+        }
+        .wrap_bottom {
+            margin-top: 6rem;
+            position: relative;
+
+            @include bdesktop() {
+                margin-top: 4rem;
+            }
+            @include desktop() {
+                margin-top: 2.4rem;
+            }
+            @include tablets() {
+                flex: 1;
+                overflow: hidden;
+                margin-top: 0;
+                margin-left: 1.2rem;
+            }
+            @include mobile() {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 3.4rem;
+            }
+            .swiper-wrapper {
+                display: flex;
+                width: 100%;
+                height: fit-content;
+
+                .swiper-slide {
+                    width: calc((100% - 1.6rem) / 2) !important;
+                    height: 19.8rem;
+                    margin: 0;
+                    @include desktop() {
+                        height: 14.2rem;
+                    }
+                    @include tablets() {
+                        width: 100% !important;
+                        height: 18.6rem;
+                    }
+                    @include mobile() {
+                        height: 15.2rem;
+                    }
+                }
+            }
+            .swiper-pagination5 {
+                top: 18.6rem;
+                margin-top: 8px;
+                @include mobile() {
+                    top: 15.2rem;
+                }
+                .swiper-pagination-bullet {
+                    margin: 8px;
+                }
+            }
+            .wrap_links {
+                display: flex;
+                gap: 1.6rem;
+                margin-top: 1.6rem;
+                @include tablets() {
+                    margin-top: 5.2rem;
+                    flex-direction: column;
+                    gap: 1.2rem;
+                }
+                @include mobile() {
+                    flex-direction: row;
+                }
+                > a {
+                    display: block;
+                    width: calc((100% - 1.6rem) / 2) !important;
+                    height: 11rem;
+                    // height: 19.8rem;
+                    background-color: #f3f3f3;
+                    border-radius: 2.4rem;
+
+                    @include desktop() {
+                        height: 7.4rem;
+                    }
+                    @include tablets() {
+                        width: 100% !important;
+                        border-radius: 1.6rem;
+                    }
+                    @include mobile() {
+                        height: 5.6rem;
+                        width: calc((100% - 1.2rem) / 2) !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
 //promise
 .cont-promise {
     &__list {

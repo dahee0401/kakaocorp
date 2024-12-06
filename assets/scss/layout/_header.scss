@@ -140,7 +140,21 @@
         overflow-y: auto;
         -webkit-transition: all 0.3s ease-out 0s;
         transition: all 0.3s ease-out 0s;
+        &::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: $colorGray6;
+        }
 
+        &::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 16px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+            background-color: $colorGray10;
+        }
         > .wrap_gnb {
             overflow-x: hidden;
             overflow-y: auto;
@@ -238,6 +252,7 @@
                             font-size: 1.6rem;
                             line-height: 1.5;
                             letter-spacing: -0.25px;
+                            transition: all ease 0.3s;
                             > li {
                                 &:hover {
                                     > a {

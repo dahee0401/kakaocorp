@@ -785,6 +785,28 @@
                     <!-- news -->
                     <section class="cont-news cont__wrapper">
                         <h3 class="cont__title type-news">오늘의 뉴스</h3>
+                        <div class="inner_main inner_news">
+                            <div class="wrap_top swiper4">
+                                <div class="swiper-wrapper">
+                                    <a class="swiper-slide" href="#none"></a>
+                                    <a class="swiper-slide" href="#none"></a>
+                                    <a class="swiper-slide" href="#none"></a>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                            </div>
+                            <div class="wrap_bottom swiper5">
+                                <div class="swiper-wrapper">
+                                    <a class="swiper-slide" href="#none"></a>
+                                    <a class="swiper-slide" href="#none"></a>
+                                </div>
+                                <div class="swiper-pagination swiper-pagination5"></div>
+                                <div class="wrap_links">
+                                    <a href="#"></a>
+                                    <a href="#"></a>
+                                </div>
+                            </div>
+                        </div>
                     </section>
                     <!-- promise -->
                     <section class="cont-promise cont__wrapper">
@@ -1269,7 +1291,7 @@
         <script>
             // swiper : cont-home
             var ww = $(window).width();
-            var mySwiper1, mySwiper2, mySwiper3;
+            var mySwiper1, mySwiper2, mySwiper3, mySwiper4, mySwiper5;
 
             function initSwiper1() {
                 if (mySwiper1) {
@@ -1335,6 +1357,49 @@
                 });
             }
 
+            function initSwiper4() {
+                if (ww <= 1023) {
+                    // 1023 이하일 때만 초기화
+                    if (mySwiper4) {
+                        mySwiper4.destroy();
+                    }
+
+                    mySwiper4 = new Swiper('.swiper4', {
+                        slidesPerView: 1,
+                        effect: 'fade',
+                        fadeEffect: {
+                            crossFade: true,
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                    });
+                }
+            }
+
+            function initSwiper5() {
+                if (ww <= 1023) {
+                    // 1023 이하일 때만 초기화
+                    if (mySwiper5) {
+                        mySwiper5.destroy();
+                    }
+
+                    mySwiper5 = new Swiper('.swiper5', {
+                        slidesPerView: 1,
+                        loop: true,
+                        effect: 'fade',
+                        fadeEffect: {
+                            crossFade: true,
+                        },
+                        pagination: {
+                            el: '.swiper-pagination5',
+                            clickable: true,
+                        },
+                    });
+                }
+            }
+
             function updatePaginationType(swiper, paginationSelector) {
                 if (ww < 768) {
                     swiper.params.pagination.type = 'fraction'; // 768px 이하
@@ -1348,18 +1413,21 @@
                     swiper.pagination.render(); // 페이지네이션 다시 렌더링
                 }
 
-                swiper.update(); //swiper 업데이트
+                swiper.update(); // swiper 업데이트
             }
 
             // 초기 Swiper 설정
             initSwiper1();
             initSwiper2();
             initSwiper3();
+            initSwiper4();
+            initSwiper5();
 
-            // 리사이즈 이벤트에 따른 Swiper 재설정 및 페이지네이션 타입 변경
             $(window).on('resize', function () {
                 ww = $(window).width();
                 updatePaginationType(mySwiper1, '.swiper-pagination'); // 첫 번째 Swiper
+                initSwiper4(); // swiper4 초기화
+                initSwiper5(); // swiper5 초기화
             });
         </script>
     </body>
