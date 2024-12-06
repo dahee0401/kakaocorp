@@ -2640,6 +2640,12 @@ body.dark-mode .kakao_subscribe {
 .cont-news .inner_news .wrap_bottom .swiper-pagination5 {
   top: 18.6rem;
   margin-top: 8px;
+  display: none;
+}
+@media (max-width: 1023px) {
+  .cont-news .inner_news .wrap_bottom .swiper-pagination5 {
+    display: block;
+  }
 }
 @media (max-width: 767px) {
   .cont-news .inner_news .wrap_bottom .swiper-pagination5 {

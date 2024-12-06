@@ -1376,6 +1376,10 @@ body {
             .swiper-pagination5 {
                 top: 18.6rem;
                 margin-top: 8px;
+                display: none;
+                @include tablets() {
+                    display: block;
+                }
                 @include mobile() {
                     top: 15.2rem;
                 }
