@@ -1359,44 +1359,52 @@
 
             function initSwiper4() {
                 if (ww <= 1023) {
-                    // 1023 이하일 때만 초기화
-                    if (mySwiper4) {
-                        mySwiper4.destroy();
+                    if (!mySwiper4) {
+                        // 스와이퍼가 초기화되지 않은 경우에만 초기화
+                        mySwiper4 = new Swiper('.swiper4', {
+                            slidesPerView: 1,
+                            effect: 'fade',
+                            fadeEffect: {
+                                crossFade: true,
+                            },
+                            navigation: {
+                                nextEl: '.swiper-button-next',
+                                prevEl: '.swiper-button-prev',
+                            },
+                        });
                     }
-
-                    mySwiper4 = new Swiper('.swiper4', {
-                        slidesPerView: 1,
-                        effect: 'fade',
-                        fadeEffect: {
-                            crossFade: true,
-                        },
-                        navigation: {
-                            nextEl: '.swiper-button-next',
-                            prevEl: '.swiper-button-prev',
-                        },
-                    });
+                } else {
+                    if (mySwiper4) {
+                        // 1023px 초과일 때 스와이퍼 파괴
+                        mySwiper4.destroy();
+                        mySwiper4 = null; // 초기화 상태로 설정
+                    }
                 }
             }
 
             function initSwiper5() {
                 if (ww <= 1023) {
-                    // 1023 이하일 때만 초기화
-                    if (mySwiper5) {
-                        mySwiper5.destroy();
+                    if (!mySwiper5) {
+                        // 스와이퍼가 초기화되지 않은 경우에만 초기화
+                        mySwiper5 = new Swiper('.swiper5', {
+                            slidesPerView: 1,
+                            loop: true,
+                            effect: 'fade',
+                            fadeEffect: {
+                                crossFade: true,
+                            },
+                            pagination: {
+                                el: '.swiper-pagination5',
+                                clickable: true,
+                            },
+                        });
                     }
-
-                    mySwiper5 = new Swiper('.swiper5', {
-                        slidesPerView: 1,
-                        loop: true,
-                        effect: 'fade',
-                        fadeEffect: {
-                            crossFade: true,
-                        },
-                        pagination: {
-                            el: '.swiper-pagination5',
-                            clickable: true,
-                        },
-                    });
+                } else {
+                    if (mySwiper5) {
+                        // 1023px 초과일 때 스와이퍼 파괴
+                        mySwiper5.destroy();
+                        mySwiper5 = null; // 초기화 상태로 설정
+                    }
                 }
             }
 
