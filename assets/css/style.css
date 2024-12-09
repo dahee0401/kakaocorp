@@ -1221,6 +1221,16 @@ body.dark-mode header.active {
 body.dark-mode .icon-path {
   stroke: #fff !important;
 }
+body.dark-mode .inner_gnb {
+  background-color: #000 !important;
+}
+body.dark-mode .inner_gnb .list_gnb a {
+  color: #fff !important;
+}
+body.dark-mode .inner_gnb .list_gnb--item .list_sub {
+  color: #fff !important;
+  background-color: #222 !important;
+}
 body.dark-mode .info_banner {
   background-color: #fff;
   color: #000;

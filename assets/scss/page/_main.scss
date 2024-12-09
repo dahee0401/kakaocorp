@@ -64,7 +64,20 @@ body {
         .icon-path {
             stroke: #fff !important;
         }
-
+        .inner_gnb {
+            background-color: $colorBlack !important;
+            .list_gnb {
+                a {
+                    color: $colorWhite !important;
+                }
+            }
+            .list_gnb--item {
+                .list_sub {
+                    color: $colorWhite !important;
+                    background-color: #222 !important;
+                }
+            }
+        }
         .info_banner {
             background-color: $colorWhite;
             color: $colorBlack;

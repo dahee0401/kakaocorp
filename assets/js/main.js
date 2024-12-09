@@ -173,8 +173,11 @@ document.addEventListener('keydown', function (event) {
 });
 
 // 다크모드
-document.querySelector('.util__btn--mode').addEventListener('click', function () {
-    document.body.classList.toggle('dark-mode'); // body에 dark-mode 클래스 토글s
+const modeButtons = document.querySelectorAll('.util__btn--mode');
+modeButtons.forEach(function (button) {
+    button.addEventListener('click', function () {
+        document.body.classList.toggle('dark-mode'); // body에 dark-mode 클래스 토글
+    });
 });
 
 // footer link_info클릭 토글
