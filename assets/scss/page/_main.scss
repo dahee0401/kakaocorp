@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+    font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', sans-serif;
     color: $colorBlack;
     background-color: $colorWhite;
     word-break: keep-all;
@@ -508,36 +508,6 @@ body {
             height: 100%;
         }
 
-        // 페이지네이션
-        .swiper-pagination {
-            position: absolute;
-            left: 50%;
-            -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-            // font-size: 0;
-            white-space: nowrap;
-            bottom: 2.2rem;
-            @include desktop() {
-                bottom: 0.4rem;
-            }
-            .swiper-pagination-bullet {
-                content: '';
-                box-sizing: border-box;
-                width: 8px;
-                height: 8px;
-                border-radius: 4px;
-                border: 1px solid #888;
-                background-color: $colorWhite;
-                opacity: 1;
-                margin: 0.8rem;
-
-                &-active {
-                    width: 2.4rem;
-                    background-color: #000;
-                }
-            }
-        }
-
         // 슬라이드 버튼
         .swiper-commons-button {
             position: absolute;
@@ -574,7 +544,7 @@ body {
 
             .swiper-container {
                 @include mobile() {
-                    padding-top: 4.2rem;
+                    padding-top: 3.2rem;
                 }
             }
             .swiper-wrapper {
@@ -648,6 +618,7 @@ body {
             }
             .swiper-pagination {
                 @include mobile() {
+                    width: fit-content;
                     top: 0;
                     left: 8.4rem;
                     height: 3.2rem;
@@ -725,7 +696,7 @@ body {
                             letter-spacing: -0.6px;
                             font-weight: 400;
 
-                            @media screen and (max-width: 1902px) {
+                            @include bdesktop {
                                 overflow: hidden;
                                 text-overflow: ellipsis;
                                 display: -webkit-box;
@@ -862,6 +833,36 @@ body {
     }
 }
 
+// 페이지네이션
+.swiper-pagination {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    // font-size: 0;
+    white-space: nowrap;
+    bottom: 2.2rem;
+    @include desktop() {
+        bottom: 0.4rem;
+    }
+    .swiper-pagination-bullet {
+        content: '';
+        box-sizing: border-box;
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        border: 1px solid #888;
+        background-color: $colorWhite;
+        opacity: 1;
+        margin: 0.8rem;
+
+        &-active {
+            width: 2.4rem;
+            background-color: #000;
+        }
+    }
+}
+
 // story
 .cont-story {
     overflow: hidden;
@@ -994,6 +995,7 @@ body {
                         font-size: 2.6rem;
                         letter-spacing: -0.8px;
                         -webkit-line-clamp: 3;
+
                         @include desktop() {
                             font-size: 1.8rem;
                             -webkit-line-clamp: 2;
@@ -1287,17 +1289,240 @@ body {
             .swiper-wrapper {
                 width: 100%;
                 .swiper-slide {
-                    display: block;
+                    position: relative;
                     width: calc((100% - 3.2rem) / 3) !important;
-                    height: 62.1rem;
-
+                    height: 68.9rem;
+                    padding: 4rem 4rem 0;
+                    @include bdesktop() {
+                        height: 62.1rem;
+                        padding: 3rem 3rem 0;
+                    }
                     @include desktop() {
                         height: 42.4rem;
+                        padding: 2.4rem 2.4rem 0;
                     }
                     @include tablets() {
                         width: 100% !important;
-
                         height: 39.9rem;
+                        padding: 2.1rem 2rem 0;
+                    }
+                    .inner_card {
+                        position: relative;
+                        .info_cate {
+                            display: flex;
+                            align-items: center;
+                            @include tablets() {
+                                height: 2.4rem;
+                            }
+                            img {
+                                width: 4.6rem;
+                                height: 4.6rem;
+                                margin-right: 12px;
+                                @include desktop() {
+                                    width: 4rem;
+                                    height: 4rem;
+                                    margin: 0 8px 0 0;
+                                }
+                                @include tablets() {
+                                    width: 2.4rem;
+                                    height: 2.4rem;
+                                    // margin-right: 4px;
+                                }
+                            }
+                            .txt_cate {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                position: relative;
+                                height: 3.6rem;
+                                padding: 0 16px;
+                                border-radius: 8px;
+                                font-size: 1.4rem;
+                                // letter-spacing: -0.2px;
+                                // color: $colorBlack;
+                                background-color: $colorWhite;
+                                vertical-align: top;
+                                margin-top: 1px;
+                                font-family: '맑은고딕';
+                                @include bdesktop() {
+                                    margin: 0 8px 0 0;
+                                }
+
+                                @include desktop() {
+                                    height: 3.4rem;
+                                    padding: 0 1.6rem;
+                                    font-size: 1.2rem;
+                                    // line-height: 2.75;
+                                }
+                                @include tablets() {
+                                    height: 2.6rem;
+                                    padding: 0 1.2rem;
+                                    border-radius: 8px;
+                                }
+                            }
+                            .txt_date {
+                                display: inline-block;
+                                margin-left: 1.2rem;
+                                font-size: 1.4rem;
+                                line-height: 3.2857em;
+                                color: #333;
+                                letter-spacing: -0.2px;
+                                @include desktop() {
+                                    margin: 0 0 0 8px;
+                                    font-size: 12px;
+                                    line-height: 41px;
+                                }
+                            }
+                        }
+                        .link_item {
+                            display: block;
+                            margin: 0 -4rem;
+                            font-size: 1px;
+                            outline-offset: -4px;
+                            letter-spacing: -0.6px;
+                            @include bdesktop() {
+                                margin: 0 -3rem;
+                            }
+                            @include desktop() {
+                                margin: 0 -2.4rem;
+                            }
+                            @include tablets() {
+                                margin: 0 -2rem;
+                            }
+                            .tit_card {
+                                height: 168px;
+                                margin-top: 20px;
+                                padding: 0 4rem;
+                                display: -webkit-box;
+                                overflow: hidden;
+                                -webkit-line-clamp: 4;
+                                margin-top: 2rem;
+                                font-size: 3rem;
+                                line-height: 1.4;
+                                font-weight: 600;
+                                @include bdesktop() {
+                                    height: 21rem;
+                                    padding: 0 3rem;
+                                    -webkit-line-clamp: 5;
+                                }
+                                @include desktop() {
+                                    height: 11.2rem;
+                                    margin-top: 1.2rem;
+                                    letter-spacing: -0.6px;
+                                    -webkit-line-clamp: 4;
+                                    padding: 0 2.4rem;
+                                    font-size: 1.8rem;
+                                    line-height: 1.55;
+                                }
+                                @include tablets() {
+                                    height: 8.4rem;
+                                    margin-top: 1.2rem;
+                                    -webkit-line-clamp: 3;
+                                }
+                            }
+
+                            .wrap_thumb {
+                                position: relative;
+                                display: block;
+                                height: 314px;
+                                margin-top: 10.1rem;
+                                @include bdesktop() {
+                                    height: 24.9rem;
+                                    margin-top: 6.6rem;
+                                }
+                                @include desktop() {
+                                    height: 17.8rem;
+                                    margin-top: 5.8rem;
+                                }
+                                @include tablets() {
+                                    height: 19.9rem;
+                                    margin-top: 5.8rem;
+                                }
+                                > img {
+                                    position: absolute;
+                                    left: 50%;
+                                    -webkit-transform: translateX(-50%);
+                                    transform: translateX(-50%);
+                                    display: block;
+                                    height: 100%;
+                                    min-width: 100%;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .info_card {
+                            overflow: hidden;
+                            position: absolute;
+                            top: 27.7rem;
+                            left: 0;
+                            right: 0;
+                            // right: 4rem;
+                            line-height: 1;
+                            // height: 2.6rem;
+                            font-size: 1.6rem;
+                            line-height: 1;
+                            color: #666;
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            pointer-events: none;
+
+                            @include bdesktop() {
+                                top: 29.6rem;
+                            }
+                            @include desktop() {
+                                top: 18.8rem;
+                            }
+                            @include tablets() {
+                                top: 14.2rem;
+                            }
+                            .txt_keyword {
+                                margin-right: 6px;
+                                vertical-align: top;
+                                letter-spacing: -0px;
+                                @include desktop() {
+                                    margin-right: 4px;
+                                    font-size: 1.3rem;
+                                    height: 1.8rem;
+                                }
+                                @include tablets() {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                    }
+                    .btn_share {
+                        display: block;
+                        overflow: hidden;
+                        position: absolute;
+                        top: 5.1rem;
+                        right: 3rem;
+                        z-index: 20;
+                        width: 24px;
+                        height: 24px;
+                        font-size: 0;
+                        line-height: 0;
+
+                        @include bdesktop() {
+                            right: 3rem;
+                            top: 4.1rem;
+                        }
+                        @include desktop() {
+                            top: 3.2rem;
+                            right: 2rem;
+                        }
+                        @include tablets() {
+                            top: 2.4rem;
+                            right: 0.8rem;
+                        }
+                        @include mobile() {
+                            top: 2rem;
+                            right: 0.8rem;
+                        }
+
+                        > img {
+                            display: block;
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -1311,8 +1536,10 @@ body {
                 background-size: 100%;
                 background-repeat: no-repeat;
                 background-position: 50%;
-                top: 50%;
-                transform: translate3d(0, -50%, 0);
+                top: 22rem;
+                margin: 0;
+                // top: 50%;
+                // transform: translate3d(0, -50%, 0);
                 &::after {
                     display: none;
                 }
@@ -1361,15 +1588,111 @@ body {
                     width: calc((100% - 1.6rem) / 2) !important;
                     height: 19.8rem;
                     margin: 0;
+                    padding: 3.6rem 4rem;
                     @include desktop() {
+                        border-radius: 2rem;
+                        padding: 2.4rem;
                         height: 14.2rem;
                     }
                     @include tablets() {
                         width: 100% !important;
                         height: 18.6rem;
+
+                        border-radius: 1.6rem;
                     }
                     @include mobile() {
                         height: 15.2rem;
+                    }
+                    .item_card_news {
+                        position: relative;
+
+                        @include desktop() {
+                        }
+                        .box_top {
+                            .badge_box {
+                                display: flex;
+                                align-items: center;
+                                gap: 1.2rem;
+                                font-size: 1.4rem;
+                                letter-spacing: -0.2px;
+
+                                @include desktop() {
+                                    font-size: 1.2rem;
+                                }
+
+                                > img {
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    width: 3.8rem;
+                                    height: 100%;
+                                    @include tablets() {
+                                        width: 2.4rem;
+                                        // height: 2.4rem;
+                                    }
+                                }
+                                > .cate_box {
+                                    padding: 4px 12px;
+                                    border-radius: 8px;
+                                    background-color: $colorWhite;
+                                    padding: 4px 12px;
+                                    border-radius: 8px;
+                                }
+                                > .date_box {
+                                }
+                            }
+                        }
+                        .title_box {
+                            display: block;
+                            overflow: hidden;
+                            margin-top: 1.2rem;
+                            font-size: 2.6rem;
+                            line-height: 1.45;
+                            // height: 7.6rem;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            letter-spacing: -0.5px;
+
+                            @include desktop() {
+                                margin-top: 4px;
+                                font-size: 1.7rem;
+                                line-height: 26px;
+                                // height: 52px;
+                            }
+                            @include tablets() {
+                                margin-top: 8px;
+                                // height: 104px;
+                                -webkit-line-clamp: 4;
+                                line-height: 1.5294;
+                            }
+                            @include mobile() {
+                                overflow: hidden;
+                                margin-top: 4px;
+                                font-size: 1.6rem;
+                                line-height: 1.5;
+                                // height: 72px;
+                                -webkit-line-clamp: 3;
+                            }
+                        }
+                        .btn_share {
+                            display: block;
+                            position: absolute;
+                            top: 4.3rem;
+                            right: 3rem;
+                            width: 2.4rem;
+                            height: 2.4rem;
+
+                            @include desktop() {
+                                top: 1rem;
+                                right: 0;
+                            }
+                            @include tablets() {
+                                top: 0;
+                                right: -1.4rem;
+                            }
+                            @include mobile() {
+                            }
+                        }
                     }
                 }
             }
@@ -1385,6 +1708,11 @@ body {
                 }
                 .swiper-pagination-bullet {
                     margin: 8px;
+                    background-color: #888;
+
+                    &-active {
+                        background-color: $colorBlack;
+                    }
                 }
             }
             .wrap_links {
@@ -1400,23 +1728,34 @@ body {
                     flex-direction: row;
                 }
                 > a {
-                    display: block;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
                     width: calc((100% - 1.6rem) / 2) !important;
                     height: 11rem;
-                    // height: 19.8rem;
+                    padding: 3.6rem 4rem;
                     background-color: #f3f3f3;
                     border-radius: 2.4rem;
+                    font-size: 2.6rem;
+                    cursor: pointer;
+                    z-index: 10;
 
                     @include desktop() {
+                        border-radius: 2rem;
                         height: 7.4rem;
+                        padding: 2.4rem;
+                        font-size: 1.7rem;
                     }
                     @include tablets() {
                         width: 100% !important;
+                        padding: 2rem;
                         border-radius: 1.6rem;
                     }
                     @include mobile() {
-                        height: 5.6rem;
                         width: calc((100% - 1.2rem) / 2) !important;
+                        height: 5.6rem;
+                        padding: 1.6rem;
+                        font-size: 1.6rem;
                     }
                 }
             }

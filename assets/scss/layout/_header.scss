@@ -67,15 +67,18 @@
                         display: block;
                         height: 100%;
                         padding: 0 4rem;
-                        // line-height: 8.5rem;
                         text-align: center;
                         font-size: 1.7rem;
                         border-bottom: 1px solid transparent;
-                        @media screen and (max-width: 1902px) {
+                        @include bdesktop() {
                             padding: 0 3rem;
                         }
                         @include desktop() {
                             padding: 0 2rem;
+                            padding: 4px 12px 5px;
+                            font-size: 1.4rem;
+
+                            letter-spacing: -0.2px;
                         }
 
                         > .ico_link {
