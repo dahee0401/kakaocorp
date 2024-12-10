@@ -93,12 +93,13 @@ footer {
                     }
                     > li {
                         margin-top: 0.8rem;
-                        &:hover {
-                            > a {
+                        > a {
+                            &:hover {
                                 color: $colorBlack;
                                 text-decoration: underline;
                             }
                         }
+
                         &:first-child {
                             margin-bottom: 1.2rem;
                             @include tablets() {
@@ -138,7 +139,7 @@ footer {
                             }
                         }
                         a {
-                            font-size: 1.2rem;
+                            font-size: 1.4rem;
                             line-height: 1.78;
                             letter-spacing: -0.2px;
                             color: $colorGray9;
@@ -228,10 +229,14 @@ footer {
                 float: left;
                 position: relative;
                 line-height: 1.8rem;
-                margin-left: 2.4rem;
-
+                &:not(:first-child) {
+                    margin-left: 2rem;
+                }
                 @include bdesktop() {
                     margin-left: 2rem;
+                }
+                @include desktop() {
+                    margin-top: 6px;
                 }
                 @include tablets() {
                     width: 50%;
@@ -240,7 +245,7 @@ footer {
                 }
                 > a {
                     padding-right: 0.8333em;
-                    font-size: 1.25rem;
+                    font-size: 1.2rem;
 
                     color: $colorGray9;
 
@@ -263,7 +268,6 @@ footer {
                             background-position: center;
                         }
                         &.on {
-                            color: $colorBlack;
                             &::after {
                                 transform: translateY(-50%) scaleY(-1); // 상하 반전 추가
                             }
@@ -276,7 +280,7 @@ footer {
                     }
                     &.link_emph {
                         color: $colorGray8;
-                        font-weight: 700;
+                        // font-weight: 700;
                     }
                 }
                 > .list_subinfo {
@@ -309,7 +313,7 @@ footer {
         > .wrap_relation {
             float: right;
             position: relative;
-            width: 208px;
+            width: 20rem;
             @include tablets() {
                 margin-top: 5.8rem;
                 width: 29.8rem;
@@ -333,18 +337,14 @@ footer {
                 letter-spacing: -0.2px;
                 background: $colorGray1;
 
-                &::after {
-                    content: '';
+                .link_info_plus {
+                    display: block;
+                    height: 2.4rem;
                     position: absolute;
                     right: 2rem;
+                    top: 8px;
                     float: right;
-                    width: 1.5rem;
-                    height: 1.5rem;
-                    margin-top: 3px;
-                    background-image: url(/assets/img/ico_close.svg);
-                    transform: rotate(-45deg);
-                    background-repeat: no-repeat;
-                    background-size: cover;
+                    transform: rotate(0);
                     transition: transform 0.2s linear;
                 }
 
@@ -354,8 +354,8 @@ footer {
                         height: auto;
                     }
 
-                    &::after {
-                        transform: rotate(0);
+                    .link_info_plus {
+                        transform: rotate(-45deg);
                     }
                 }
             }
@@ -381,15 +381,17 @@ footer {
                     &:not(:first-child) {
                         margin-top: 1.2rem;
                     }
+                    &:hover {
+                        > a {
+                            color: $colorBlack;
+                            text-decoration: underline;
+                        }
+                    }
                     > a {
                         padding: 0 1.6667em;
                         font-size: 1.2rem;
                         color: $colorGray10;
                         white-space: nowrap;
-                        &:hover {
-                            color: $colorBlack;
-                            text-decoration: underline;
-                        }
                     }
                 }
             }
@@ -405,6 +407,7 @@ footer {
             margin-left: 2.4rem;
             @include desktop() {
                 margin-left: 2rem;
+                padding-top: 1.2rem;
             }
             @include tablets() {
                 float: left;

@@ -158,7 +158,7 @@ const searchButtons = document.querySelectorAll('.searchBtn');
 searchButtons.forEach(function (button) {
     button.addEventListener('click', function () {
         document.body.classList.toggle('open_search'); // body에 open_search 클래스 토글
-        const searchLayer = document.querySelector('.search_layer');
+        // const searchLayer = document.querySelector('.search_layer');
     });
 });
 document.getElementById('closeBtn').addEventListener('click', function () {
@@ -257,6 +257,7 @@ listItems.forEach((item) => {
                 if (otherSubList) {
                     otherSubList.style.display = 'none';
                 }
+                otherItem.classList.remove('active');
             }
         });
 
@@ -269,6 +270,7 @@ listItems.forEach((item) => {
                 subList.style.display = 'none';
             }
         }
+        this.classList.toggle('active');
     });
 });
 

@@ -37,16 +37,17 @@
             justify-content: space-between;
             align-items: center;
             height: 7.2rem;
+            position: relative;
 
             &__logo {
                 width: 7.4rem;
             }
 
             .layer_close {
-                img {
-                    display: block;
-                    width: 100%;
-                }
+                // background-color: red;
+                display: block;
+                width: 2.4rem;
+                height: 2.4rem;
             }
         }
 
@@ -134,6 +135,10 @@
 
                             &::placeholder {
                                 color: $colorWhite;
+                            }
+                            &:focus {
+                                outline: 0;
+                                border: 0;
                             }
                         }
                     }

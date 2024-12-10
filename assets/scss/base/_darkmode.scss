@@ -1,0 +1,226 @@
+body {
+    &.dark-mode {
+        color: $colorWhite;
+        background-color: $colorBlack;
+
+        .theme-icon path {
+            fill: none;
+            stroke: #fff !important;
+        }
+        .icon-path {
+            stroke: #fff !important;
+        }
+
+        header {
+            color: $colorWhite;
+            background-color: $colorBlack;
+            border-bottom: 1px solid $colorBlack;
+
+            &.active {
+                border-bottom: 1px solid $colorGray8;
+            }
+        }
+
+        .inner_gnb {
+            background-color: $colorBlack !important;
+            .list_gnb {
+                a {
+                    color: $colorWhite !important;
+                }
+            }
+        }
+        .list_gnb--item {
+            color: $colorWhite !important;
+            .list_sub {
+                background-color: #222 !important;
+            }
+        }
+        .header > .area_gnb > .wrap_gnb > .inner_gnb .group_relation .list_relation li a {
+            color: $colorWhite !important;
+        }
+        .info_banner {
+            background-color: $colorWhite;
+            color: $colorBlack;
+        }
+        [class*='inner-'] {
+            background-color: $colorBlack !important;
+        }
+
+        // .swiper-slide {
+        //     * {
+        //         color: $colorBlack !important;
+        //     }
+        // }
+
+        .item_normal_card {
+            background-color: $colorGray8 !important;
+            color: $colorWhite;
+
+            [class*='card'] {
+                color: $colorWhite !important;
+            }
+        }
+
+        .cont-service__list-item {
+            background-color: $colorGray8 !important;
+        }
+
+        .commons {
+            background-color: $colorGray8 !important;
+        }
+
+        .title_responsible {
+            background-color: $colorBlack;
+        }
+        .btn_area {
+            background-color: $colorBlack;
+        }
+
+        .wrap_btn {
+            background-color: $colorGray8 !important;
+        }
+        .text_cate {
+            background-color: $colorGray7 !important;
+        }
+
+        .kakao_subscribe {
+            color: $colorBlack !important;
+        }
+
+        .swiper-slide {
+            background-color: $colorGray8 !important;
+            color: $colorWhite;
+        }
+        .txt_cate,
+        .cate_box {
+            background-color: $colorGray7 !important;
+        }
+        .info_card {
+            color: $colorWhite !important;
+        }
+        .wrap_links {
+            a {
+                background-color: $colorGray8 !important;
+            }
+        }
+
+        // footer
+        footer {
+            border-top: 1px solid $colorWhite;
+            background-color: $colorBlack;
+        }
+        .service__list {
+            > li {
+                > a {
+                    color: $colorWhite !important;
+                    &:hover {
+                        color: $colorWhite !important;
+                    }
+                }
+
+                a {
+                    color: $colorWhite !important;
+                }
+            }
+        }
+        .util__btn {
+            &:hover {
+                background-color: #222224 !important;
+            }
+        }
+        .board_type {
+            > ul {
+                > li {
+                    a {
+                        &:hover {
+                            color: $colorWhite !important;
+                        }
+                    }
+                }
+            }
+        }
+        .wrap_info {
+            a {
+                &.link_emph {
+                    color: $colorWhite !important;
+                }
+                &:hover {
+                    color: $colorWhite !important;
+                }
+            }
+        }
+        .list_subinfo {
+            background-color: #222224 !important;
+            > li {
+                > a {
+                    color: #999 !important;
+                }
+            }
+        }
+        .link_info {
+            // background-color: #222224 !important;
+            // color: $colorWhite !important;
+            &:hover {
+                color: $colorWhite !important;
+            }
+            &::after {
+                background-image: url();
+            }
+            &.on {
+                color: $colorWhite;
+            }
+        }
+        .wrap_relation {
+            a {
+                background-color: #222224 !important;
+                color: #fafafa !important;
+            }
+        }
+        .sub_info {
+            background-color: #222224 !important;
+        }
+
+        // 검색창
+        .inner_layer {
+            background-color: $colorBlack !important;
+        }
+        .search_layer {
+            &::before {
+                background-color: $colorBlack !important;
+            }
+        }
+        .link_tag {
+            background-color: #333 !important;
+
+            &:hover {
+                opacity: #444;
+            }
+        }
+        .inner-bottom {
+            a {
+                background-color: #333 !important;
+                color: $colorWhite;
+            }
+        }
+        .tooltip {
+            .info_banner {
+                background-color: $colorWhite !important;
+                color: $colorBlack !important;
+                &::after {
+                    display: none;
+                }
+            }
+        }
+        .group_search {
+            // form {
+            //     input {
+            //         background-color: $colorWhite !important;
+            //         color: #333 !important;
+            //         &::placeholder {
+            //             color: #333 !important;
+            //         }
+            //     }
+            // }
+        }
+    }
+}
